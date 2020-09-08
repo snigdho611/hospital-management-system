@@ -69,8 +69,8 @@ namespace HospitalManagementSystem
                     {
                         LogInSuccess LG = new LogInSuccess(adminName);
                         LG.ShowDialog();
-
                         this.Hide();
+
                         Main M1 = new Main();
                         M1.ShowDialog();
                         this.Close();
