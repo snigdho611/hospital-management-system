@@ -11,3 +11,16 @@ C:\Users\LENOVO\source\repos\HospitalManagementSystem\HospitalManagementSystem\o
 C:\Users\LENOVO\source\repos\HospitalManagementSystem\HospitalManagementSystem\obj\Debug\HospitalManagementSystem.csproj.CopyComplete
 C:\Users\LENOVO\source\repos\HospitalManagementSystem\HospitalManagementSystem\obj\Debug\HospitalManagementSystem.exe
 C:\Users\LENOVO\source\repos\HospitalManagementSystem\HospitalManagementSystem\obj\Debug\HospitalManagementSystem.pdb
+D:\GitHub\HospitalManagementSystem\HospitalManagementSystem\bin\Debug\HospitalManagementSystem.exe.config
+D:\GitHub\HospitalManagementSystem\HospitalManagementSystem\bin\Debug\HospitalManagementSystem.exe
+D:\GitHub\HospitalManagementSystem\HospitalManagementSystem\bin\Debug\HospitalManagementSystem.pdb
+D:\GitHub\HospitalManagementSystem\HospitalManagementSystem\bin\Debug\Oracle.ManagedDataAccess.dll
+D:\GitHub\HospitalManagementSystem\HospitalManagementSystem\obj\Debug\HospitalManagementSystem.csprojAssemblyReference.cache
+D:\GitHub\HospitalManagementSystem\HospitalManagementSystem\obj\Debug\HospitalManagementSystem.LogIn.resources
+D:\GitHub\HospitalManagementSystem\HospitalManagementSystem\obj\Debug\HospitalManagementSystem.LogInSuccess.resources
+D:\GitHub\HospitalManagementSystem\HospitalManagementSystem\obj\Debug\HospitalManagementSystem.Properties.Resources.resources
+D:\GitHub\HospitalManagementSystem\HospitalManagementSystem\obj\Debug\HospitalManagementSystem.csproj.GenerateResource.cache
+D:\GitHub\HospitalManagementSystem\HospitalManagementSystem\obj\Debug\HospitalManagementSystem.csproj.CoreCompileInputs.cache
+D:\GitHub\HospitalManagementSystem\HospitalManagementSystem\obj\Debug\HospitalManagementSystem.csproj.CopyComplete
+D:\GitHub\HospitalManagementSystem\HospitalManagementSystem\obj\Debug\HospitalManagementSystem.exe
+D:\GitHub\HospitalManagementSystem\HospitalManagementSystem\obj\Debug\HospitalManagementSystem.pdb

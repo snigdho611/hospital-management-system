@@ -49,24 +49,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LogIn.cs">
+    <Compile Include="Windows\LogIn.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LogIn.Designer.cs">
+    <Compile Include="Windows\LogIn.Designer.cs">
       <DependentUpon>LogIn.cs</DependentUpon>
     </Compile>
-    <Compile Include="LogInSuccess.cs">
+    <Compile Include="Windows\LogInSuccess.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LogInSuccess.Designer.cs">
+    <Compile Include="Windows\LogInSuccess.Designer.cs">
       <DependentUpon>LogInSuccess.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="LogIn.resx">
+    <EmbeddedResource Include="Windows\LogIn.resx">
       <DependentUpon>LogIn.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LogInSuccess.resx">
+    <EmbeddedResource Include="Windows\LogInSuccess.resx">
       <DependentUpon>LogInSuccess.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
