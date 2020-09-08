@@ -45,7 +45,7 @@ namespace HospitalManagementSystem
 
                 try
                 {
-                    string connectionString = "DATA SOURCE=localhost:1521/XE;USER ID=SNIGDHO; PASSWORD = STUDENT";
+                    string connectionString = "Data Source=localhost;User ID=SNIGDHO;Password=student;";
 
                     connection = new OracleConnection(connectionString);
                     connection.Open();
@@ -83,7 +83,7 @@ namespace HospitalManagementSystem
 
                 catch (Exception exc)
                 {
-                    exc.ToString();
+                    MessageBox.Show(exc.ToString());
                 }
             }
             
