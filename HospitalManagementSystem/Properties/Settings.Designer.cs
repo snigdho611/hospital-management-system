@@ -32,5 +32,15 @@ namespace HospitalManagementSystem.Properties {
                 return ((string)(this["ConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=localhost;User ID=SNIGDHO;Unicode=True")]
+        public string ConnectionString1 {
+            get {
+                return ((string)(this["ConnectionString1"]));
+            }
+        }
     }
 }
