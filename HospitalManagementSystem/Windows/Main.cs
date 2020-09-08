@@ -20,39 +20,22 @@ namespace HospitalManagementSystem.Windows
 
         private void button1_Click(object sender, EventArgs e)
         {
-            OracleConnection connection = null;
-            OracleCommand command = null;
-            //OracleDataReader reader = null;
+            
+        }
 
+        private void docBtn_Click(object sender, EventArgs e)
+        {
             try
             {
-                /*
-                string connectionString = "Data Source=localhost;User ID=SNIGDHO;Password=student;";
+                OracleConnection connection = new OracleConnection("Data Source=localhost;User ID=SNIGDHO;Password=student;");
+                OracleCommand command = new OracleCommand("select * from DOCTORS", connection);
 
-                connection = new OracleConnection(connectionString);
                 connection.Open();
+                OracleDataReader reader = command.ExecuteReader();
 
-                OracleParameter parameter = new OracleParameter();
-
-                command = new OracleCommand("select * from DOCTORS", connection);
-                command.CommandType = CommandType.Text;
-
-                reader = command.ExecuteReader();
-                DataTable DT = new DataTable();
-                DT.Load(reader);
-                dataGridView1.DataSource = DT;*/
-
-                using (OracleConnection conn = new OracleConnection("Data Source=localhost;User ID=SNIGDHO;Password=student;"))
-                using (OracleCommand cmd = new OracleCommand("select * from DOCTORS", conn))
-                {
-                    conn.Open();
-                    using (OracleDataReader reader = cmd.ExecuteReader())
-                    {
-                        DataTable dataTable = new DataTable();
-                        dataTable.Load(reader);
-                        dataGridView1.DataSource = dataTable;
-                    }
-                }
+                DataTable Table = new DataTable();
+                Table.Load(reader);
+                dataGridView1.DataSource = Table;
             }
 
             catch (Exception exc)

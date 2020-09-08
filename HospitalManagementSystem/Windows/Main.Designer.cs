@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.panel1 = new System.Windows.Forms.Panel();
             this.phrBtn = new System.Windows.Forms.Button();
@@ -36,13 +35,10 @@
             this.docBtn = new System.Windows.Forms.Button();
             this.ptnBtn = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet1BindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -97,6 +93,7 @@
             this.docBtn.Text = "DOCTORS";
             this.docBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.docBtn.UseVisualStyleBackColor = true;
+            this.docBtn.Click += new System.EventHandler(this.docBtn_Click);
             // 
             // ptnBtn
             // 
@@ -114,29 +111,18 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.dataGridView1);
             this.panel2.Location = new System.Drawing.Point(176, 6);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(724, 663);
+            this.panel2.Size = new System.Drawing.Size(932, 663);
             this.panel2.TabIndex = 1;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(602, 286);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(104, 25);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(45, 56);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(534, 567);
+            this.dataGridView1.Size = new System.Drawing.Size(755, 567);
             this.dataGridView1.TabIndex = 0;
             // 
             // Main
@@ -144,7 +130,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(224)))), ((int)(((byte)(157)))));
-            this.ClientSize = new System.Drawing.Size(1063, 681);
+            this.ClientSize = new System.Drawing.Size(1120, 681);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
@@ -156,7 +142,6 @@
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet1BindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -170,8 +155,6 @@
         private System.Windows.Forms.Button phrBtn;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.BindingSource dataSet1BindingSource;
-        private System.Windows.Forms.Button button1;
         
     }
 }
