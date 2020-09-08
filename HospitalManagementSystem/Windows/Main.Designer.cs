@@ -30,79 +30,87 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.phrBtn = new System.Windows.Forms.Button();
+            this.apnBtn = new System.Windows.Forms.Button();
+            this.docBtn = new System.Windows.Forms.Button();
+            this.ptnBtn = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.phrBtn);
+            this.panel1.Controls.Add(this.apnBtn);
+            this.panel1.Controls.Add(this.docBtn);
+            this.panel1.Controls.Add(this.ptnBtn);
             this.panel1.Location = new System.Drawing.Point(5, 4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(147, 675);
             this.panel1.TabIndex = 0;
             // 
-            // button4
+            // phrBtn
             // 
-            this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button4.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold);
-            this.button4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button4.Location = new System.Drawing.Point(3, 408);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(141, 129);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "PHARMACY";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button4.UseVisualStyleBackColor = true;
+            this.phrBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("phrBtn.BackgroundImage")));
+            this.phrBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.phrBtn.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold);
+            this.phrBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.phrBtn.Location = new System.Drawing.Point(3, 408);
+            this.phrBtn.Name = "phrBtn";
+            this.phrBtn.Size = new System.Drawing.Size(141, 129);
+            this.phrBtn.TabIndex = 3;
+            this.phrBtn.Text = "PHARMACY";
+            this.phrBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.phrBtn.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // apnBtn
             // 
-            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button3.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold);
-            this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button3.Location = new System.Drawing.Point(3, 273);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(141, 129);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "APPOINTMENTS";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button3.UseVisualStyleBackColor = true;
+            this.apnBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("apnBtn.BackgroundImage")));
+            this.apnBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.apnBtn.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold);
+            this.apnBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.apnBtn.Location = new System.Drawing.Point(3, 273);
+            this.apnBtn.Name = "apnBtn";
+            this.apnBtn.Size = new System.Drawing.Size(141, 129);
+            this.apnBtn.TabIndex = 2;
+            this.apnBtn.Text = "APPOINTMENTS";
+            this.apnBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.apnBtn.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // docBtn
             // 
-            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold);
-            this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Location = new System.Drawing.Point(3, 138);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(141, 129);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "DOCTORS";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button2.UseVisualStyleBackColor = true;
+            this.docBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("docBtn.BackgroundImage")));
+            this.docBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.docBtn.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold);
+            this.docBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.docBtn.Location = new System.Drawing.Point(3, 138);
+            this.docBtn.Name = "docBtn";
+            this.docBtn.Size = new System.Drawing.Size(141, 129);
+            this.docBtn.TabIndex = 1;
+            this.docBtn.Text = "DOCTORS";
+            this.docBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.docBtn.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // ptnBtn
             // 
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(3, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(141, 129);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "PATIENTS";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.UseVisualStyleBackColor = true;
+            this.ptnBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ptnBtn.BackgroundImage")));
+            this.ptnBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ptnBtn.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ptnBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ptnBtn.Location = new System.Drawing.Point(3, 3);
+            this.ptnBtn.Name = "ptnBtn";
+            this.ptnBtn.Size = new System.Drawing.Size(141, 129);
+            this.ptnBtn.TabIndex = 0;
+            this.ptnBtn.Text = "PATIENTS";
+            this.ptnBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.ptnBtn.UseVisualStyleBackColor = true;
+            // 
+            // panel2
+            // 
+            this.panel2.Location = new System.Drawing.Point(176, 6);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(724, 535);
+            this.panel2.TabIndex = 1;
             // 
             // Main
             // 
@@ -110,6 +118,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(224)))), ((int)(((byte)(157)))));
             this.ClientSize = new System.Drawing.Size(1063, 681);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -125,9 +134,10 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button ptnBtn;
+        private System.Windows.Forms.Button docBtn;
+        private System.Windows.Forms.Button apnBtn;
+        private System.Windows.Forms.Button phrBtn;
+        private System.Windows.Forms.Panel panel2;
     }
 }
