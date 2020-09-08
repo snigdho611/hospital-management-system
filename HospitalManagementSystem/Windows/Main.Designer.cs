@@ -37,16 +37,16 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Location = new System.Drawing.Point(5, 21);
+            this.panel1.Location = new System.Drawing.Point(5, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(173, 475);
+            this.panel1.Size = new System.Drawing.Size(173, 492);
             this.panel1.TabIndex = 0;
             // 
             // button1
             // 
             this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Location = new System.Drawing.Point(14, 17);
+            this.button1.Location = new System.Drawing.Point(7, 3);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(141, 129);
             this.button1.TabIndex = 0;
