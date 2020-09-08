@@ -1,4 +1,5 @@
-﻿using Oracle.ManagedDataAccess.Client;
+﻿using HospitalManagementSystem.Windows;
+using Oracle.ManagedDataAccess.Client;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -68,6 +69,11 @@ namespace HospitalManagementSystem
                     {
                         LogInSuccess LG = new LogInSuccess(adminName);
                         LG.ShowDialog();
+
+                        this.Hide();
+                        Main M1 = new Main();
+                        M1.ShowDialog();
+                        this.Close();
                     }
                     else if (x == 0)
                     {

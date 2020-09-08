@@ -84,7 +84,7 @@
             // 
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.panel1.Location = new System.Drawing.Point(467, 91);
+            this.panel1.Location = new System.Drawing.Point(402, 91);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(128, 180);
             this.panel1.TabIndex = 4;
@@ -95,7 +95,7 @@
             this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DarkGreen;
-            this.label3.Location = new System.Drawing.Point(499, 285);
+            this.label3.Location = new System.Drawing.Point(434, 285);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(248, 62);
             this.label3.TabIndex = 5;
@@ -106,7 +106,7 @@
             this.panel2.AutoSize = true;
             this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel2.Location = new System.Drawing.Point(599, 103);
+            this.panel2.Location = new System.Drawing.Point(534, 103);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(162, 177);
             this.panel2.TabIndex = 5;
@@ -152,7 +152,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(224)))), ((int)(((byte)(157)))));
-            this.ClientSize = new System.Drawing.Size(784, 402);
+            this.ClientSize = new System.Drawing.Size(714, 402);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
