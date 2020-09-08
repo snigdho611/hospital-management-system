@@ -36,6 +36,7 @@
             this.ptnBtn = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.docLbl = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -111,6 +112,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.docLbl);
             this.panel2.Controls.Add(this.dataGridView1);
             this.panel2.Location = new System.Drawing.Point(176, 6);
             this.panel2.Name = "panel2";
@@ -124,6 +126,18 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(755, 567);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.Visible = false;
+            // 
+            // docLbl
+            // 
+            this.docLbl.AutoSize = true;
+            this.docLbl.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.docLbl.Location = new System.Drawing.Point(40, 14);
+            this.docLbl.Name = "docLbl";
+            this.docLbl.Size = new System.Drawing.Size(95, 25);
+            this.docLbl.TabIndex = 1;
+            this.docLbl.Text = "Doctors";
+            this.docLbl.Visible = false;
             // 
             // Main
             // 
@@ -141,6 +155,7 @@
             this.Text = "CCH Ltd.";
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
@@ -155,6 +170,6 @@
         private System.Windows.Forms.Button phrBtn;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView dataGridView1;
-        
+        private System.Windows.Forms.Label docLbl;
     }
 }

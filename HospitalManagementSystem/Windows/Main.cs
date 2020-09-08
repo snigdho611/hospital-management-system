@@ -36,6 +36,9 @@ namespace HospitalManagementSystem.Windows
                 DataTable Table = new DataTable();
                 Table.Load(reader);
                 dataGridView1.DataSource = Table;
+                dataGridView1.Visible = true;
+
+                docLbl.Visible = true;
             }
 
             catch (Exception exc)
