@@ -17,7 +17,7 @@ namespace HospitalManagementSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LogIn());
+            Application.Run(new Main());
             //Application.Run(new LogInSuccess("Snigdho Dip"));
         }
     }

@@ -35,8 +35,8 @@
             this.docBtn = new System.Windows.Forms.Button();
             this.ptnBtn = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.tblLbl = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.docLbl = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -109,15 +109,26 @@
             this.ptnBtn.Text = "PATIENTS";
             this.ptnBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.ptnBtn.UseVisualStyleBackColor = true;
+            this.ptnBtn.Click += new System.EventHandler(this.ptnBtn_Click);
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.docLbl);
+            this.panel2.Controls.Add(this.tblLbl);
             this.panel2.Controls.Add(this.dataGridView1);
             this.panel2.Location = new System.Drawing.Point(176, 6);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(932, 663);
             this.panel2.TabIndex = 1;
+            // 
+            // tblLbl
+            // 
+            this.tblLbl.AutoSize = true;
+            this.tblLbl.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tblLbl.Location = new System.Drawing.Point(40, 14);
+            this.tblLbl.Name = "tblLbl";
+            this.tblLbl.Size = new System.Drawing.Size(0, 25);
+            this.tblLbl.TabIndex = 1;
+            this.tblLbl.Visible = false;
             // 
             // dataGridView1
             // 
@@ -127,17 +138,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(755, 567);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.Visible = false;
-            // 
-            // docLbl
-            // 
-            this.docLbl.AutoSize = true;
-            this.docLbl.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.docLbl.Location = new System.Drawing.Point(40, 14);
-            this.docLbl.Name = "docLbl";
-            this.docLbl.Size = new System.Drawing.Size(95, 25);
-            this.docLbl.TabIndex = 1;
-            this.docLbl.Text = "Doctors";
-            this.docLbl.Visible = false;
             // 
             // Main
             // 
@@ -170,6 +170,6 @@
         private System.Windows.Forms.Button phrBtn;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label docLbl;
+        private System.Windows.Forms.Label tblLbl;
     }
 }

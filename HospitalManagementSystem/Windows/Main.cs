@@ -27,7 +27,8 @@ namespace HospitalManagementSystem.Windows
         {
             try
             {
-                OracleConnection connection = new OracleConnection("Data Source=localhost;User ID=SNIGDHO;Password=student;");
+                string connectionString = "Data Source=localhost;User ID=SNIGDHO;Password=student;";
+                OracleConnection connection = new OracleConnection(connectionString);
                 OracleCommand command = new OracleCommand("select * from DOCTORS", connection);
 
                 connection.Open();
@@ -38,12 +39,39 @@ namespace HospitalManagementSystem.Windows
                 dataGridView1.DataSource = Table;
                 dataGridView1.Visible = true;
 
-                docLbl.Visible = true;
+                tblLbl.Text = "Doctors";
+                tblLbl.Visible = true;
             }
 
             catch (Exception exc)
             {
                 MessageBox.Show(exc.ToString());
+            }
+        }
+
+        private void ptnBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string connectionString = "Data Source=localhost;User ID=SNIGDHO;Password=student;";
+                OracleConnection connection = new OracleConnection(connectionString);
+                
+                OracleCommand command = new OracleCommand("select * from PATIENTS", connection);
+
+                connection.Open();
+                OracleDataReader reader = command.ExecuteReader();
+                DataTable dTable = new DataTable();
+                dTable.Load(reader);
+                dataGridView1.DataSource = dTable;
+                dataGridView1.Visible = true;
+
+                tblLbl.Text = "Patients";
+                tblLbl.Visible = true;
+            }
+
+            catch(Exception E)
+            {
+                MessageBox.Show(E.ToString());
             }
         }
     }
