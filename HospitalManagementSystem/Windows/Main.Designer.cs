@@ -35,10 +35,10 @@
             this.docBtn = new System.Windows.Forms.Button();
             this.ptnBtn = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.searchBox = new System.Windows.Forms.TextBox();
             this.tblLbl = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -116,13 +116,34 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.comboBox1);
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.searchBox);
             this.panel2.Controls.Add(this.tblLbl);
             this.panel2.Controls.Add(this.dataGridView1);
             this.panel2.Location = new System.Drawing.Point(176, 6);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(932, 663);
             this.panel2.TabIndex = 1;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "ID",
+            "Name"});
+            this.comboBox1.Location = new System.Drawing.Point(94, 88);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(95, 24);
+            this.comboBox1.TabIndex = 3;
+            // 
+            // searchBox
+            // 
+            this.searchBox.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchBox.Location = new System.Drawing.Point(195, 88);
+            this.searchBox.Name = "searchBox";
+            this.searchBox.Size = new System.Drawing.Size(342, 26);
+            this.searchBox.TabIndex = 2;
+            this.searchBox.TextChanged += new System.EventHandler(this.searchBox_TextChanged);
             // 
             // tblLbl
             // 
@@ -142,27 +163,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(755, 524);
             this.dataGridView1.TabIndex = 0;
-            //this.dataGridView1.Visible = false;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(195, 88);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(342, 26);
-            this.textBox1.TabIndex = 2;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "ID",
-            "Name"});
-            this.comboBox1.Location = new System.Drawing.Point(94, 88);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(95, 24);
-            this.comboBox1.TabIndex = 3;
             // 
             // Main
             // 
@@ -197,6 +197,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label tblLbl;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox searchBox;
     }
 }

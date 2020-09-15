@@ -34,9 +34,10 @@ namespace HospitalManagementSystem.Windows
                 connection.Open();
                 OracleDataReader reader = command.ExecuteReader();
 
-                DataTable Table = new DataTable();
-                Table.Load(reader);
-                dataGridView1.DataSource = Table;
+                DataTable dTable = new DataTable();
+                dTable.Load(reader);
+                dataGridView1.Refresh();
+                dataGridView1.DataSource = dTable;
                 dataGridView1.Visible = true;
 
                 tblLbl.Text = "Doctors";
@@ -62,6 +63,7 @@ namespace HospitalManagementSystem.Windows
                 OracleDataReader reader = command.ExecuteReader();
                 DataTable dTable = new DataTable();
                 dTable.Load(reader);
+                dataGridView1.Refresh();
                 dataGridView1.DataSource = dTable;
                 dataGridView1.Visible = true;
 
@@ -70,6 +72,71 @@ namespace HospitalManagementSystem.Windows
             }
 
             catch(Exception E)
+            {
+                MessageBox.Show(E.ToString());
+            }
+        }
+
+        private void searchBox_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                string connectionString = "Data Source=localhost;User ID=SNIGDHO;Password=student;";
+                OracleConnection connection = new OracleConnection(connectionString);
+
+                
+
+                connection.Open();
+
+                string selectedItem = comboBox1.Text;
+
+                //Patients
+                if (selectedItem == "ID" && tblLbl.Text == "Patients")
+                {
+                    OracleCommand command = new OracleCommand("select * from PATIENTS where PAT_ID like '" + searchBox.Text + "%'", connection);
+                    OracleDataReader reader = command.ExecuteReader();
+                    DataTable dTable = new DataTable();
+                    dTable.Load(reader);
+                    dataGridView1.DataSource = dTable;
+                    dataGridView1.Visible = true;
+                }
+                else if (selectedItem == "Name" && tblLbl.Text == "Patients")
+                {
+                    OracleCommand command = new OracleCommand("select * from PATIENTS where PAT_NAME like '" + searchBox.Text + "%'", connection);
+                    OracleDataReader reader = command.ExecuteReader();
+                    DataTable dTable = new DataTable();
+                    dTable.Load(reader);
+                    dataGridView1.DataSource = dTable;
+                    dataGridView1.Visible = true;
+                }
+                
+
+                //Doctors
+                else if (selectedItem == "ID" && tblLbl.Text == "Doctors")
+                {
+                    OracleCommand command = new OracleCommand("select * from Doctors where DOC_ID like '" + searchBox.Text + "%'", connection);
+                    OracleDataReader reader = command.ExecuteReader();
+                    DataTable dTable = new DataTable();
+                    dTable.Load(reader);
+                    dataGridView1.DataSource = dTable;
+                    dataGridView1.Visible = true;
+                }
+                else if (selectedItem == "Name" && tblLbl.Text == "Doctors")
+                {
+                    OracleCommand command = new OracleCommand("select * from DOCTORS where DOC_NAME like '" + searchBox.Text + "%'", connection);
+                    OracleDataReader reader = command.ExecuteReader();
+                    DataTable dTable = new DataTable();
+                    dTable.Load(reader);
+                    dataGridView1.DataSource = dTable;
+                    dataGridView1.Visible = true;
+                }
+                else if(selectedItem == "")
+                {
+                    MessageBox.Show("No property was selected!");
+                }
+            }
+
+            catch (Exception E)
             {
                 MessageBox.Show(E.ToString());
             }
