@@ -141,5 +141,10 @@ namespace HospitalManagementSystem.Windows
                 MessageBox.Show(E.ToString());
             }
         }
+
+        private void addPtnBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

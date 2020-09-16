@@ -40,6 +40,7 @@
             this.searchBox = new System.Windows.Forms.TextBox();
             this.tblLbl = new System.Windows.Forms.Label();
             this.dataGridViewMain = new System.Windows.Forms.DataGridView();
+            this.addPtnBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMain)).BeginInit();
@@ -135,9 +136,9 @@
             this.panel2.Controls.Add(this.searchBox);
             this.panel2.Controls.Add(this.tblLbl);
             this.panel2.Controls.Add(this.dataGridViewMain);
-            this.panel2.Location = new System.Drawing.Point(218, 6);
+            this.panel2.Location = new System.Drawing.Point(224, 6);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(890, 663);
+            this.panel2.Size = new System.Drawing.Size(884, 663);
             this.panel2.TabIndex = 1;
             // 
             // comboBox1
@@ -147,7 +148,7 @@
             this.comboBox1.Items.AddRange(new object[] {
             "ID",
             "Name"});
-            this.comboBox1.Location = new System.Drawing.Point(43, 93);
+            this.comboBox1.Location = new System.Drawing.Point(20, 93);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(95, 24);
             this.comboBox1.TabIndex = 3;
@@ -155,7 +156,7 @@
             // searchBox
             // 
             this.searchBox.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchBox.Location = new System.Drawing.Point(144, 93);
+            this.searchBox.Location = new System.Drawing.Point(121, 93);
             this.searchBox.Name = "searchBox";
             this.searchBox.Size = new System.Drawing.Size(342, 26);
             this.searchBox.TabIndex = 2;
@@ -165,7 +166,7 @@
             // 
             this.tblLbl.AutoSize = true;
             this.tblLbl.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tblLbl.Location = new System.Drawing.Point(40, 14);
+            this.tblLbl.Location = new System.Drawing.Point(17, 14);
             this.tblLbl.Name = "tblLbl";
             this.tblLbl.Size = new System.Drawing.Size(97, 25);
             this.tblLbl.TabIndex = 1;
@@ -175,10 +176,23 @@
             // dataGridViewMain
             // 
             this.dataGridViewMain.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewMain.Location = new System.Drawing.Point(45, 136);
+            this.dataGridViewMain.Location = new System.Drawing.Point(22, 136);
             this.dataGridViewMain.Name = "dataGridViewMain";
             this.dataGridViewMain.Size = new System.Drawing.Size(755, 524);
             this.dataGridViewMain.TabIndex = 0;
+            // 
+            // addPtnBtn
+            // 
+            this.addPtnBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(166)))), ((int)(((byte)(126)))));
+            this.addPtnBtn.Font = new System.Drawing.Font("Mongolian Baiti", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addPtnBtn.ForeColor = System.Drawing.Color.White;
+            this.addPtnBtn.Location = new System.Drawing.Point(155, 99);
+            this.addPtnBtn.Name = "addPtnBtn";
+            this.addPtnBtn.Size = new System.Drawing.Size(63, 36);
+            this.addPtnBtn.TabIndex = 2;
+            this.addPtnBtn.Text = "Add Patient";
+            this.addPtnBtn.UseVisualStyleBackColor = false;
+            this.addPtnBtn.Click += new System.EventHandler(this.addPtnBtn_Click);
             // 
             // Main
             // 
@@ -186,6 +200,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(224)))), ((int)(((byte)(157)))));
             this.ClientSize = new System.Drawing.Size(1120, 681);
+            this.Controls.Add(this.addPtnBtn);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
@@ -215,5 +230,6 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.TextBox searchBox;
         private System.Windows.Forms.Button usrBtn;
+        private System.Windows.Forms.Button addPtnBtn;
     }
 }
