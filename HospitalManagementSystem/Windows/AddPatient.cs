@@ -25,13 +25,20 @@ namespace HospitalManagementSystem.Windows
                 string connectionString = "Data Source=localhost;User ID=SNIGDHO;Password=student;";
                 OracleConnection connection = new OracleConnection(connectionString);
 
-
-
-                //OracleCommand command = new OracleCommand("INSERT INTO PATIENTS(pat_name, gender, age, diagnosis, doc_id, room_no) values(:pName, :pGender, :pAge, :pDiagnosis, :pDocId, :pRoomNo)", connection);
-                OracleCommand command = new OracleCommand("INSERT INTO PATIENTS(pat_name) values(:pName)", connection);
+                string insertPatientQuery = "begin insertPatient('"
+                    + txtName.Text + "', '"
+                    + cmbGender.Text.ToString() + "', "
+                    + txtAge.Text + ", '"
+                    + txtDgn.Text + "', "
+                    + txtDocId.Text + ", "
+                    + txtRoom.Text + ", "
+                    + txtBill.Text + "); end;";
+                
+                OracleCommand command = new OracleCommand(
+                    insertPatientQuery, connection) ;
                 connection.Open();
 
-                command.Parameters.Add("pName", OracleDbType.Varchar2).Value = "ABCD";
+                //command.Parameters.Add("pName", OracleDbType.Varchar2).Value = "ABCD";
                     //command.Parameters.Add("pGender", OracleDbType.Varchar2).Value = "ABCD";
                     //cmd.Parameters.Add("p3", OracleDbType.Varchar2).Value = txtpass.Text;
                     int rowsUpdated = command.ExecuteNonQuery();
@@ -44,7 +51,7 @@ namespace HospitalManagementSystem.Windows
                         MessageBox.Show("Success!");
                         MessageBox.Show("User has been created");
                     }
-                
+
             }
             catch (Exception E)
             {

@@ -30,20 +30,20 @@
         {
             this.txtName = new System.Windows.Forms.TextBox();
             this.txtAge = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbGender = new System.Windows.Forms.ComboBox();
             this.lblName = new System.Windows.Forms.Label();
             this.lblGender = new System.Windows.Forms.Label();
             this.lblAge = new System.Windows.Forms.Label();
             this.lblDgn = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtDgn = new System.Windows.Forms.TextBox();
             this.lblDocId = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtDocId = new System.Windows.Forms.TextBox();
             this.lblDocName = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtDocName = new System.Windows.Forms.TextBox();
             this.lblRoom = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtRoom = new System.Windows.Forms.TextBox();
             this.lblBill = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtBill = new System.Windows.Forms.TextBox();
             this.btnAddPatient = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -64,17 +64,17 @@
             this.txtAge.Size = new System.Drawing.Size(71, 22);
             this.txtAge.TabIndex = 1;
             // 
-            // comboBox1
+            // cmbGender
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cmbGender.FormattingEnabled = true;
+            this.cmbGender.Items.AddRange(new object[] {
             "Male",
             "Female",
             "Other"});
-            this.comboBox1.Location = new System.Drawing.Point(130, 81);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 2;
+            this.cmbGender.Location = new System.Drawing.Point(130, 81);
+            this.cmbGender.Name = "cmbGender";
+            this.cmbGender.Size = new System.Drawing.Size(121, 21);
+            this.cmbGender.TabIndex = 2;
             // 
             // lblName
             // 
@@ -120,13 +120,13 @@
             this.lblDgn.TabIndex = 7;
             this.lblDgn.Text = "Diagnosis:";
             // 
-            // textBox1
+            // txtDgn
             // 
-            this.textBox1.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(130, 136);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(242, 22);
-            this.textBox1.TabIndex = 6;
+            this.txtDgn.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDgn.Location = new System.Drawing.Point(130, 136);
+            this.txtDgn.Name = "txtDgn";
+            this.txtDgn.Size = new System.Drawing.Size(242, 22);
+            this.txtDgn.TabIndex = 6;
             // 
             // lblDocId
             // 
@@ -139,13 +139,13 @@
             this.lblDocId.TabIndex = 9;
             this.lblDocId.Text = "Doctor ID:";
             // 
-            // textBox2
+            // txtDocId
             // 
-            this.textBox2.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(130, 164);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(71, 22);
-            this.textBox2.TabIndex = 8;
+            this.txtDocId.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDocId.Location = new System.Drawing.Point(130, 164);
+            this.txtDocId.Name = "txtDocId";
+            this.txtDocId.Size = new System.Drawing.Size(71, 22);
+            this.txtDocId.TabIndex = 8;
             // 
             // lblDocName
             // 
@@ -158,13 +158,13 @@
             this.lblDocName.TabIndex = 11;
             this.lblDocName.Text = "Doctor Name:";
             // 
-            // textBox3
+            // txtDocName
             // 
-            this.textBox3.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(130, 192);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(242, 22);
-            this.textBox3.TabIndex = 10;
+            this.txtDocName.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDocName.Location = new System.Drawing.Point(130, 192);
+            this.txtDocName.Name = "txtDocName";
+            this.txtDocName.Size = new System.Drawing.Size(242, 22);
+            this.txtDocName.TabIndex = 10;
             // 
             // lblRoom
             // 
@@ -177,13 +177,13 @@
             this.lblRoom.TabIndex = 13;
             this.lblRoom.Text = "Room:";
             // 
-            // textBox4
+            // txtRoom
             // 
-            this.textBox4.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(130, 220);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(242, 22);
-            this.textBox4.TabIndex = 12;
+            this.txtRoom.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRoom.Location = new System.Drawing.Point(130, 220);
+            this.txtRoom.Name = "txtRoom";
+            this.txtRoom.Size = new System.Drawing.Size(242, 22);
+            this.txtRoom.TabIndex = 12;
             // 
             // lblBill
             // 
@@ -196,13 +196,13 @@
             this.lblBill.TabIndex = 15;
             this.lblBill.Text = "Bill:";
             // 
-            // textBox5
+            // txtBill
             // 
-            this.textBox5.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(130, 248);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(242, 22);
-            this.textBox5.TabIndex = 14;
+            this.txtBill.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBill.Location = new System.Drawing.Point(130, 248);
+            this.txtBill.Name = "txtBill";
+            this.txtBill.Size = new System.Drawing.Size(242, 22);
+            this.txtBill.TabIndex = 14;
             // 
             // btnAddPatient
             // 
@@ -240,19 +240,19 @@
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnAddPatient);
             this.Controls.Add(this.lblBill);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.txtBill);
             this.Controls.Add(this.lblRoom);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txtRoom);
             this.Controls.Add(this.lblDocName);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtDocName);
             this.Controls.Add(this.lblDocId);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtDocId);
             this.Controls.Add(this.lblDgn);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtDgn);
             this.Controls.Add(this.lblAge);
             this.Controls.Add(this.lblGender);
             this.Controls.Add(this.lblName);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cmbGender);
             this.Controls.Add(this.txtAge);
             this.Controls.Add(this.txtName);
             this.Name = "AddPatient";
@@ -267,20 +267,20 @@
 
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.TextBox txtAge;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbGender;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label lblGender;
         private System.Windows.Forms.Label lblAge;
         private System.Windows.Forms.Label lblDgn;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtDgn;
         private System.Windows.Forms.Label lblDocId;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtDocId;
         private System.Windows.Forms.Label lblDocName;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtDocName;
         private System.Windows.Forms.Label lblRoom;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtRoom;
         private System.Windows.Forms.Label lblBill;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtBill;
         private System.Windows.Forms.Button btnAddPatient;
         private System.Windows.Forms.Button btnCancel;
     }
