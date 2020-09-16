@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.usrBtn = new System.Windows.Forms.Button();
             this.phrBtn = new System.Windows.Forms.Button();
             this.apnBtn = new System.Windows.Forms.Button();
             this.docBtn = new System.Windows.Forms.Button();
@@ -39,7 +40,6 @@
             this.searchBox = new System.Windows.Forms.TextBox();
             this.tblLbl = new System.Windows.Forms.Label();
             this.dataGridViewMain = new System.Windows.Forms.DataGridView();
-            this.usrBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMain)).BeginInit();
@@ -56,6 +56,20 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(147, 675);
             this.panel1.TabIndex = 0;
+            // 
+            // usrBtn
+            // 
+            this.usrBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("usrBtn.BackgroundImage")));
+            this.usrBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.usrBtn.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold);
+            this.usrBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.usrBtn.Location = new System.Drawing.Point(3, 543);
+            this.usrBtn.Name = "usrBtn";
+            this.usrBtn.Size = new System.Drawing.Size(141, 129);
+            this.usrBtn.TabIndex = 4;
+            this.usrBtn.Text = "PHARMACY";
+            this.usrBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.usrBtn.UseVisualStyleBackColor = true;
             // 
             // phrBtn
             // 
@@ -121,9 +135,9 @@
             this.panel2.Controls.Add(this.searchBox);
             this.panel2.Controls.Add(this.tblLbl);
             this.panel2.Controls.Add(this.dataGridViewMain);
-            this.panel2.Location = new System.Drawing.Point(182, 6);
+            this.panel2.Location = new System.Drawing.Point(218, 6);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(926, 663);
+            this.panel2.Size = new System.Drawing.Size(890, 663);
             this.panel2.TabIndex = 1;
             // 
             // comboBox1
@@ -165,20 +179,6 @@
             this.dataGridViewMain.Name = "dataGridViewMain";
             this.dataGridViewMain.Size = new System.Drawing.Size(755, 524);
             this.dataGridViewMain.TabIndex = 0;
-            // 
-            // usrBtn
-            // 
-            this.usrBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("usrBtn.BackgroundImage")));
-            this.usrBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.usrBtn.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold);
-            this.usrBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.usrBtn.Location = new System.Drawing.Point(3, 543);
-            this.usrBtn.Name = "usrBtn";
-            this.usrBtn.Size = new System.Drawing.Size(141, 129);
-            this.usrBtn.TabIndex = 4;
-            this.usrBtn.Text = "PHARMACY";
-            this.usrBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.usrBtn.UseVisualStyleBackColor = true;
             // 
             // Main
             // 
