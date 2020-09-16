@@ -39,6 +39,7 @@
             this.searchBox = new System.Windows.Forms.TextBox();
             this.tblLbl = new System.Windows.Forms.Label();
             this.dataGridViewMain = new System.Windows.Forms.DataGridView();
+            this.usrBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMain)).BeginInit();
@@ -46,6 +47,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.usrBtn);
             this.panel1.Controls.Add(this.phrBtn);
             this.panel1.Controls.Add(this.apnBtn);
             this.panel1.Controls.Add(this.docBtn);
@@ -164,6 +166,20 @@
             this.dataGridViewMain.Size = new System.Drawing.Size(755, 524);
             this.dataGridViewMain.TabIndex = 0;
             // 
+            // usrBtn
+            // 
+            this.usrBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("usrBtn.BackgroundImage")));
+            this.usrBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.usrBtn.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold);
+            this.usrBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.usrBtn.Location = new System.Drawing.Point(3, 543);
+            this.usrBtn.Name = "usrBtn";
+            this.usrBtn.Size = new System.Drawing.Size(141, 129);
+            this.usrBtn.TabIndex = 4;
+            this.usrBtn.Text = "PHARMACY";
+            this.usrBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.usrBtn.UseVisualStyleBackColor = true;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -198,5 +214,6 @@
         private System.Windows.Forms.Label tblLbl;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.TextBox searchBox;
+        private System.Windows.Forms.Button usrBtn;
     }
 }
