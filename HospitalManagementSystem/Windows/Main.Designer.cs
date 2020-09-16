@@ -38,10 +38,10 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.searchBox = new System.Windows.Forms.TextBox();
             this.tblLbl = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewMain = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMain)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -118,10 +118,10 @@
             this.panel2.Controls.Add(this.comboBox1);
             this.panel2.Controls.Add(this.searchBox);
             this.panel2.Controls.Add(this.tblLbl);
-            this.panel2.Controls.Add(this.dataGridView1);
-            this.panel2.Location = new System.Drawing.Point(176, 6);
+            this.panel2.Controls.Add(this.dataGridViewMain);
+            this.panel2.Location = new System.Drawing.Point(182, 6);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(932, 663);
+            this.panel2.Size = new System.Drawing.Size(926, 663);
             this.panel2.TabIndex = 1;
             // 
             // comboBox1
@@ -131,7 +131,7 @@
             this.comboBox1.Items.AddRange(new object[] {
             "ID",
             "Name"});
-            this.comboBox1.Location = new System.Drawing.Point(94, 88);
+            this.comboBox1.Location = new System.Drawing.Point(43, 93);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(95, 24);
             this.comboBox1.TabIndex = 3;
@@ -139,7 +139,7 @@
             // searchBox
             // 
             this.searchBox.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchBox.Location = new System.Drawing.Point(195, 88);
+            this.searchBox.Location = new System.Drawing.Point(144, 93);
             this.searchBox.Name = "searchBox";
             this.searchBox.Size = new System.Drawing.Size(342, 26);
             this.searchBox.TabIndex = 2;
@@ -156,13 +156,13 @@
             this.tblLbl.Text = "ABCDE";
             this.tblLbl.Visible = false;
             // 
-            // dataGridView1
+            // dataGridViewMain
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(45, 136);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(755, 524);
-            this.dataGridView1.TabIndex = 0;
+            this.dataGridViewMain.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewMain.Location = new System.Drawing.Point(45, 136);
+            this.dataGridViewMain.Name = "dataGridViewMain";
+            this.dataGridViewMain.Size = new System.Drawing.Size(755, 524);
+            this.dataGridViewMain.TabIndex = 0;
             // 
             // Main
             // 
@@ -181,7 +181,7 @@
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMain)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -194,7 +194,7 @@
         private System.Windows.Forms.Button apnBtn;
         private System.Windows.Forms.Button phrBtn;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewMain;
         private System.Windows.Forms.Label tblLbl;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.TextBox searchBox;

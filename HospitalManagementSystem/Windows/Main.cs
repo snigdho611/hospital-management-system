@@ -36,9 +36,9 @@ namespace HospitalManagementSystem.Windows
 
                 DataTable dTable = new DataTable();
                 dTable.Load(reader);
-                dataGridView1.Refresh();
-                dataGridView1.DataSource = dTable;
-                dataGridView1.Visible = true;
+                dataGridViewMain.Refresh();
+                dataGridViewMain.DataSource = dTable;
+                dataGridViewMain.Visible = true;
 
                 tblLbl.Text = "Doctors";
                 tblLbl.Visible = true;
@@ -63,9 +63,9 @@ namespace HospitalManagementSystem.Windows
                 OracleDataReader reader = command.ExecuteReader();
                 DataTable dTable = new DataTable();
                 dTable.Load(reader);
-                dataGridView1.Refresh();
-                dataGridView1.DataSource = dTable;
-                dataGridView1.Visible = true;
+                dataGridViewMain.Refresh();
+                dataGridViewMain.DataSource = dTable;
+                dataGridViewMain.Visible = true;
 
                 tblLbl.Text = "Patients";
                 tblLbl.Visible = true;
@@ -97,8 +97,8 @@ namespace HospitalManagementSystem.Windows
                     OracleDataReader reader = command.ExecuteReader();
                     DataTable dTable = new DataTable();
                     dTable.Load(reader);
-                    dataGridView1.DataSource = dTable;
-                    dataGridView1.Visible = true;
+                    dataGridViewMain.DataSource = dTable;
+                    dataGridViewMain.Visible = true;
                 }
                 else if (selectedItem == "Name" && tblLbl.Text == "Patients")
                 {
@@ -106,8 +106,8 @@ namespace HospitalManagementSystem.Windows
                     OracleDataReader reader = command.ExecuteReader();
                     DataTable dTable = new DataTable();
                     dTable.Load(reader);
-                    dataGridView1.DataSource = dTable;
-                    dataGridView1.Visible = true;
+                    dataGridViewMain.DataSource = dTable;
+                    dataGridViewMain.Visible = true;
                 }
                 
 
@@ -118,8 +118,8 @@ namespace HospitalManagementSystem.Windows
                     OracleDataReader reader = command.ExecuteReader();
                     DataTable dTable = new DataTable();
                     dTable.Load(reader);
-                    dataGridView1.DataSource = dTable;
-                    dataGridView1.Visible = true;
+                    dataGridViewMain.DataSource = dTable;
+                    dataGridViewMain.Visible = true;
                 }
                 else if (selectedItem == "Name" && tblLbl.Text == "Doctors")
                 {
@@ -127,8 +127,8 @@ namespace HospitalManagementSystem.Windows
                     OracleDataReader reader = command.ExecuteReader();
                     DataTable dTable = new DataTable();
                     dTable.Load(reader);
-                    dataGridView1.DataSource = dTable;
-                    dataGridView1.Visible = true;
+                    dataGridViewMain.DataSource = dTable;
+                    dataGridViewMain.Visible = true;
                 }
                 else if(selectedItem == "")
                 {
