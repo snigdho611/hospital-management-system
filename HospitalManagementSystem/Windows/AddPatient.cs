@@ -33,29 +33,39 @@ namespace HospitalManagementSystem.Windows
                     + txtDocId.Text + ", "
                     + txtRoom.Text + ", "
                     + txtBill.Text + "); end;";
-                
+
+               // string insertPatientQuery = "begin insertPatient(:p1, :p2, :p3, :p4, :p5, :p6, :p7); end;";
+
                 OracleCommand command = new OracleCommand(
-                    insertPatientQuery, connection) ;
+                   insertPatientQuery, connection);
                 connection.Open();
 
-                //command.Parameters.Add("pName", OracleDbType.Varchar2).Value = "ABCD";
-                    //command.Parameters.Add("pGender", OracleDbType.Varchar2).Value = "ABCD";
-                    //cmd.Parameters.Add("p3", OracleDbType.Varchar2).Value = txtpass.Text;
-                    int rowsUpdated = command.ExecuteNonQuery();
-                    if (rowsUpdated == 0)
-                    {
-                        MessageBox.Show("Record not inserted");
-                    }
-                    else
-                    {
-                        MessageBox.Show("Success!");
-                        MessageBox.Show("User has been created");
-                    }
+                txtBill.Text = insertPatientQuery;
+                /*
+                command.Parameters.Add("p1", OracleDbType.NVarchar2).Value = txtName.Text;
+                command.Parameters.Add("p2", OracleDbType.NVarchar2).Value = cmbGender.Text.ToString();
+                command.Parameters.Add("p3", OracleDbType.NVarchar2).Value = Convert.ToInt32(txtAge.Text);
+                command.Parameters.Add("p4", OracleDbType.NVarchar2).Value = txtDgn.Text;
+                command.Parameters.Add("p5", OracleDbType.NVarchar2).Value = Convert.ToInt32(txtDocId.Text);
+                command.Parameters.Add("p6", OracleDbType.NVarchar2).Value = Convert.ToInt32(txtRoom.Text);
+                command.Parameters.Add("p7", OracleDbType.NVarchar2).Value = Convert.ToInt32(txtBill.Text);
+                */
+                txtBill.Text = insertPatientQuery;
+
+                int rowsUpdated = command.ExecuteNonQuery();
+                if (rowsUpdated == 0)
+                {
+                    MessageBox.Show("Record not inserted");
+                }
+                else
+                {
+                    MessageBox.Show("Successfully inserted new patient!");
+                }
 
             }
             catch (Exception E)
             {
-
+                MessageBox.Show(E.ToString());
             }
 
         }
