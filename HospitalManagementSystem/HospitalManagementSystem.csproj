@@ -56,6 +56,7 @@
     <Compile Include="Windows\AddPatient.Designer.cs">
       <DependentUpon>AddPatient.cs</DependentUpon>
     </Compile>
+    <Compile Include="Windows\DataAccess.cs" />
     <Compile Include="Windows\Main.cs">
       <SubType>Form</SubType>
     </Compile>
