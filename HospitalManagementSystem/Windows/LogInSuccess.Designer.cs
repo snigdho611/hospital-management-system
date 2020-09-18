@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LogInSuccess));
             this.label4 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label4
@@ -50,7 +51,7 @@
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Sitka Small", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(175, 112);
+            this.button1.Location = new System.Drawing.Point(175, 138);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(92, 25);
             this.button1.TabIndex = 7;
@@ -58,10 +59,23 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label5.ForeColor = System.Drawing.Color.MediumVioletRed;
+            this.label5.Location = new System.Drawing.Point(97, 90);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(264, 19);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Granted access: Administrator Mode";
+            this.label5.Visible = false;
+            // 
             // LogInSuccess
             // 
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(224)))), ((int)(((byte)(157)))));
-            this.ClientSize = new System.Drawing.Size(462, 160);
+            this.ClientSize = new System.Drawing.Size(462, 186);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
@@ -88,5 +102,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label5;
     }
 }
