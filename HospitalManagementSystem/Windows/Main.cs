@@ -117,7 +117,7 @@ namespace HospitalManagementSystem.Windows
                 //Doctors
                 else if (selectedItem == "ID" && tblLbl.Text == "Doctors")
                 {
-                    string searchBoxQuery = "select * from PATIENTS where PAT_NAME like '" + searchBox.Text + "%'";
+                    string searchBoxQuery = "select * from DOCTORS where DOC_ID like '" + searchBox.Text + "%'";
                     access.Command = new OracleCommand(searchBoxQuery, access.Connection);
                     access.Adapter = new OracleDataAdapter(access.Command);
                     DataTable table = new DataTable();
@@ -127,7 +127,7 @@ namespace HospitalManagementSystem.Windows
                 }
                 else if (selectedItem == "Name" && tblLbl.Text == "Doctors")
                 {
-                    string searchBoxQuery = "select * from PATIENTS where PAT_NAME like '" + searchBox.Text + "%'";
+                    string searchBoxQuery = "select * from DOCTORS where DOC_NAME like '" + searchBox.Text + "%'";
                     access.Command = new OracleCommand(searchBoxQuery, access.Connection);
                     access.Adapter = new OracleDataAdapter(access.Command);
                     DataTable table = new DataTable();
