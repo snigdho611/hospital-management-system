@@ -63,7 +63,7 @@ namespace HospitalManagementSystem
                     access.Adapter = new OracleDataAdapter(access.Command);
                     DataTable table = access.ExecuteQueryTable(selectQuery);
 
-                    if (table.Rows.Count == 0)
+                    if (table.Rows.Count == 1)
                     {
                         LogInSuccess LG = new LogInSuccess(table.Rows[0]["AD_NAME"].ToString());
                         LG.ShowDialog();
@@ -75,7 +75,7 @@ namespace HospitalManagementSystem
                     }
                     else 
                     {
-                        MessageBox.Show(table.Rows[0]["AD_NAME"].ToString());
+                        MessageBox.Show("INVALID USERNAME OR PASSWORD");
                     }
                 }
 

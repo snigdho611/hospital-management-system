@@ -54,17 +54,19 @@ namespace HospitalManagementSystem.Windows
         {
             try
             {
+                DataAccess access = new DataAccess();
                 string connectionString = "Data Source=localhost;User ID=SNIGDHO;Password=student;";
-                OracleConnection connection = new OracleConnection(connectionString);
-                
-                OracleCommand command = new OracleCommand("select PAT_ID AS PATIENT_ID, PAT_NAME AS NAME, AGE, DIAGNOSIS, DOC_ID AS DOCTOR_ID, ROOM_NO AS WARD, BILL, TO_DATE(ADMITTED, 'DD/MM/YY') AS ADMITTED from PATIENTS", connection);
+                string selectPatientQuery = "select PAT_ID AS PATIENT_ID, PAT_NAME AS NAME, AGE, DIAGNOSIS, DOC_ID AS DOCTOR_ID, ROOM_NO AS WARD, BILL, TO_DATE(ADMITTED, 'DD/MM/YY')AS ADMITTED from PATIENTS";
+                access.Connection = new OracleConnection(connectionString);
+                access.Connection.Open();
 
-                connection.Open();
-                OracleDataReader reader = command.ExecuteReader();
-                DataTable dTable = new DataTable();
-                dTable.Load(reader);
+                access.Command = new OracleCommand(selectPatientQuery, access.Connection);
+
+                access.Adapter = new OracleDataAdapter(access.Command);
+                DataTable table = new DataTable();
+                access.Adapter.Fill(table);
                 dataGridViewMain.Refresh();
-                dataGridViewMain.DataSource = dTable;
+                dataGridViewMain.DataSource = table;
                 dataGridViewMain.Visible = true;
 
                 tblLbl.Text = "Patients";
@@ -82,31 +84,32 @@ namespace HospitalManagementSystem.Windows
             try
             {
                 string connectionString = "Data Source=localhost;User ID=SNIGDHO;Password=student;";
-                OracleConnection connection = new OracleConnection(connectionString);
 
-                
-
-                connection.Open();
+                DataAccess access = new DataAccess();
+                access.Connection = new OracleConnection(connectionString);
+                access.Connection.Open();
 
                 string selectedItem = comboBox1.Text;
 
                 //Patients
                 if (selectedItem == "ID" && tblLbl.Text == "Patients")
                 {
-                    OracleCommand command = new OracleCommand("select * from PATIENTS where PAT_ID like '" + searchBox.Text + "%'", connection);
-                    OracleDataReader reader = command.ExecuteReader();
-                    DataTable dTable = new DataTable();
-                    dTable.Load(reader);
-                    dataGridViewMain.DataSource = dTable;
+                    string searchBoxQuery = "select * from PATIENTS where PAT_ID like '" + searchBox.Text + "%'";
+                    access.Command = new OracleCommand(searchBoxQuery, access.Connection);
+                    access.Adapter = new OracleDataAdapter(access.Command);
+                    DataTable table = new DataTable();
+                    access.Adapter.Fill(table);
+                    dataGridViewMain.DataSource = table;
                     dataGridViewMain.Visible = true;
                 }
                 else if (selectedItem == "Name" && tblLbl.Text == "Patients")
                 {
-                    OracleCommand command = new OracleCommand("select * from PATIENTS where PAT_NAME like '" + searchBox.Text + "%'", connection);
-                    OracleDataReader reader = command.ExecuteReader();
-                    DataTable dTable = new DataTable();
-                    dTable.Load(reader);
-                    dataGridViewMain.DataSource = dTable;
+                    string searchBoxQuery = "select * from PATIENTS where PAT_NAME like '" + searchBox.Text + "%'";
+                    access.Command = new OracleCommand(searchBoxQuery, access.Connection);
+                    access.Adapter = new OracleDataAdapter(access.Command);
+                    DataTable table = new DataTable();
+                    access.Adapter.Fill(table);
+                    dataGridViewMain.DataSource = table;
                     dataGridViewMain.Visible = true;
                 }
                 
@@ -114,20 +117,22 @@ namespace HospitalManagementSystem.Windows
                 //Doctors
                 else if (selectedItem == "ID" && tblLbl.Text == "Doctors")
                 {
-                    OracleCommand command = new OracleCommand("select * from Doctors where DOC_ID like '" + searchBox.Text + "%'", connection);
-                    OracleDataReader reader = command.ExecuteReader();
-                    DataTable dTable = new DataTable();
-                    dTable.Load(reader);
-                    dataGridViewMain.DataSource = dTable;
+                    string searchBoxQuery = "select * from PATIENTS where PAT_NAME like '" + searchBox.Text + "%'";
+                    access.Command = new OracleCommand(searchBoxQuery, access.Connection);
+                    access.Adapter = new OracleDataAdapter(access.Command);
+                    DataTable table = new DataTable();
+                    access.Adapter.Fill(table);
+                    dataGridViewMain.DataSource = table;
                     dataGridViewMain.Visible = true;
                 }
                 else if (selectedItem == "Name" && tblLbl.Text == "Doctors")
                 {
-                    OracleCommand command = new OracleCommand("select * from DOCTORS where DOC_NAME like '" + searchBox.Text + "%'", connection);
-                    OracleDataReader reader = command.ExecuteReader();
-                    DataTable dTable = new DataTable();
-                    dTable.Load(reader);
-                    dataGridViewMain.DataSource = dTable;
+                    string searchBoxQuery = "select * from PATIENTS where PAT_NAME like '" + searchBox.Text + "%'";
+                    access.Command = new OracleCommand(searchBoxQuery, access.Connection);
+                    access.Adapter = new OracleDataAdapter(access.Command);
+                    DataTable table = new DataTable();
+                    access.Adapter.Fill(table);
+                    dataGridViewMain.DataSource = table;
                     dataGridViewMain.Visible = true;
                 }
                 else if(selectedItem == "")
