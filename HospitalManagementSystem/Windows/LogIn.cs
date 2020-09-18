@@ -39,37 +39,31 @@ namespace HospitalManagementSystem
             
             else
             {
-                OracleConnection connection = null;
-                OracleCommand command = null;
-                OracleDataReader reader = null;
+                //OracleConnection connection = null;
+                //OracleCommand command = null;
+                //OracleDataReader reader = null;
 
                 try
                 {
+                    DataAccess access = new DataAccess();
                     string connectionString = "Data Source=localhost;User ID=SNIGDHO;Password=student;";
 
-                    connection = new OracleConnection(connectionString);
-                    connection.Open();
+                    access.Connection = new OracleConnection(connectionString);
+                    access.Connection.Open();
 
-                    OracleParameter parameter = new OracleParameter();
+                    //connection = new OracleConnection(connectionString);
+                    //connection.Open();
 
-                    command = new OracleCommand("select AD_NAME from admin where username = '" + textBox1.Text + "' and password = '" + textBox2.Text + "'", connection);
-                    command.CommandType = CommandType.Text;
+                    //OracleParameter parameter = new OracleParameter();
 
-                    OracleDataAdapter adapter = new OracleDataAdapter(command);
-                    DataTable table = new DataTable();
-                    adapter.Fill(table);
+                    string selectQuery = "select AD_NAME from admin where username = '" + textBox1.Text + "' and password = '" + textBox2.Text + "'";
+                    access.Command = new OracleCommand(selectQuery, access.Connection);
+                    access.Command.CommandType = CommandType.Text;
 
-                    reader = command.ExecuteReader();
-                    int x = 0;
-                    string adminName = " ";
+                    access.Adapter = new OracleDataAdapter(access.Command);
+                    DataTable table = access.ExecuteQueryTable(selectQuery);
 
-                    while (reader.Read())
-                    {
-                        x += 1;
-                        adminName = reader["AD_NAME"].ToString();
-                    }
-
-                    if (table.Rows.Count == 1)
+                    if (table.Rows.Count == 0)
                     {
                         LogInSuccess LG = new LogInSuccess(table.Rows[0]["AD_NAME"].ToString());
                         LG.ShowDialog();
@@ -79,9 +73,9 @@ namespace HospitalManagementSystem
                         M1.ShowDialog();
                         this.Close();
                     }
-                    else if (x == 0)
+                    else 
                     {
-                        MessageBox.Show("Invalid username or password");
+                        MessageBox.Show(table.Rows[0]["AD_NAME"].ToString());
                     }
                 }
 
