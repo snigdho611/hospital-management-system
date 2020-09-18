@@ -52,7 +52,7 @@ namespace HospitalManagementSystem.Windows
 
                 
 
-                string insertPatientQuery = "begin insertPatient(\n:p1, \n:p2, \n:p3, :p4, :p5, :p6, :p7); end;";
+                string insertPatientQuery = "begin insertPatient(:p1, :p2, :p3, :p4, :p5, :p6, :p7); end;";
 
                 OracleCommand command = new OracleCommand(
                    insertPatientQuery, connection);
