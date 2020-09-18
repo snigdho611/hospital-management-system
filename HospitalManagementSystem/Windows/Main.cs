@@ -57,7 +57,7 @@ namespace HospitalManagementSystem.Windows
                 string connectionString = "Data Source=localhost;User ID=SNIGDHO;Password=student;";
                 OracleConnection connection = new OracleConnection(connectionString);
                 
-                OracleCommand command = new OracleCommand("select * from PATIENTS", connection);
+                OracleCommand command = new OracleCommand("select PAT_ID AS PATIENT_ID, PAT_NAME AS NAME, AGE, DIAGNOSIS, DOC_ID AS DOCTOR_ID, ROOM_NO AS WARD, BILL, TO_DATE(ADMITTED, 'DD/MM/YY') AS ADMITTED from PATIENTS", connection);
 
                 connection.Open();
                 OracleDataReader reader = command.ExecuteReader();
