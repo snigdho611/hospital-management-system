@@ -55,6 +55,10 @@ namespace HospitalManagementSystem
                     command = new OracleCommand("select AD_NAME from admin where username = '" + textBox1.Text + "' and password = '" + textBox2.Text + "'", connection);
                     command.CommandType = CommandType.Text;
 
+                    OracleDataAdapter adapter = new OracleDataAdapter(command);
+                    DataTable table = new DataTable();
+                    adapter.Fill(table);
+
                     reader = command.ExecuteReader();
                     int x = 0;
                     string adminName = " ";
@@ -65,9 +69,9 @@ namespace HospitalManagementSystem
                         adminName = reader["AD_NAME"].ToString();
                     }
 
-                    if (x == 1)
+                    if (table.Rows.Count == 1)
                     {
-                        LogInSuccess LG = new LogInSuccess(adminName);
+                        LogInSuccess LG = new LogInSuccess(table.Rows[0]["AD_NAME"].ToString());
                         LG.ShowDialog();
                         this.Hide();
 
