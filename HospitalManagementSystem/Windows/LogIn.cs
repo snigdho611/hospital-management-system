@@ -56,7 +56,7 @@ namespace HospitalManagementSystem
 
                     //OracleParameter parameter = new OracleParameter();
 
-                    string selectQuery = "select AD_NAME from admin where username = '" + textBox1.Text + "' and password = '" + textBox2.Text + "'";
+                    string selectQuery = "select * from admin where username = '" + textBox1.Text + "' and password = '" + textBox2.Text + "'";
                     access.Command = new OracleCommand(selectQuery, access.Connection);
                     access.Command.CommandType = CommandType.Text;
 
@@ -65,13 +65,28 @@ namespace HospitalManagementSystem
 
                     if (table.Rows.Count == 1)
                     {
-                        LogInSuccess LG = new LogInSuccess(table.Rows[0]["AD_NAME"].ToString());
-                        LG.ShowDialog();
-                        this.Hide();
+                        if(table.Rows[0]["AD_PERMIT"].ToString() == "1")
+                        {
+                            LogInSuccess LG = new LogInSuccess(table.Rows[0]["AD_NAME"].ToString());
+                            LG.MakeAdmin();
+                            LG.ShowDialog();
+                            this.Hide();
 
-                        Main M1 = new Main();
-                        M1.ShowDialog();
-                        this.Close();
+                            Main M1 = new Main();
+                            M1.AdminAccess();
+                            M1.ShowDialog();
+                            this.Close();
+                        }
+                        else
+                        {
+                            LogInSuccess LG = new LogInSuccess(table.Rows[0]["AD_NAME"].ToString());
+                            LG.ShowDialog();
+                            this.Hide();
+
+                            Main M1 = new Main();
+                            M1.ShowDialog();
+                            this.Close();
+                        }
                     }
                     else 
                     {

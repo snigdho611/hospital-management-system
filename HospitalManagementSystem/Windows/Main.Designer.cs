@@ -68,9 +68,10 @@
             this.usrBtn.Name = "usrBtn";
             this.usrBtn.Size = new System.Drawing.Size(141, 129);
             this.usrBtn.TabIndex = 4;
-            this.usrBtn.Text = "PHARMACY";
+            this.usrBtn.Text = "USER";
             this.usrBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.usrBtn.UseVisualStyleBackColor = true;
+            this.usrBtn.Visible = false;
             // 
             // phrBtn
             // 
@@ -215,6 +216,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMain)).EndInit();
             this.ResumeLayout(false);
 
+        }
+
+        public void AdminAccess()
+        {
+            this.usrBtn.Visible = true;
         }
 
         #endregion

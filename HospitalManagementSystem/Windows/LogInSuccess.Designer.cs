@@ -95,6 +95,11 @@
             this.label4.Text = "Welcome to the System, " + adminName;
         }
 
+        public void MakeAdmin()
+        {
+            this.label5.Visible = true;
+        }
+
         #endregion
 
         private System.Windows.Forms.Label label1;
