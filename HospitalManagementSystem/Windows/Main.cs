@@ -60,10 +60,8 @@ namespace HospitalManagementSystem.Windows
                 access.Connection = new OracleConnection(connectionString);
                 access.Connection.Open();
 
-                access.Command = new OracleCommand(selectPatientQuery, access.Connection);
-
                 access.Adapter = new OracleDataAdapter(access.Command);
-                DataTable table = new DataTable();
+                DataTable table = access.ExecuteQueryTable(selectPatientQuery);
                 access.Adapter.Fill(table);
                 dataGridViewMain.Refresh();
                 dataGridViewMain.DataSource = table;

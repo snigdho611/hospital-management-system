@@ -22,27 +22,23 @@ namespace HospitalManagementSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(String.IsNullOrEmpty(textBox1.Text) && String.IsNullOrEmpty(textBox2.Text))
+            if(String.IsNullOrEmpty(txtUserId.Text) && String.IsNullOrEmpty(txtPass.Text))
             {
                 MessageBox.Show("Both fields are empty!");
             }
 
-            else if(String.IsNullOrEmpty(textBox1.Text))
+            else if(String.IsNullOrEmpty(txtUserId.Text))
             {
                 MessageBox.Show("Username field is empty!");
             }
 
-            else if (String.IsNullOrEmpty(textBox2.Text))
+            else if (String.IsNullOrEmpty(txtPass.Text))
             {
                 MessageBox.Show("Password field is empty!");
             }
             
             else
             {
-                //OracleConnection connection = null;
-                //OracleCommand command = null;
-                //OracleDataReader reader = null;
-
                 try
                 {
                     DataAccess access = new DataAccess();
@@ -51,17 +47,18 @@ namespace HospitalManagementSystem
                     access.Connection = new OracleConnection(connectionString);
                     access.Connection.Open();
 
-                    //connection = new OracleConnection(connectionString);
-                    //connection.Open();
+                    string selectQuery = "select * from admin where username = :p1 and password = :p2";
 
-                    //OracleParameter parameter = new OracleParameter();
-
-                    string selectQuery = "select * from admin where username = '" + textBox1.Text + "' and password = '" + textBox2.Text + "'";
+                    
                     access.Command = new OracleCommand(selectQuery, access.Connection);
-                    access.Command.CommandType = CommandType.Text;
+                    
+                    access.Command.Parameters.Add("p1", OracleDbType.Varchar2).Value = txtUserId.Text;
+                    access.Command.Parameters.Add("p2", OracleDbType.Varchar2).Value = txtPass.Text;
+
 
                     access.Adapter = new OracleDataAdapter(access.Command);
-                    DataTable table = access.ExecuteQueryTable(selectQuery);
+                    DataTable table = new DataTable();
+                    access.Adapter.Fill(table);
 
                     if (table.Rows.Count == 1)
                     {

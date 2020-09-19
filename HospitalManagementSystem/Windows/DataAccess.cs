@@ -40,7 +40,7 @@ namespace HospitalManagementSystem.Windows
             this.command = new OracleCommand(query, this.connection);
         }
 
-        public DataTable ExecuteQueryTable(string query)
+        public DataTable ExecuteQueryTable(string query)           //Only to be used if query string is valid
         {
             this.QueryText(query);
             this.adapter = new OracleDataAdapter(this.command);
