@@ -201,6 +201,7 @@
             // btnDischarge
             // 
             this.btnDischarge.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnDischarge.Enabled = false;
             this.btnDischarge.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.btnDischarge.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDischarge.Font = new System.Drawing.Font("Sitka Small", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

@@ -20,6 +20,8 @@ namespace HospitalManagementSystem.Windows
 
         private void docBtn_Click(object sender, EventArgs e)
         {
+            btnDischarge.Enabled = false;
+
             try
             {
                 string connectionString = "Data Source=localhost;User ID=SNIGDHO;Password=student;";
@@ -47,6 +49,8 @@ namespace HospitalManagementSystem.Windows
 
         private void ptnBtn_Click(object sender, EventArgs e)
         {
+            btnDischarge.Enabled = true;
+
             try
             {
                 DataAccess access = new DataAccess();
@@ -86,7 +90,7 @@ namespace HospitalManagementSystem.Windows
                 //Patients
                 if (selectedItem == "ID" && tblLbl.Text == "Patients")
                 {
-                    string searchBoxQuery = "select * from PATIENTS where PAT_ID like :p || '%'";
+                    string searchBoxQuery = "select PAT_ID AS PATIENT_ID, PAT_NAME AS NAME, AGE, DIAGNOSIS, DOC_ID AS DOCTOR_ID, ROOM_NO AS WARD, BILL, TO_DATE(ADMITTED, 'DD/MM/YY')AS ADMITTED from PATIENTS where PAT_ID like :p || '%'";
                     access.Command = new OracleCommand(searchBoxQuery, access.Connection);
                     access.Command.Parameters.Add("p1", OracleDbType.Varchar2).Value = searchBox.Text;
                     access.Adapter = new OracleDataAdapter(access.Command);
@@ -97,7 +101,7 @@ namespace HospitalManagementSystem.Windows
                 }
                 else if (selectedItem == "Name" && tblLbl.Text == "Patients")
                 {
-                    string searchBoxQuery = "select * from PATIENTS where PAT_NAME like :p || '%'";
+                    string searchBoxQuery = "select PAT_ID AS PATIENT_ID, PAT_NAME AS NAME, AGE, DIAGNOSIS, DOC_ID AS DOCTOR_ID, ROOM_NO AS WARD, BILL, TO_DATE(ADMITTED, 'DD/MM/YY')AS ADMITTED from PATIENTS where NAME like :p || '%'";
                     access.Command = new OracleCommand(searchBoxQuery, access.Connection);
                     access.Command.Parameters.Add("p1", OracleDbType.Varchar2).Value = searchBox.Text;
 
@@ -159,7 +163,13 @@ namespace HospitalManagementSystem.Windows
 
                 if (countOfRows == 1)
                 {
-                    MessageBox.Show(dataGridViewMain.SelectedRows[0].ToString());
+                    //MessageBox.Show(dataGridViewMain.SelectedRows.ToString());
+                    //dataGridViewMain.ClearSelection();
+                    int selectedRowIndex = dataGridViewMain.SelectedRows[0].Index;
+                    DataGridViewRow selectedRow = dataGridViewMain.Rows[selectedRowIndex];
+                    string patientName = Convert.ToString(selectedRow.Cells["NAME"].Value);
+                    MessageBox.Show("Are you sure you want to discharge " + patientName+ "? ");
+                    dataGridViewMain.ClearSelection();
                 }
 
                 else if (countOfRows > 1)
