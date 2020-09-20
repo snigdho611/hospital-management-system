@@ -153,7 +153,24 @@ namespace HospitalManagementSystem.Windows
 
         private void btnDischarge_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(dataGridViewMain.SelectedRows[0].ToString());
+            try
+            {
+                int countOfRows = dataGridViewMain.SelectedRows.Count;
+
+                if (countOfRows == 1)
+                {
+                    MessageBox.Show(dataGridViewMain.SelectedRows[0].ToString());
+                }
+
+                else if (countOfRows > 1)
+                {
+                    MessageBox.Show("You must choose only one patient to Discharge");
+                }
+            }
+            catch(Exception exc)
+            {
+                MessageBox.Show(exc.ToString());
+            }
         }
     }
 }
