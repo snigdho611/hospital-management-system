@@ -18,11 +18,6 @@ namespace HospitalManagementSystem.Windows
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void docBtn_Click(object sender, EventArgs e)
         {
             try
@@ -93,6 +88,7 @@ namespace HospitalManagementSystem.Windows
                 {
                     string searchBoxQuery = "select * from PATIENTS where PAT_ID like :p || '%'";
                     access.Command = new OracleCommand(searchBoxQuery, access.Connection);
+                    access.Command.Parameters.Add("p1", OracleDbType.Varchar2).Value = searchBox.Text;
                     access.Adapter = new OracleDataAdapter(access.Command);
                     DataTable table = new DataTable();
                     access.Adapter.Fill(table);
@@ -119,6 +115,7 @@ namespace HospitalManagementSystem.Windows
                 {
                     string searchBoxQuery = "select * from DOCTORS where DOC_ID like :p || '%'";
                     access.Command = new OracleCommand(searchBoxQuery, access.Connection);
+                    access.Command.Parameters.Add("p1", OracleDbType.Varchar2).Value = searchBox.Text;
                     access.Adapter = new OracleDataAdapter(access.Command);
                     DataTable table = new DataTable();
                     access.Adapter.Fill(table);
@@ -129,6 +126,7 @@ namespace HospitalManagementSystem.Windows
                 {
                     string searchBoxQuery = "select * from DOCTORS where DOC_NAMElike :p || '%'";
                     access.Command = new OracleCommand(searchBoxQuery, access.Connection);
+                    access.Command.Parameters.Add("p1", OracleDbType.Varchar2).Value = searchBox.Text;
                     access.Adapter = new OracleDataAdapter(access.Command);
                     DataTable table = new DataTable();
                     access.Adapter.Fill(table);
@@ -151,6 +149,11 @@ namespace HospitalManagementSystem.Windows
         {
             AddPatient addPatient = new AddPatient();
             addPatient.ShowDialog();
+        }
+
+        private void btnDischarge_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(dataGridViewMain.SelectedRows[0].ToString());
         }
     }
 }

@@ -41,6 +41,7 @@
             this.tblLbl = new System.Windows.Forms.Label();
             this.dataGridViewMain = new System.Windows.Forms.DataGridView();
             this.addPtnBtn = new System.Windows.Forms.Button();
+            this.btnDischarge = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMain)).BeginInit();
@@ -133,6 +134,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.btnDischarge);
             this.panel2.Controls.Add(this.comboBox1);
             this.panel2.Controls.Add(this.searchBox);
             this.panel2.Controls.Add(this.tblLbl);
@@ -195,6 +197,20 @@
             this.addPtnBtn.UseVisualStyleBackColor = false;
             this.addPtnBtn.Click += new System.EventHandler(this.addPtnBtn_Click);
             // 
+            // btnDischarge
+            // 
+            this.btnDischarge.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnDischarge.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btnDischarge.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDischarge.Font = new System.Drawing.Font("Sitka Small", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDischarge.Location = new System.Drawing.Point(783, 136);
+            this.btnDischarge.Name = "btnDischarge";
+            this.btnDischarge.Size = new System.Drawing.Size(92, 25);
+            this.btnDischarge.TabIndex = 7;
+            this.btnDischarge.Text = "Discharge";
+            this.btnDischarge.UseVisualStyleBackColor = false;
+            this.btnDischarge.Click += new System.EventHandler(this.btnDischarge_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -237,5 +253,6 @@
         private System.Windows.Forms.TextBox searchBox;
         private System.Windows.Forms.Button usrBtn;
         private System.Windows.Forms.Button addPtnBtn;
+        private System.Windows.Forms.Button btnDischarge;
     }
 }
