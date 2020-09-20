@@ -77,11 +77,7 @@ namespace HospitalManagementSystem.Windows
         {
             try
             {
-                string connectionString = "Data Source=localhost;User ID=SNIGDHO;Password=student;";
-
                 DataAccess access = new DataAccess();
-                access.Connection = new OracleConnection(connectionString);
-                access.Connection.Open();
 
                 string selectedItem = comboBox1.Text;
 
