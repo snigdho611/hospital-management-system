@@ -101,7 +101,7 @@ namespace HospitalManagementSystem.Windows
                 }
                 else if (selectedItem == "Name" && tblLbl.Text == "Patients")
                 {
-                    string searchBoxQuery = "select PAT_ID AS PATIENT_ID, PAT_NAME AS NAME, AGE, DIAGNOSIS, DOC_ID AS DOCTOR_ID, ROOM_NO AS WARD, BILL, TO_DATE(ADMITTED, 'DD/MM/YY')AS ADMITTED from PATIENTS where NAME like :p || '%'";
+                    string searchBoxQuery = "select PAT_ID AS PATIENT_ID, PAT_NAME AS NAME, AGE, DIAGNOSIS, DOC_ID AS DOCTOR_ID, ROOM_NO AS WARD, BILL, TO_DATE(ADMITTED, 'DD/MM/YY')AS ADMITTED from PATIENTS where PAT_NAME like :p || '%'";
                     access.Command = new OracleCommand(searchBoxQuery, access.Connection);
                     access.Command.Parameters.Add("p1", OracleDbType.Varchar2).Value = searchBox.Text;
 
