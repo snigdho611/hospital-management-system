@@ -163,8 +163,6 @@ namespace HospitalManagementSystem.Windows
 
                 if (countOfRows == 1)
                 {
-                    //MessageBox.Show(dataGridViewMain.SelectedRows.ToString());
-                    //dataGridViewMain.ClearSelection();
                     int selectedRowIndex = dataGridViewMain.SelectedRows[0].Index;
                     DataGridViewRow selectedRow = dataGridViewMain.Rows[selectedRowIndex];
                     string patientName = Convert.ToString(selectedRow.Cells["NAME"].Value);
