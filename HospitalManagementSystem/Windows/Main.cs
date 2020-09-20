@@ -184,8 +184,12 @@ namespace HospitalManagementSystem.Windows
                 int selectedRowIndex = dataGridViewMain.SelectedRows[0].Index;
                 DataGridViewRow selectedRow = dataGridViewMain.Rows[selectedRowIndex];
                 dataGridViewMain.ClearSelection();
+
                 UpdatePatient updatePatient = new UpdatePatient();
                 updatePatient.LoadData(selectedRow);
+                updatePatient.LoadDoctor(selectedRow);
+                updatePatient.PatientID = Convert.ToInt32(selectedRow.Cells["PATIENT_ID"].Value);
+                //updatePatient.LoadDoctor(dTable.Rows[0]["PAT_ID"].ToString());
                 updatePatient.ShowDialog();
             }
             

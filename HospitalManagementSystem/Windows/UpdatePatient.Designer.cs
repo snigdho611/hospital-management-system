@@ -32,7 +32,7 @@ namespace HospitalManagementSystem.Windows
         private void InitializeComponent()
         {
             this.btnCancel = new System.Windows.Forms.Button();
-            this.btnAddPatient = new System.Windows.Forms.Button();
+            this.btnUpdatePatient = new System.Windows.Forms.Button();
             this.lblBill = new System.Windows.Forms.Label();
             this.txtBill = new System.Windows.Forms.TextBox();
             this.lblRoom = new System.Windows.Forms.Label();
@@ -49,6 +49,8 @@ namespace HospitalManagementSystem.Windows
             this.cmbGender = new System.Windows.Forms.ComboBox();
             this.txtAge = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnCancel
@@ -65,19 +67,19 @@ namespace HospitalManagementSystem.Windows
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // btnAddPatient
+            // btnUpdatePatient
             // 
-            this.btnAddPatient.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnAddPatient.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.btnAddPatient.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAddPatient.Font = new System.Drawing.Font("Sitka Small", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddPatient.Location = new System.Drawing.Point(86, 330);
-            this.btnAddPatient.Name = "btnAddPatient";
-            this.btnAddPatient.Size = new System.Drawing.Size(92, 25);
-            this.btnAddPatient.TabIndex = 34;
-            this.btnAddPatient.Text = "Update Patient";
-            this.btnAddPatient.UseVisualStyleBackColor = false;
-            this.btnAddPatient.Click += new System.EventHandler(this.btnAddPatient_Click);
+            this.btnUpdatePatient.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnUpdatePatient.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btnUpdatePatient.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnUpdatePatient.Font = new System.Drawing.Font("Sitka Small", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdatePatient.Location = new System.Drawing.Point(86, 330);
+            this.btnUpdatePatient.Name = "btnUpdatePatient";
+            this.btnUpdatePatient.Size = new System.Drawing.Size(92, 25);
+            this.btnUpdatePatient.TabIndex = 34;
+            this.btnUpdatePatient.Text = "Update Patient";
+            this.btnUpdatePatient.UseVisualStyleBackColor = false;
+            this.btnUpdatePatient.Click += new System.EventHandler(this.btnUpdatePatient_Click);
             // 
             // lblBill
             // 
@@ -133,6 +135,7 @@ namespace HospitalManagementSystem.Windows
             this.txtDocName.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDocName.Location = new System.Drawing.Point(134, 189);
             this.txtDocName.Name = "txtDocName";
+            this.txtDocName.ReadOnly = true;
             this.txtDocName.Size = new System.Drawing.Size(242, 22);
             this.txtDocName.TabIndex = 28;
             // 
@@ -235,14 +238,34 @@ namespace HospitalManagementSystem.Windows
             this.txtName.Size = new System.Drawing.Size(242, 22);
             this.txtName.TabIndex = 18;
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(134, 276);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(156, 20);
+            this.dateTimePicker1.TabIndex = 36;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.DarkBlue;
+            this.label1.Location = new System.Drawing.Point(28, 276);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(100, 19);
+            this.label1.TabIndex = 37;
+            this.label1.Text = "Admitted on:";
+            // 
             // UpdatePatient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(224)))), ((int)(((byte)(157)))));
             this.ClientSize = new System.Drawing.Size(460, 379);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.btnAddPatient);
+            this.Controls.Add(this.btnUpdatePatient);
             this.Controls.Add(this.lblBill);
             this.Controls.Add(this.txtBill);
             this.Controls.Add(this.lblRoom);
@@ -273,7 +296,7 @@ namespace HospitalManagementSystem.Windows
         #endregion
 
         private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.Button btnAddPatient;
+        private System.Windows.Forms.Button btnUpdatePatient;
         private System.Windows.Forms.Label lblBill;
         private System.Windows.Forms.TextBox txtBill;
         private System.Windows.Forms.Label lblRoom;
@@ -290,5 +313,7 @@ namespace HospitalManagementSystem.Windows
         private System.Windows.Forms.ComboBox cmbGender;
         private System.Windows.Forms.TextBox txtAge;
         private System.Windows.Forms.TextBox txtName;
+        private DateTimePicker dateTimePicker1;
+        private Label label1;
     }
 }
