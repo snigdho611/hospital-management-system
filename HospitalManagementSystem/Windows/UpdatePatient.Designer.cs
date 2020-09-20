@@ -1,4 +1,7 @@
-﻿namespace HospitalManagementSystem.Windows
+﻿using Oracle.ManagedDataAccess.Client;
+using System.Windows.Forms;
+
+namespace HospitalManagementSystem.Windows
 {
     partial class UpdatePatient
     {
@@ -264,6 +267,8 @@
             this.PerformLayout();
 
         }
+
+        
 
         #endregion
 

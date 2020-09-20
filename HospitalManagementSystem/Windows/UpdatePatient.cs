@@ -23,6 +23,14 @@ namespace HospitalManagementSystem.Windows
             this.Close();
         }
 
+        public void LoadData(DataGridViewRow selectedRow)
+        {
+            txtName.Text = selectedRow.Cells["NAME"].ToString();
+            cmbGender.Text = selectedRow.Cells["GENDER"].ToString();
+            txtAge.Text = selectedRow.Cells["AGE"].ToString(); ;
+            
+        }
+
         private void btnAddPatient_Click(object sender, EventArgs e)
         {
             if (String.IsNullOrWhiteSpace(txtName.Text) == true)
@@ -33,6 +41,8 @@ namespace HospitalManagementSystem.Windows
             {
                 try
                 {
+
+
                     string connectionString = "Data Source=localhost;User ID=SNIGDHO;Password=student;";
                     OracleConnection connection = new OracleConnection(connectionString);
 

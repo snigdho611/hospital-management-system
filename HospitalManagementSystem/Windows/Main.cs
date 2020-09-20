@@ -55,7 +55,7 @@ namespace HospitalManagementSystem.Windows
             {
                 DataAccess access = new DataAccess();
                 string connectionString = "Data Source=localhost;User ID=SNIGDHO;Password=student;";
-                string selectPatientQuery = "select PAT_ID AS PATIENT_ID, PAT_NAME AS NAME, AGE, DIAGNOSIS, DOC_ID AS DOCTOR_ID, ROOM_NO AS WARD, BILL, TO_DATE(ADMITTED, 'DD/MM/YY')AS ADMITTED from PATIENTS";
+                string selectPatientQuery = "select PAT_ID AS PATIENT_ID, PAT_NAME AS NAME, GENDER, AGE, DIAGNOSIS, DOC_ID AS DOCTOR_ID, ROOM_NO AS WARD, BILL, TO_DATE(ADMITTED, 'DD/MM/YY')AS ADMITTED from PATIENTS";
                 access.Connection = new OracleConnection(connectionString);
                 access.Connection.Open();
 
@@ -185,8 +185,18 @@ namespace HospitalManagementSystem.Windows
 
         private void button1_Click(object sender, EventArgs e)
         {
-            UpdatePatient updatePatient = new UpdatePatient();
-            updatePatient.ShowDialog();
+            int countOfRows = dataGridViewMain.SelectedRows.Count;
+
+            if (countOfRows == 1)
+            {
+                int selectedRowIndex = dataGridViewMain.SelectedRows[0].Index;
+                DataGridViewRow selectedRow = dataGridViewMain.Rows[selectedRowIndex];
+                dataGridViewMain.ClearSelection();
+                UpdatePatient updatePatient = new UpdatePatient();
+                updatePatient.LoadData(selectedRow);
+                updatePatient.ShowDialog();
+            }
+            
         }
     }
 }
