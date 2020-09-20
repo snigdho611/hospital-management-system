@@ -35,6 +35,13 @@ namespace HospitalManagementSystem.Windows
             set { this.adapter = value; }
         }
 
+        public DataAccess()
+        {
+            string connectionString = "Data Source=localhost;User ID=SNIGDHO;Password=student;";
+            this.Connection = new OracleConnection(connectionString);
+            this.Connection.Open();
+        }
+
         private void QueryText(string query)
         {
             this.command = new OracleCommand(query, this.connection);

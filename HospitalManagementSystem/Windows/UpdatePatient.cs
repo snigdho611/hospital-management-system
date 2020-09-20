@@ -45,18 +45,17 @@ namespace HospitalManagementSystem.Windows
             {
                 try
                 {
-
-
+                    DataAccess access = new DataAccess();
                     string connectionString = "Data Source=localhost;User ID=SNIGDHO;Password=student;";
-                    OracleConnection connection = new OracleConnection(connectionString);
+                    access.Connection = new OracleConnection(connectionString);
 
                     string updatePatientQuery = "select * from patients where pat_id = :pid";
                     
 
                     OracleCommand command = new OracleCommand(
-                       updatePatientQuery, connection);
+                       updatePatientQuery, access.Connection);
 
-                    connection.Open();
+                    access.Connection.Open();
 
                     command.Parameters.Add("pid", OracleDbType.Varchar2).Value = txtName.Text;
                     /*

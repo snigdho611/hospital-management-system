@@ -24,11 +24,10 @@ namespace HospitalManagementSystem.Windows
 
             try
             {
-                string connectionString = "Data Source=localhost;User ID=SNIGDHO;Password=student;";
-                OracleConnection connection = new OracleConnection(connectionString);
-                OracleCommand command = new OracleCommand("select * from DOCTORS", connection);
-
-                connection.Open();
+                
+                DataAccess access = new DataAccess();
+                
+                OracleCommand command = new OracleCommand("select * from DOCTORS", access.Connection);
                 OracleDataReader reader = command.ExecuteReader();
 
                 DataTable dTable = new DataTable();
@@ -53,13 +52,12 @@ namespace HospitalManagementSystem.Windows
 
             try
             {
-                DataAccess access = new DataAccess();
-                string connectionString = "Data Source=localhost;User ID=SNIGDHO;Password=student;";
-                string selectPatientQuery = "select PAT_ID AS PATIENT_ID, PAT_NAME AS NAME, GENDER, AGE, DIAGNOSIS, DOC_ID AS DOCTOR_ID, ROOM_NO AS WARD, BILL, TO_DATE(ADMITTED, 'DD/MM/YY')AS ADMITTED from PATIENTS";
-                access.Connection = new OracleConnection(connectionString);
-                access.Connection.Open();
-
                 
+                
+                string selectPatientQuery = "select PAT_ID AS PATIENT_ID, PAT_NAME AS NAME, GENDER, AGE, DIAGNOSIS, DOC_ID AS DOCTOR_ID, ROOM_NO AS WARD, BILL, TO_DATE(ADMITTED, 'DD/MM/YY')AS ADMITTED from PATIENTS";
+
+                DataAccess access = new DataAccess();
+
                 DataTable table = access.ExecuteQueryTable(selectPatientQuery);
                 dataGridViewMain.Refresh();
                 dataGridViewMain.DataSource = table;
