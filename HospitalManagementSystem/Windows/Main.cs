@@ -182,5 +182,11 @@ namespace HospitalManagementSystem.Windows
                 MessageBox.Show(exc.ToString());
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            UpdatePatient updatePatient = new UpdatePatient();
+            updatePatient.ShowDialog();
+        }
     }
 }

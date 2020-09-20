@@ -60,6 +60,7 @@
             this.btnCancel.TabIndex = 35;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnAddPatient
             // 
@@ -257,7 +258,7 @@
             this.Name = "UpdatePatient";
             this.Opacity = 0.95D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Add Patient";
+            this.Text = "Update Patient";
             this.ResumeLayout(false);
             this.PerformLayout();
 

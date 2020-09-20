@@ -27,3 +27,4 @@ D:\GitHub\HospitalManagementSystem\HospitalManagementSystem\obj\Debug\HospitalMa
 D:\GitHub\HospitalManagementSystem\HospitalManagementSystem\obj\Debug\HospitalManagementSystem.csprojAssemblyReference.cache
 D:\GitHub\HospitalManagementSystem\HospitalManagementSystem\obj\Debug\HospitalManagementSystem.Windows.AddPatient.resources
 D:\GitHub\HospitalManagementSystem\HospitalManagementSystem\obj\Debug\HospitalManagementSystem.Windows.DoctorConfirm.resources
+D:\GitHub\HospitalManagementSystem\HospitalManagementSystem\obj\Debug\HospitalManagementSystem.Windows.UpdatePatient.resources
