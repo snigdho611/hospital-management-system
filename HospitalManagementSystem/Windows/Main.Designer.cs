@@ -42,6 +42,7 @@
             this.dataGridViewMain = new System.Windows.Forms.DataGridView();
             this.addPtnBtn = new System.Windows.Forms.Button();
             this.btnDischarge = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMain)).BeginInit();
@@ -213,12 +214,25 @@
             this.btnDischarge.UseVisualStyleBackColor = false;
             this.btnDischarge.Click += new System.EventHandler(this.btnDischarge_Click);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(166)))), ((int)(((byte)(126)))));
+            this.button1.Font = new System.Drawing.Font("Mongolian Baiti", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(155, 57);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(63, 36);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Update Patient";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(224)))), ((int)(((byte)(157)))));
             this.ClientSize = new System.Drawing.Size(1120, 681);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.addPtnBtn);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -256,5 +270,6 @@
         private System.Windows.Forms.Button usrBtn;
         private System.Windows.Forms.Button addPtnBtn;
         private System.Windows.Forms.Button btnDischarge;
+        private System.Windows.Forms.Button button1;
     }
 }
