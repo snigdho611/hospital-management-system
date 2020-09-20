@@ -74,6 +74,7 @@
             this.btnAddPatient.TabIndex = 34;
             this.btnAddPatient.Text = "Update Patient";
             this.btnAddPatient.UseVisualStyleBackColor = false;
+            this.btnAddPatient.Click += new System.EventHandler(this.btnAddPatient_Click);
             // 
             // lblBill
             // 
