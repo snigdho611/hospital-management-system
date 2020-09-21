@@ -145,8 +145,8 @@ namespace HospitalManagementSystem.Windows
 
         private void addPtnBtn_Click(object sender, EventArgs e)
         {
-            AddPatient addPatient = new AddPatient();
-            addPatient.ShowDialog();
+            DoctorConfirm doctorConfirm = new DoctorConfirm();
+            doctorConfirm.ShowDialog();
         }
 
         private void btnDischarge_Click(object sender, EventArgs e)

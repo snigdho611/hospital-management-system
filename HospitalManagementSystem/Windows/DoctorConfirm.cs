@@ -16,5 +16,11 @@ namespace HospitalManagementSystem.Windows
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AddPatient addPatient = new AddPatient();
+            addPatient.ShowDialog();
+        }
     }
 }
