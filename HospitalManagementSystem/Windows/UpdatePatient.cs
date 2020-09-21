@@ -87,11 +87,11 @@ namespace HospitalManagementSystem.Windows
                     int rowsUpdated = command.ExecuteNonQuery();
                     if (rowsUpdated == 0)
                     {
-                        MessageBox.Show("Record not inserted");
+                        MessageBox.Show("Failed to update patient information!");
                     }
                     else
                     {
-                        MessageBox.Show("Successfully inserted new patient!");
+                        MessageBox.Show("Successfully updated patient information!");
                     }
                     
 

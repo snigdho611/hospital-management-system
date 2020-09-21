@@ -36,12 +36,12 @@
             this.docBtn = new System.Windows.Forms.Button();
             this.ptnBtn = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnDischarge = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.searchBox = new System.Windows.Forms.TextBox();
             this.tblLbl = new System.Windows.Forms.Label();
             this.dataGridViewMain = new System.Windows.Forms.DataGridView();
             this.addPtnBtn = new System.Windows.Forms.Button();
-            this.btnDischarge = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -120,6 +120,7 @@
             // 
             // ptnBtn
             // 
+            this.ptnBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(200)))), ((int)(((byte)(157)))));
             this.ptnBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ptnBtn.BackgroundImage")));
             this.ptnBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ptnBtn.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -130,7 +131,7 @@
             this.ptnBtn.TabIndex = 0;
             this.ptnBtn.Text = "PATIENTS";
             this.ptnBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.ptnBtn.UseVisualStyleBackColor = true;
+            this.ptnBtn.UseVisualStyleBackColor = false;
             this.ptnBtn.Click += new System.EventHandler(this.ptnBtn_Click);
             // 
             // panel2
@@ -144,6 +145,21 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(884, 663);
             this.panel2.TabIndex = 1;
+            // 
+            // btnDischarge
+            // 
+            this.btnDischarge.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnDischarge.Enabled = false;
+            this.btnDischarge.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btnDischarge.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDischarge.Font = new System.Drawing.Font("Sitka Small", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDischarge.Location = new System.Drawing.Point(783, 136);
+            this.btnDischarge.Name = "btnDischarge";
+            this.btnDischarge.Size = new System.Drawing.Size(92, 25);
+            this.btnDischarge.TabIndex = 7;
+            this.btnDischarge.Text = "Discharge";
+            this.btnDischarge.UseVisualStyleBackColor = false;
+            this.btnDischarge.Click += new System.EventHandler(this.btnDischarge_Click);
             // 
             // comboBox1
             // 
@@ -200,21 +216,6 @@
             this.addPtnBtn.UseVisualStyleBackColor = false;
             this.addPtnBtn.Click += new System.EventHandler(this.addPtnBtn_Click);
             // 
-            // btnDischarge
-            // 
-            this.btnDischarge.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnDischarge.Enabled = false;
-            this.btnDischarge.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.btnDischarge.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnDischarge.Font = new System.Drawing.Font("Sitka Small", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDischarge.Location = new System.Drawing.Point(783, 136);
-            this.btnDischarge.Name = "btnDischarge";
-            this.btnDischarge.Size = new System.Drawing.Size(92, 25);
-            this.btnDischarge.TabIndex = 7;
-            this.btnDischarge.Text = "Discharge";
-            this.btnDischarge.UseVisualStyleBackColor = false;
-            this.btnDischarge.Click += new System.EventHandler(this.btnDischarge_Click);
-            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(166)))), ((int)(((byte)(126)))));
@@ -232,7 +233,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(224)))), ((int)(((byte)(157)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(200)))), ((int)(((byte)(157)))));
             this.ClientSize = new System.Drawing.Size(1120, 681);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.addPtnBtn);

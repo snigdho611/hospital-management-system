@@ -73,7 +73,7 @@
             // 
             // LogInSuccess
             // 
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(224)))), ((int)(((byte)(157)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(200)))), ((int)(((byte)(157)))));
             this.ClientSize = new System.Drawing.Size(449, 180);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.button1);
