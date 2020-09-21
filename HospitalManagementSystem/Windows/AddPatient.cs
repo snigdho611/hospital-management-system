@@ -65,5 +65,28 @@ namespace HospitalManagementSystem.Windows
         {
             this.Close();
         }
+
+        public void LoadDoctor(string doctorID)
+        {
+            txtDocId.Text = doctorID;
+            try
+            {
+                DataAccess access = new DataAccess();
+                string searchDoctor = "select * from doctors where doc_id = :p1";
+                
+                access.Command = new OracleCommand(searchDoctor, access.Connection);
+                access.Command.Parameters.Add("p1", OracleDbType.Varchar2).Value = doctorID;
+                OracleDataReader reader = access.Command.ExecuteReader();
+
+                DataTable dTable = new DataTable();
+                dTable.Load(reader);
+                txtDocName.Text = dTable.Rows[0]["DOC_NAME"].ToString();
+            }
+            catch(Exception exc)
+            {
+                MessageBox.Show(exc.ToString());
+            }
+            
+        }
     }
 }

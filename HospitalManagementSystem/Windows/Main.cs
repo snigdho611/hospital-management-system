@@ -27,8 +27,8 @@ namespace HospitalManagementSystem.Windows
                 
                 DataAccess access = new DataAccess();
                 
-                OracleCommand command = new OracleCommand("select * from DOCTORS", access.Connection);
-                OracleDataReader reader = command.ExecuteReader();
+                access.Command = new OracleCommand("select * from getAllDoctors", access.Connection);
+                OracleDataReader reader = access.Command.ExecuteReader();
 
                 DataTable dTable = new DataTable();
                 dTable.Load(reader);
@@ -54,7 +54,7 @@ namespace HospitalManagementSystem.Windows
             {
                 
                 
-                string selectPatientQuery = "select PAT_ID AS PATIENT_ID, PAT_NAME AS NAME, GENDER, AGE, DIAGNOSIS, DOC_ID AS DOCTOR_ID, ROOM_NO AS WARD, BILL, TO_DATE(ADMITTED, 'DD/MM/YY')AS ADMITTED from PATIENTS";
+                string selectPatientQuery = "SELECT * FROM getAllPatients";
 
                 DataAccess access = new DataAccess();
 
@@ -84,7 +84,7 @@ namespace HospitalManagementSystem.Windows
                 //Patients
                 if (selectedItem == "ID" && tblLbl.Text == "Patients")
                 {
-                    string searchBoxQuery = "select PAT_ID AS PATIENT_ID, PAT_NAME AS NAME, AGE, DIAGNOSIS, DOC_ID AS DOCTOR_ID, ROOM_NO AS WARD, BILL, TO_DATE(ADMITTED, 'DD/MM/YY')AS ADMITTED from PATIENTS where PAT_ID like :p || '%'";
+                    string searchBoxQuery = "SELECT * FROM getAllPatients where PATIENT_ID like :p1 || '%'";
                     access.Command = new OracleCommand(searchBoxQuery, access.Connection);
                     access.Command.Parameters.Add("p1", OracleDbType.Varchar2).Value = searchBox.Text;
                     access.Adapter = new OracleDataAdapter(access.Command);
@@ -95,7 +95,7 @@ namespace HospitalManagementSystem.Windows
                 }
                 else if (selectedItem == "Name" && tblLbl.Text == "Patients")
                 {
-                    string searchBoxQuery = "select PAT_ID AS PATIENT_ID, PAT_NAME AS NAME, AGE, DIAGNOSIS, DOC_ID AS DOCTOR_ID, ROOM_NO AS WARD, BILL, TO_DATE(ADMITTED, 'DD/MM/YY')AS ADMITTED from PATIENTS where PAT_NAME like :p || '%'";
+                    string searchBoxQuery = "SELECT * FROM getAllPatients where NAME like :p1 || '%'";
                     access.Command = new OracleCommand(searchBoxQuery, access.Connection);
                     access.Command.Parameters.Add("p1", OracleDbType.Varchar2).Value = searchBox.Text;
 
@@ -111,7 +111,7 @@ namespace HospitalManagementSystem.Windows
                 //Doctors
                 else if (selectedItem == "ID" && tblLbl.Text == "Doctors")
                 {
-                    string searchBoxQuery = "select * from DOCTORS where DOC_ID like :p || '%'";
+                    string searchBoxQuery = "select * from getAllDoctors where DOCTOR_ID like :p || '%'";
                     access.Command = new OracleCommand(searchBoxQuery, access.Connection);
                     access.Command.Parameters.Add("p1", OracleDbType.Varchar2).Value = searchBox.Text;
                     access.Adapter = new OracleDataAdapter(access.Command);
@@ -122,7 +122,7 @@ namespace HospitalManagementSystem.Windows
                 }
                 else if (selectedItem == "Name" && tblLbl.Text == "Doctors")
                 {
-                    string searchBoxQuery = "select * from DOCTORS where DOC_NAMElike :p || '%'";
+                    string searchBoxQuery = "select * from getAllDoctors where NAME like :p || '%'";
                     access.Command = new OracleCommand(searchBoxQuery, access.Connection);
                     access.Command.Parameters.Add("p1", OracleDbType.Varchar2).Value = searchBox.Text;
                     access.Adapter = new OracleDataAdapter(access.Command);

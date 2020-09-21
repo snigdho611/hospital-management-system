@@ -71,20 +71,20 @@ namespace HospitalManagementSystem.Windows
                     
                     string updatePatientQuery = "BEGIN updatePatient(:p1, :p2, :p3, :p4, :p5, :p6, :p7, to_date(:p8, 'DD-MM-YYYY'), :p9); END; ";
 
-                    OracleCommand command = new OracleCommand(
+                    access.Command = new OracleCommand(
                        updatePatientQuery, access.Connection);
 
-                    command.Parameters.Add("p1", OracleDbType.Varchar2).Value = txtName.Text;
-                    command.Parameters.Add("p2", OracleDbType.Varchar2).Value = cmbGender.Text.ToString();
-                    command.Parameters.Add("p3", OracleDbType.Varchar2).Value = txtAge.Text;
-                    command.Parameters.Add("p4", OracleDbType.Varchar2).Value = txtDgn.Text;
-                    command.Parameters.Add("p5", OracleDbType.Varchar2).Value = txtDocId.Text;
-                    command.Parameters.Add("p6", OracleDbType.Varchar2).Value = txtRoom.Text;
-                    command.Parameters.Add("p7", OracleDbType.Varchar2).Value = txtBill.Text;
-                    command.Parameters.Add("p8", OracleDbType.Varchar2).Value = dateTimePicker1.Value.Date.ToString("dd-MM-yyyy");
-                    command.Parameters.Add("p9", OracleDbType.Varchar2).Value = PatientID.ToString();
+                    access.Command.Parameters.Add("p1", OracleDbType.Varchar2).Value = txtName.Text;
+                    access.Command.Parameters.Add("p2", OracleDbType.Varchar2).Value = cmbGender.Text.ToString();
+                    access.Command.Parameters.Add("p3", OracleDbType.Varchar2).Value = txtAge.Text;
+                    access.Command.Parameters.Add("p4", OracleDbType.Varchar2).Value = txtDgn.Text;
+                    access.Command.Parameters.Add("p5", OracleDbType.Varchar2).Value = txtDocId.Text;
+                    access.Command.Parameters.Add("p6", OracleDbType.Varchar2).Value = txtRoom.Text;
+                    access.Command.Parameters.Add("p7", OracleDbType.Varchar2).Value = txtBill.Text;
+                    access.Command.Parameters.Add("p8", OracleDbType.Varchar2).Value = dateTimePicker1.Value.Date.ToString("dd-MM-yyyy");
+                    access.Command.Parameters.Add("p9", OracleDbType.Varchar2).Value = PatientID.ToString();
 
-                    int rowsUpdated = command.ExecuteNonQuery();
+                    int rowsUpdated = access.Command.ExecuteNonQuery();
                     if (rowsUpdated == 0)
                     {
                         MessageBox.Show("Failed to update patient information!");

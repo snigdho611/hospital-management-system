@@ -30,7 +30,7 @@
         {
             this.button1 = new System.Windows.Forms.Button();
             this.lblUser = new System.Windows.Forms.Label();
-            this.txtUserId = new System.Windows.Forms.TextBox();
+            this.txtDocId = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -59,13 +59,13 @@
             this.lblUser.TabIndex = 8;
             this.lblUser.Text = "Doctor ID: ";
             // 
-            // txtUserId
+            // txtDocId
             // 
-            this.txtUserId.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.txtUserId.Location = new System.Drawing.Point(138, 75);
-            this.txtUserId.Name = "txtUserId";
-            this.txtUserId.Size = new System.Drawing.Size(114, 20);
-            this.txtUserId.TabIndex = 7;
+            this.txtDocId.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.txtDocId.Location = new System.Drawing.Point(138, 75);
+            this.txtDocId.Name = "txtDocId";
+            this.txtDocId.Size = new System.Drawing.Size(114, 20);
+            this.txtDocId.TabIndex = 7;
             // 
             // label1
             // 
@@ -88,7 +88,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.lblUser);
-            this.Controls.Add(this.txtUserId);
+            this.Controls.Add(this.txtDocId);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "DoctorConfirm";
             this.Opacity = 0.95D;
@@ -103,7 +103,7 @@
 
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label lblUser;
-        private System.Windows.Forms.TextBox txtUserId;
+        private System.Windows.Forms.TextBox txtDocId;
         private System.Windows.Forms.Label label1;
     }
 }

@@ -144,6 +144,7 @@
             this.txtDocId.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDocId.Location = new System.Drawing.Point(130, 164);
             this.txtDocId.Name = "txtDocId";
+            this.txtDocId.ReadOnly = true;
             this.txtDocId.Size = new System.Drawing.Size(71, 22);
             this.txtDocId.TabIndex = 8;
             // 
@@ -163,6 +164,7 @@
             this.txtDocName.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDocName.Location = new System.Drawing.Point(130, 192);
             this.txtDocName.Name = "txtDocName";
+            this.txtDocName.ReadOnly = true;
             this.txtDocName.Size = new System.Drawing.Size(242, 22);
             this.txtDocName.TabIndex = 10;
             // 

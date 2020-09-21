@@ -20,6 +20,7 @@ namespace HospitalManagementSystem.Windows
         private void button1_Click(object sender, EventArgs e)
         {
             AddPatient addPatient = new AddPatient();
+            addPatient.LoadDoctor(txtDocId.Text);
             addPatient.ShowDialog();
         }
     }
