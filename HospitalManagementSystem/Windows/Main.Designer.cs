@@ -75,7 +75,6 @@
             this.usrBtn.Text = "USER";
             this.usrBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.usrBtn.UseVisualStyleBackColor = true;
-            this.usrBtn.Visible = false;
             // 
             // phrBtn
             // 
@@ -90,6 +89,7 @@
             this.phrBtn.Text = "PHARMACY";
             this.phrBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.phrBtn.UseVisualStyleBackColor = true;
+            this.phrBtn.Visible = false;
             // 
             // apnBtn
             // 

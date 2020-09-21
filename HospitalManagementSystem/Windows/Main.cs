@@ -52,8 +52,6 @@ namespace HospitalManagementSystem.Windows
 
             try
             {
-                
-                
                 string selectPatientQuery = "SELECT * FROM getAllPatients";
 
                 DataAccess access = new DataAccess();
@@ -160,8 +158,24 @@ namespace HospitalManagementSystem.Windows
                     int selectedRowIndex = dataGridViewMain.SelectedRows[0].Index;
                     DataGridViewRow selectedRow = dataGridViewMain.Rows[selectedRowIndex];
                     string patientName = Convert.ToString(selectedRow.Cells["NAME"].Value);
-                    MessageBox.Show("Are you sure you want to discharge " + patientName+ "? ");
+                    MessageBox.Show("Are you sure you want to discharge " + patientName + "?");
                     dataGridViewMain.ClearSelection();
+
+                   // string dischargeQuery = "declare patientInfo patients% rowtype; patientID patients.pat_id % type:= 310021; output varchar2(1000); begin output:= printPatient(patientInfo, patientID); dbms_output.put_line(output); end; ";
+                    //DataAccess access = new DataAccess();
+                    //access.Command.CommandText = "declare patientInfo patients% rowtype; patientID patients.pat_id % type:= 310021; output varchar2(1000); begin output:= printPatient(patientInfo, patientID); dbms_output.put_line(output); end; ";
+                    //access.Command.CommandType = CommandType.Text;
+
+                    //OracleParameter output = new OracleParameter("output", OracleDbType.Varchar2);
+                    //output.Direction = ParameterDirection.ReturnValue;
+
+                    //access.Command.Parameters.Add(output);
+
+                    //access.Command.ExecuteNonQuery();
+
+                    //string Stage = output.Value.ToString();
+                    //MessageBox.Show(Stage);
+                    
                 }
 
                 else if (countOfRows > 1)
