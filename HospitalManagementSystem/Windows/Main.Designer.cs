@@ -43,6 +43,7 @@
             this.dataGridViewMain = new System.Windows.Forms.DataGridView();
             this.addPtnBtn = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.btnDept = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMain)).BeginInit();
@@ -50,6 +51,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnDept);
             this.panel1.Controls.Add(this.usrBtn);
             this.panel1.Controls.Add(this.phrBtn);
             this.panel1.Controls.Add(this.apnBtn);
@@ -102,6 +104,7 @@
             this.apnBtn.Text = "APPOINTMENTS";
             this.apnBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.apnBtn.UseVisualStyleBackColor = true;
+            this.apnBtn.Visible = false;
             // 
             // docBtn
             // 
@@ -143,7 +146,7 @@
             this.panel2.Controls.Add(this.dataGridViewMain);
             this.panel2.Location = new System.Drawing.Point(224, 6);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(884, 663);
+            this.panel2.Size = new System.Drawing.Size(884, 535);
             this.panel2.TabIndex = 1;
             // 
             // btnDischarge
@@ -200,7 +203,7 @@
             this.dataGridViewMain.Name = "dataGridViewMain";
             this.dataGridViewMain.ReadOnly = true;
             this.dataGridViewMain.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewMain.Size = new System.Drawing.Size(755, 524);
+            this.dataGridViewMain.Size = new System.Drawing.Size(755, 396);
             this.dataGridViewMain.TabIndex = 0;
             // 
             // addPtnBtn
@@ -228,6 +231,22 @@
             this.button1.Text = "Update Patient";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnDept
+            // 
+            this.btnDept.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDept.BackgroundImage")));
+            this.btnDept.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnDept.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnDept.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnDept.Location = new System.Drawing.Point(6, 273);
+            this.btnDept.Name = "btnDept";
+            this.btnDept.Size = new System.Drawing.Size(141, 129);
+            this.btnDept.TabIndex = 5;
+            this.btnDept.Text = "DEPARTMENTS";
+            this.btnDept.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnDept.UseVisualStyleBackColor = true;
+            this.btnDept.Visible = false;
+            this.btnDept.Click += new System.EventHandler(this.btnDept_Click);
             // 
             // Main
             // 
@@ -274,5 +293,6 @@
         private System.Windows.Forms.Button addPtnBtn;
         private System.Windows.Forms.Button btnDischarge;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnDept;
     }
 }

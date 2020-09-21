@@ -194,5 +194,10 @@ namespace HospitalManagementSystem.Windows
             }
             
         }
+
+        private void btnDept_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
