@@ -220,5 +220,30 @@ namespace HospitalManagementSystem.Windows
         {
 
         }
+
+        private void usrBtn_Click(object sender, EventArgs e)
+        {
+            btnDischarge.Enabled = true;
+
+            try
+            {
+                string selectPatientQuery = "SELECT * FROM getAllAdmins";
+
+                DataAccess access = new DataAccess();
+
+                DataTable table = access.ExecuteQueryTable(selectPatientQuery);
+                dataGridViewMain.Refresh();
+                dataGridViewMain.DataSource = table;
+                dataGridViewMain.Visible = true;
+
+                tblLbl.Text = "Admins";
+                tblLbl.Visible = true;
+            }
+
+            catch (Exception E)
+            {
+                MessageBox.Show(E.ToString());
+            }
+        }
     }
 }
