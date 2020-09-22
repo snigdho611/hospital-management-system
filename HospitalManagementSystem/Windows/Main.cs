@@ -290,5 +290,15 @@ namespace HospitalManagementSystem.Windows
             LogOutConfirm logOut = new LogOutConfirm();
             logOut.ShowDialog();
         }
+
+        public void ShowUserName(string name)
+        {
+            txtLoggedInAs.Text = name;
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

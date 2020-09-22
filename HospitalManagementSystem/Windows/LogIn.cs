@@ -62,10 +62,12 @@ namespace HospitalManagementSystem
 
                     if (table.Rows.Count == 1)
                     {
-                        if(table.Rows[0]["AD_PERMIT"].ToString() == "1")
+                        string name = table.Rows[0]["AD_NAME"].ToString();
+                        if (table.Rows[0]["AD_PERMIT"].ToString() == "1")
                         {
-                            LogInSuccess LG = new LogInSuccess(table.Rows[0]["AD_NAME"].ToString());
+                            LogInSuccess LG = new LogInSuccess();
                             LG.MakeAdmin();
+                            LG.Show(name);
                             LG.ShowDialog();
                             this.Hide();
 
@@ -76,11 +78,13 @@ namespace HospitalManagementSystem
                         }
                         else
                         {
-                            LogInSuccess LG = new LogInSuccess(table.Rows[0]["AD_NAME"].ToString());
+                            LogInSuccess LG = new LogInSuccess();
+                            LG.Show(table.Rows[0]["AD_NAME"].ToString());
                             LG.ShowDialog();
                             this.Hide();
 
                             Main M1 = new Main();
+                            M1.ShowUserName(table.Rows[0]["AD_NAME"].ToString());
                             M1.ShowDialog();
                             this.Close();
                         }

@@ -50,6 +50,8 @@ namespace HospitalManagementSystem.Windows
             this.delPtnBtn = new System.Windows.Forms.Button();
             this.addDocBtn = new System.Windows.Forms.Button();
             this.btnLogOut = new System.Windows.Forms.Button();
+            this.btnLoggedInAs = new System.Windows.Forms.Label();
+            this.txtLoggedInAs = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMain)).BeginInit();
@@ -162,6 +164,8 @@ namespace HospitalManagementSystem.Windows
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.txtLoggedInAs);
+            this.panel2.Controls.Add(this.btnLoggedInAs);
             this.panel2.Controls.Add(this.btnLogOut);
             this.panel2.Controls.Add(this.btnDischarge);
             this.panel2.Controls.Add(this.comboBox1);
@@ -293,7 +297,6 @@ namespace HospitalManagementSystem.Windows
             // btnLogOut
             // 
             this.btnLogOut.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnLogOut.Enabled = false;
             this.btnLogOut.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLogOut.Font = new System.Drawing.Font("Sitka Small", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -304,6 +307,27 @@ namespace HospitalManagementSystem.Windows
             this.btnLogOut.Text = "Log Out";
             this.btnLogOut.UseVisualStyleBackColor = false;
             this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
+            // 
+            // btnLoggedInAs
+            // 
+            this.btnLoggedInAs.AutoSize = true;
+            this.btnLoggedInAs.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnLoggedInAs.ForeColor = System.Drawing.Color.DarkBlue;
+            this.btnLoggedInAs.Location = new System.Drawing.Point(525, 624);
+            this.btnLoggedInAs.Name = "btnLoggedInAs";
+            this.btnLoggedInAs.Size = new System.Drawing.Size(101, 19);
+            this.btnLoggedInAs.TabIndex = 11;
+            this.btnLoggedInAs.Text = "Logged in as:";
+            this.btnLoggedInAs.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // txtLoggedInAs
+            // 
+            this.txtLoggedInAs.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLoggedInAs.Location = new System.Drawing.Point(632, 620);
+            this.txtLoggedInAs.Name = "txtLoggedInAs";
+            this.txtLoggedInAs.ReadOnly = true;
+            this.txtLoggedInAs.Size = new System.Drawing.Size(136, 26);
+            this.txtLoggedInAs.TabIndex = 12;
             // 
             // Main
             // 
@@ -356,5 +380,7 @@ namespace HospitalManagementSystem.Windows
         private System.Windows.Forms.Button delPtnBtn;
         private System.Windows.Forms.Button addDocBtn;
         private Button btnLogOut;
+        private Label btnLoggedInAs;
+        private TextBox txtLoggedInAs;
     }
 }

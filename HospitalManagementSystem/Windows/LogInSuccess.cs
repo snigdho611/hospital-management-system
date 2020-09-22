@@ -12,10 +12,9 @@ namespace HospitalManagementSystem
 {
     public partial class LogInSuccess : Form
     {
-        public LogInSuccess(string adminName)
+        public LogInSuccess()
         {
             InitializeComponent();
-            this.Show(adminName);
         }
 
         private void button1_Click(object sender, EventArgs e)

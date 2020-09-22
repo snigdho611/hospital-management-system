@@ -19,9 +19,15 @@ namespace HospitalManagementSystem.Windows
 
         private void button1_Click(object sender, EventArgs e)
         {
-            LogIn logIn = new LogIn();
+            /*LogIn logIn = new LogIn();
             this.Hide();
             logIn.ShowDialog();
+            this.Close();*/
+            Application.Restart();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
             this.Close();
         }
     }
