@@ -1,4 +1,6 @@
-﻿namespace HospitalManagementSystem.Windows
+﻿using System.Windows.Forms;
+
+namespace HospitalManagementSystem.Windows
 {
     partial class Main
     {
@@ -50,6 +52,7 @@
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMain)).BeginInit();
             this.SuspendLayout();
+
             // 
             // panel1
             // 

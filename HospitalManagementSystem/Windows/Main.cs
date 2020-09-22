@@ -185,6 +185,7 @@ namespace HospitalManagementSystem.Windows
                     string patientName = Convert.ToString(selectedRow.Cells["NAME"].Value);
                     DischargeConfirm Discharge = new DischargeConfirm();
                     Discharge.LoadName(patientName);
+                    Discharge.Row(selectedRow);
                     Discharge.ShowDialog();
                     //dataGridViewMain.ClearSelection();
 
