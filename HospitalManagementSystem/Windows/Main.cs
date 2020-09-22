@@ -275,7 +275,7 @@ namespace HospitalManagementSystem.Windows
                         access.Command.Parameters.Add("p1", OracleDbType.Varchar2).Value = selectedRow.Cells["patient_id"].Value.ToString();
                         //MessageBox.Show(deleteQuery + selectedRow.Cells["patient_id"].Value.ToString());
                         access.Command.ExecuteNonQuery();
-                        MessageBox.Show()
+                        MessageBox.Show("");
                     }
                     catch (Exception exc)
                     {
@@ -283,6 +283,12 @@ namespace HospitalManagementSystem.Windows
                     }
                 }
             }
+        }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            LogOutConfirm logOut = new LogOutConfirm();
+            logOut.ShowDialog();
         }
     }
 }

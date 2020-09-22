@@ -49,6 +49,7 @@ namespace HospitalManagementSystem.Windows
             this.updPtnBtn = new System.Windows.Forms.Button();
             this.delPtnBtn = new System.Windows.Forms.Button();
             this.addDocBtn = new System.Windows.Forms.Button();
+            this.btnLogOut = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMain)).BeginInit();
@@ -161,6 +162,7 @@ namespace HospitalManagementSystem.Windows
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.btnLogOut);
             this.panel2.Controls.Add(this.btnDischarge);
             this.panel2.Controls.Add(this.comboBox1);
             this.panel2.Controls.Add(this.searchBox);
@@ -288,6 +290,21 @@ namespace HospitalManagementSystem.Windows
             this.addDocBtn.UseVisualStyleBackColor = false;
             this.addDocBtn.Click += new System.EventHandler(this.addDocBtn_Click);
             // 
+            // btnLogOut
+            // 
+            this.btnLogOut.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnLogOut.Enabled = false;
+            this.btnLogOut.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnLogOut.Font = new System.Drawing.Font("Sitka Small", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogOut.Location = new System.Drawing.Point(783, 620);
+            this.btnLogOut.Name = "btnLogOut";
+            this.btnLogOut.Size = new System.Drawing.Size(92, 29);
+            this.btnLogOut.TabIndex = 8;
+            this.btnLogOut.Text = "Log Out";
+            this.btnLogOut.UseVisualStyleBackColor = false;
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -338,5 +355,6 @@ namespace HospitalManagementSystem.Windows
         private System.Windows.Forms.Button btnDept;
         private System.Windows.Forms.Button delPtnBtn;
         private System.Windows.Forms.Button addDocBtn;
+        private Button btnLogOut;
     }
 }
