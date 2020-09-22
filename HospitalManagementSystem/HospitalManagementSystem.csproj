@@ -57,6 +57,12 @@
     <Compile Include="Windows\AddPatient.Designer.cs">
       <DependentUpon>AddPatient.cs</DependentUpon>
     </Compile>
+    <Compile Include="Windows\DischargeConfirm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\DischargeConfirm.Designer.cs">
+      <DependentUpon>DischargeConfirm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Windows\DoctorConfirm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +97,9 @@
     </Compile>
     <EmbeddedResource Include="Windows\AddPatient.resx">
       <DependentUpon>AddPatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\DischargeConfirm.resx">
+      <DependentUpon>DischargeConfirm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Windows\DoctorConfirm.resx">
       <DependentUpon>DoctorConfirm.cs</DependentUpon>

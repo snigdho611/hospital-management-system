@@ -183,16 +183,18 @@ namespace HospitalManagementSystem.Windows
                     int selectedRowIndex = dataGridViewMain.SelectedRows[0].Index;
                     DataGridViewRow selectedRow = dataGridViewMain.Rows[selectedRowIndex];
                     string patientName = Convert.ToString(selectedRow.Cells["NAME"].Value);
-                    MessageBox.Show("Are you sure you want to discharge " + patientName + "?");
-                    dataGridViewMain.ClearSelection();
+                    DischargeConfirm Discharge = new DischargeConfirm();
+                    Discharge.LoadName(patientName);
+                    Discharge.ShowDialog();
+                    //dataGridViewMain.ClearSelection();
 
-                    string dischargeQuery = "begin dischargeprocess(:p1); Bill(:p2);  end;";
+                    /*string dischargeQuery = "begin dischargeprocess(:p1); Bill(:p2);  end;";
 
                     DataAccess access = new DataAccess();
                     access.Command = new OracleCommand(dischargeQuery, access.Connection);
                     access.Command.Parameters.Add("p1", OracleDbType.Varchar2).Value = selectedRow.Cells["PATIENT_ID"].Value;
                     access.Command.Parameters.Add("p2", OracleDbType.Varchar2).Value = selectedRow.Cells["PATIENT_ID"].Value;
-                    int rowsAffected = access.Command.ExecuteNonQuery();
+                    int rowsAffected = access.Command.ExecuteNonQuery();*/
                     
                 }
 
