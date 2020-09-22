@@ -40,7 +40,7 @@
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Sitka Small", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(160, 111);
+            this.button1.Location = new System.Drawing.Point(160, 120);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(92, 25);
             this.button1.TabIndex = 9;
