@@ -94,7 +94,7 @@ namespace HospitalManagementSystem.Windows
             // 
             // txtBill
             // 
-            this.txtBill.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBill.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold);
             this.txtBill.Location = new System.Drawing.Point(134, 245);
             this.txtBill.Name = "txtBill";
             this.txtBill.Size = new System.Drawing.Size(242, 22);
@@ -113,7 +113,7 @@ namespace HospitalManagementSystem.Windows
             // 
             // txtRoom
             // 
-            this.txtRoom.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRoom.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold);
             this.txtRoom.Location = new System.Drawing.Point(134, 217);
             this.txtRoom.Name = "txtRoom";
             this.txtRoom.Size = new System.Drawing.Size(242, 22);
@@ -132,7 +132,7 @@ namespace HospitalManagementSystem.Windows
             // 
             // txtDocName
             // 
-            this.txtDocName.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDocName.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold);
             this.txtDocName.Location = new System.Drawing.Point(134, 189);
             this.txtDocName.Name = "txtDocName";
             this.txtDocName.ReadOnly = true;
@@ -152,7 +152,7 @@ namespace HospitalManagementSystem.Windows
             // 
             // txtDocId
             // 
-            this.txtDocId.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDocId.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold);
             this.txtDocId.Location = new System.Drawing.Point(134, 161);
             this.txtDocId.Name = "txtDocId";
             this.txtDocId.Size = new System.Drawing.Size(71, 22);
@@ -171,7 +171,7 @@ namespace HospitalManagementSystem.Windows
             // 
             // txtDgn
             // 
-            this.txtDgn.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDgn.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold);
             this.txtDgn.Location = new System.Drawing.Point(134, 133);
             this.txtDgn.Name = "txtDgn";
             this.txtDgn.Size = new System.Drawing.Size(242, 22);
@@ -212,6 +212,7 @@ namespace HospitalManagementSystem.Windows
             // 
             // cmbGender
             // 
+            this.cmbGender.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold);
             this.cmbGender.FormattingEnabled = true;
             this.cmbGender.Items.AddRange(new object[] {
             "Male",
@@ -219,12 +220,12 @@ namespace HospitalManagementSystem.Windows
             "Other"});
             this.cmbGender.Location = new System.Drawing.Point(134, 78);
             this.cmbGender.Name = "cmbGender";
-            this.cmbGender.Size = new System.Drawing.Size(121, 21);
+            this.cmbGender.Size = new System.Drawing.Size(121, 22);
             this.cmbGender.TabIndex = 20;
             // 
             // txtAge
             // 
-            this.txtAge.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAge.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold);
             this.txtAge.Location = new System.Drawing.Point(134, 105);
             this.txtAge.Name = "txtAge";
             this.txtAge.Size = new System.Drawing.Size(71, 22);
@@ -232,7 +233,7 @@ namespace HospitalManagementSystem.Windows
             // 
             // txtName
             // 
-            this.txtName.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold);
             this.txtName.Location = new System.Drawing.Point(134, 50);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(242, 22);
@@ -240,7 +241,7 @@ namespace HospitalManagementSystem.Windows
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold);
             this.dateTimePicker1.Location = new System.Drawing.Point(134, 276);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(156, 22);
