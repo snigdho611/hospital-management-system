@@ -178,6 +178,7 @@ namespace HospitalManagementSystem.Windows
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(884, 663);
             this.panel2.TabIndex = 1;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // lblAdministrator
             // 
@@ -292,7 +293,7 @@ namespace HospitalManagementSystem.Windows
             this.dataGridViewMain.Name = "dataGridViewMain";
             this.dataGridViewMain.ReadOnly = true;
             this.dataGridViewMain.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewMain.Size = new System.Drawing.Size(755, 396);
+            this.dataGridViewMain.Size = new System.Drawing.Size(755, 446);
             this.dataGridViewMain.TabIndex = 0;
             // 
             // addPtnBtn

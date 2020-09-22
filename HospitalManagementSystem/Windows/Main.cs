@@ -51,7 +51,7 @@ namespace HospitalManagementSystem.Windows
 
             try
             {
-                string selectPatientQuery = "SELECT * FROM getAllPatients";
+                string selectPatientQuery = "SELECT * FROM getAllPatientsrefdoctors";
 
                 DataAccess access = new DataAccess();
 
@@ -181,7 +181,7 @@ namespace HospitalManagementSystem.Windows
                 {
                     int selectedRowIndex = dataGridViewMain.SelectedRows[0].Index;
                     DataGridViewRow selectedRow = dataGridViewMain.Rows[selectedRowIndex];
-                    string patientName = Convert.ToString(selectedRow.Cells["NAME"].Value);
+                    string patientName = Convert.ToString(selectedRow.Cells["PATIENT_NAME"].Value);
                     DischargeConfirm Discharge = new DischargeConfirm();
                     Discharge.LoadName(patientName);
                     Discharge.Row(selectedRow);
@@ -299,6 +299,11 @@ namespace HospitalManagementSystem.Windows
         private void label4_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

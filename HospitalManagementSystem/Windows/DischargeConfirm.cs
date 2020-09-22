@@ -22,6 +22,8 @@ namespace HospitalManagementSystem.Windows
 
         private void button1_Click(object sender, EventArgs e)
         {
+
+
             try
             {
                 string dischargeQuery = "begin dischargeprocess(:p1); Bill(:p2);  end;";
@@ -37,10 +39,12 @@ namespace HospitalManagementSystem.Windows
 
                 if (dTable.Rows.Count > 0)
                 {
-                    using (StreamWriter sr = new StreamWriter("D:\\GitHub\\HospitalManagementSystem\\Receipts\\receipt.txt", true))
+                    DateTime localDateTime = DateTime.Now;
+                    using (StreamWriter sr = new StreamWriter("D:\\GitHub\\HospitalManagementSystem\\Receipts\\receipt"+ localDateTime.ToString("_yyyyMMdd-HHmmss") + ".txt"))
                     {
                         //Console.WriteLine("Receipt");
-                        sr.WriteLine("Receipt");
+                        sr.WriteLine("--------------Receipt--------------\n" +
+                            "Name: "+selectedRow.Cells["PATIENT_NAME"].Value);
                     }
 
                     Discharged dis = new Discharged();
