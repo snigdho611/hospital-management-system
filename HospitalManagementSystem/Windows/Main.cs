@@ -187,16 +187,6 @@ namespace HospitalManagementSystem.Windows
                     Discharge.LoadName(patientName);
                     Discharge.Row(selectedRow);
                     Discharge.ShowDialog();
-                    //dataGridViewMain.ClearSelection();
-
-                    /*string dischargeQuery = "begin dischargeprocess(:p1); Bill(:p2);  end;";
-
-                    DataAccess access = new DataAccess();
-                    access.Command = new OracleCommand(dischargeQuery, access.Connection);
-                    access.Command.Parameters.Add("p1", OracleDbType.Varchar2).Value = selectedRow.Cells["PATIENT_ID"].Value;
-                    access.Command.Parameters.Add("p2", OracleDbType.Varchar2).Value = selectedRow.Cells["PATIENT_ID"].Value;
-                    int rowsAffected = access.Command.ExecuteNonQuery();*/
-                    
                 }
 
                 else if (countOfRows > 1)

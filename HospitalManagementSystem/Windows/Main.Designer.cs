@@ -168,7 +168,7 @@ namespace HospitalManagementSystem.Windows
             this.panel2.Controls.Add(this.dataGridViewMain);
             this.panel2.Location = new System.Drawing.Point(224, 6);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(884, 535);
+            this.panel2.Size = new System.Drawing.Size(884, 663);
             this.panel2.TabIndex = 1;
             // 
             // btnDischarge
@@ -225,7 +225,7 @@ namespace HospitalManagementSystem.Windows
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DarkGray;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.MediumAquamarine;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewMain.DefaultCellStyle = dataGridViewCellStyle1;
