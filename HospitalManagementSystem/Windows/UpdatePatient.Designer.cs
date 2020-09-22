@@ -135,7 +135,6 @@ namespace HospitalManagementSystem.Windows
             this.txtDocName.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold);
             this.txtDocName.Location = new System.Drawing.Point(134, 189);
             this.txtDocName.Name = "txtDocName";
-            this.txtDocName.ReadOnly = true;
             this.txtDocName.Size = new System.Drawing.Size(242, 22);
             this.txtDocName.TabIndex = 28;
             // 
