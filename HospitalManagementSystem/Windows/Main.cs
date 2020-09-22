@@ -161,8 +161,15 @@ namespace HospitalManagementSystem.Windows
                     MessageBox.Show("Are you sure you want to discharge " + patientName + "?");
                     dataGridViewMain.ClearSelection();
 
+                    string dischargeQuery = "begin dischargeprocess(:p1); end;";
+
                    // string dischargeQuery = "declare patientInfo patients% rowtype; patientID patients.pat_id % type:= 310021; output varchar2(1000); begin output:= printPatient(patientInfo, patientID); dbms_output.put_line(output); end; ";
-                    //DataAccess access = new DataAccess();
+                    DataAccess access = new DataAccess();
+                    access.Command = new OracleCommand(dischargeQuery, access.Connection);
+                    access.Command.Parameters.Add("p1", OracleDbType.Varchar2).Value = selectedRow.Cells["PATIENT_ID"].Value;
+                    int rowsAffected = access.Command.ExecuteNonQuery();
+                    //MessageBox.Show("Successfully discharged ");
+                    //MessageBox.Show(selectedRow.Cells["PATIENT_ID"].Value.ToString());
                     //access.Command.CommandText = "declare patientInfo patients% rowtype; patientID patients.pat_id % type:= 310021; output varchar2(1000); begin output:= printPatient(patientInfo, patientID); dbms_output.put_line(output); end; ";
                     //access.Command.CommandType = CommandType.Text;
 
@@ -175,7 +182,7 @@ namespace HospitalManagementSystem.Windows
 
                     //string Stage = output.Value.ToString();
                     //MessageBox.Show(Stage);
-                    
+
                 }
 
                 else if (countOfRows > 1)
