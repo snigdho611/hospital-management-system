@@ -52,7 +52,8 @@
             this.btnCancel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCancel.Font = new System.Drawing.Font("Sitka Small", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(273, 283);
+            this.btnCancel.Location = new System.Drawing.Point(273, 282);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(92, 25);
             this.btnCancel.TabIndex = 35;
@@ -66,7 +67,8 @@
             this.btnAddPatient.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.btnAddPatient.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAddPatient.Font = new System.Drawing.Font("Sitka Small", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddPatient.Location = new System.Drawing.Point(66, 283);
+            this.btnAddPatient.Location = new System.Drawing.Point(66, 282);
+            this.btnAddPatient.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAddPatient.Name = "btnAddPatient";
             this.btnAddPatient.Size = new System.Drawing.Size(92, 25);
             this.btnAddPatient.TabIndex = 34;
@@ -111,6 +113,7 @@
             // 
             this.txtNationality.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold);
             this.txtNationality.Location = new System.Drawing.Point(149, 148);
+            this.txtNationality.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtNationality.Name = "txtNationality";
             this.txtNationality.Size = new System.Drawing.Size(233, 22);
             this.txtNationality.TabIndex = 24;
@@ -120,7 +123,7 @@
             this.lblSalary.AutoSize = true;
             this.lblSalary.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSalary.ForeColor = System.Drawing.Color.DarkBlue;
-            this.lblSalary.Location = new System.Drawing.Point(85, 120);
+            this.lblSalary.Location = new System.Drawing.Point(85, 121);
             this.lblSalary.Name = "lblSalary";
             this.lblSalary.Size = new System.Drawing.Size(62, 19);
             this.lblSalary.TabIndex = 23;
@@ -151,7 +154,8 @@
             // txtSalary
             // 
             this.txtSalary.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold);
-            this.txtSalary.Location = new System.Drawing.Point(149, 120);
+            this.txtSalary.Location = new System.Drawing.Point(149, 121);
+            this.txtSalary.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSalary.Name = "txtSalary";
             this.txtSalary.Size = new System.Drawing.Size(78, 22);
             this.txtSalary.TabIndex = 19;
@@ -160,6 +164,7 @@
             // 
             this.txtName.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold);
             this.txtName.Location = new System.Drawing.Point(149, 65);
+            this.txtName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(233, 22);
             this.txtName.TabIndex = 18;
@@ -179,7 +184,8 @@
             // dtpHire
             // 
             this.dtpHire.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold);
-            this.dtpHire.Location = new System.Drawing.Point(149, 94);
+            this.dtpHire.Location = new System.Drawing.Point(149, 95);
+            this.dtpHire.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dtpHire.Name = "dtpHire";
             this.dtpHire.Size = new System.Drawing.Size(233, 22);
             this.dtpHire.TabIndex = 37;
@@ -188,6 +194,7 @@
             // 
             this.dtpDOB.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold);
             this.dtpDOB.Location = new System.Drawing.Point(149, 176);
+            this.dtpDOB.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dtpDOB.Name = "dtpDOB";
             this.dtpDOB.Size = new System.Drawing.Size(233, 22);
             this.dtpDOB.TabIndex = 38;
@@ -204,6 +211,7 @@
             "50",
             "60"});
             this.cmbDeptID.Location = new System.Drawing.Point(149, 204);
+            this.cmbDeptID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cmbDeptID.Name = "cmbDeptID";
             this.cmbDeptID.Size = new System.Drawing.Size(56, 22);
             this.cmbDeptID.TabIndex = 39;
@@ -212,7 +220,8 @@
             // txtDepartment
             // 
             this.txtDepartment.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold);
-            this.txtDepartment.Location = new System.Drawing.Point(211, 205);
+            this.txtDepartment.Location = new System.Drawing.Point(211, 204);
+            this.txtDepartment.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDepartment.Name = "txtDepartment";
             this.txtDepartment.ReadOnly = true;
             this.txtDepartment.Size = new System.Drawing.Size(154, 22);
@@ -240,6 +249,7 @@
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.txtSalary);
             this.Controls.Add(this.txtName);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "AddDoctor";
             this.Opacity = 0.95D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

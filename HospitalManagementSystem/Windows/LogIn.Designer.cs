@@ -44,18 +44,20 @@
             // txtUserId
             // 
             this.txtUserId.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.txtUserId.Location = new System.Drawing.Point(152, 174);
+            this.txtUserId.Location = new System.Drawing.Point(159, 147);
+            this.txtUserId.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtUserId.Name = "txtUserId";
-            this.txtUserId.Size = new System.Drawing.Size(182, 20);
+            this.txtUserId.Size = new System.Drawing.Size(212, 22);
             this.txtUserId.TabIndex = 0;
             this.txtUserId.Text = "example: AB123";
             // 
             // txtPass
             // 
-            this.txtPass.Location = new System.Drawing.Point(152, 210);
+            this.txtPass.Location = new System.Drawing.Point(159, 187);
+            this.txtPass.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPass.Name = "txtPass";
             this.txtPass.PasswordChar = '•';
-            this.txtPass.Size = new System.Drawing.Size(182, 20);
+            this.txtPass.Size = new System.Drawing.Size(212, 22);
             this.txtPass.TabIndex = 1;
             // 
             // lblUser
@@ -63,7 +65,7 @@
             this.lblUser.AutoSize = true;
             this.lblUser.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUser.ForeColor = System.Drawing.Color.DarkBlue;
-            this.lblUser.Location = new System.Drawing.Point(55, 173);
+            this.lblUser.Location = new System.Drawing.Point(63, 149);
             this.lblUser.Name = "lblUser";
             this.lblUser.Size = new System.Drawing.Size(89, 19);
             this.lblUser.TabIndex = 2;
@@ -74,7 +76,7 @@
             this.lblPass.AutoSize = true;
             this.lblPass.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPass.ForeColor = System.Drawing.Color.DarkBlue;
-            this.lblPass.Location = new System.Drawing.Point(59, 207);
+            this.lblPass.Location = new System.Drawing.Point(68, 186);
             this.lblPass.Name = "lblPass";
             this.lblPass.Size = new System.Drawing.Size(85, 19);
             this.lblPass.TabIndex = 3;
@@ -84,9 +86,10 @@
             // 
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.panel1.Location = new System.Drawing.Point(402, 91);
+            this.panel1.Location = new System.Drawing.Point(410, 59);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(128, 180);
+            this.panel1.Size = new System.Drawing.Size(149, 193);
             this.panel1.TabIndex = 4;
             // 
             // label3
@@ -95,7 +98,7 @@
             this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DarkGreen;
-            this.label3.Location = new System.Drawing.Point(434, 285);
+            this.label3.Location = new System.Drawing.Point(447, 268);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(248, 62);
             this.label3.TabIndex = 5;
@@ -106,9 +109,10 @@
             this.panel2.AutoSize = true;
             this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel2.Location = new System.Drawing.Point(534, 103);
+            this.panel2.Location = new System.Drawing.Point(564, 72);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(162, 177);
+            this.panel2.Size = new System.Drawing.Size(189, 191);
             this.panel2.TabIndex = 5;
             // 
             // button1
@@ -117,9 +121,10 @@
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Sitka Small", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(192, 246);
+            this.button1.Location = new System.Drawing.Point(206, 225);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(92, 25);
+            this.button1.Size = new System.Drawing.Size(107, 27);
             this.button1.TabIndex = 6;
             this.button1.Text = "Log In";
             this.button1.UseVisualStyleBackColor = false;
@@ -131,9 +136,10 @@
             this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.Font = new System.Drawing.Font("Sitka Small", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(192, 285);
+            this.button2.Location = new System.Drawing.Point(206, 267);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(92, 25);
+            this.button2.Size = new System.Drawing.Size(107, 27);
             this.button2.TabIndex = 7;
             this.button2.Text = "Sign Up";
             this.button2.UseVisualStyleBackColor = false;
@@ -142,17 +148,18 @@
             // 
             this.panel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel3.BackgroundImage")));
             this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel3.Location = new System.Drawing.Point(-5, -7);
+            this.panel3.Location = new System.Drawing.Point(-6, -8);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(60, 59);
+            this.panel3.Size = new System.Drawing.Size(70, 64);
             this.panel3.TabIndex = 8;
             // 
             // LogIn
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(200)))), ((int)(((byte)(157)))));
-            this.ClientSize = new System.Drawing.Size(714, 402);
+            this.ClientSize = new System.Drawing.Size(785, 362);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -163,8 +170,10 @@
             this.Controls.Add(this.lblUser);
             this.Controls.Add(this.txtPass);
             this.Controls.Add(this.txtUserId);
+            this.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "LogIn";
             this.Opacity = 0.9D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
