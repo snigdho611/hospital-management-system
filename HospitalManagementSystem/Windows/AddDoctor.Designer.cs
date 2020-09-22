@@ -30,16 +30,20 @@
         {
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnAddPatient = new System.Windows.Forms.Button();
-            this.lblDocName = new System.Windows.Forms.Label();
-            this.txtDocName = new System.Windows.Forms.TextBox();
-            this.lblDocId = new System.Windows.Forms.Label();
-            this.lblDgn = new System.Windows.Forms.Label();
+            this.lblDeptID = new System.Windows.Forms.Label();
+            this.lblDOB = new System.Windows.Forms.Label();
+            this.lblNationality = new System.Windows.Forms.Label();
             this.txtDgn = new System.Windows.Forms.TextBox();
-            this.lblAge = new System.Windows.Forms.Label();
-            this.lblGender = new System.Windows.Forms.Label();
+            this.lblSalary = new System.Windows.Forms.Label();
+            this.lblHireCmb = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.txtAge = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
+            this.lblBDT = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.cmbDeptID = new System.Windows.Forms.ComboBox();
+            this.txtDepartment = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnCancel
@@ -48,7 +52,7 @@
             this.btnCancel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCancel.Font = new System.Drawing.Font("Sitka Small", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(289, 322);
+            this.btnCancel.Location = new System.Drawing.Point(273, 283);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(92, 25);
             this.btnCancel.TabIndex = 35;
@@ -61,91 +65,82 @@
             this.btnAddPatient.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.btnAddPatient.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAddPatient.Font = new System.Drawing.Font("Sitka Small", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddPatient.Location = new System.Drawing.Point(82, 322);
+            this.btnAddPatient.Location = new System.Drawing.Point(66, 283);
             this.btnAddPatient.Name = "btnAddPatient";
             this.btnAddPatient.Size = new System.Drawing.Size(92, 25);
             this.btnAddPatient.TabIndex = 34;
-            this.btnAddPatient.Text = "Add Patient";
+            this.btnAddPatient.Text = "Add Doctor";
             this.btnAddPatient.UseVisualStyleBackColor = false;
             // 
-            // lblDocName
+            // lblDeptID
             // 
-            this.lblDocName.AutoSize = true;
-            this.lblDocName.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDocName.ForeColor = System.Drawing.Color.DarkBlue;
-            this.lblDocName.Location = new System.Drawing.Point(20, 181);
-            this.lblDocName.Name = "lblDocName";
-            this.lblDocName.Size = new System.Drawing.Size(98, 19);
-            this.lblDocName.TabIndex = 29;
-            this.lblDocName.Text = "Department:";
+            this.lblDeptID.AutoSize = true;
+            this.lblDeptID.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDeptID.ForeColor = System.Drawing.Color.DarkBlue;
+            this.lblDeptID.Location = new System.Drawing.Point(24, 204);
+            this.lblDeptID.Name = "lblDeptID";
+            this.lblDeptID.Size = new System.Drawing.Size(118, 19);
+            this.lblDeptID.TabIndex = 29;
+            this.lblDeptID.Text = "Department ID:";
             // 
-            // txtDocName
+            // lblDOB
             // 
-            this.txtDocName.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDocName.Location = new System.Drawing.Point(130, 181);
-            this.txtDocName.Name = "txtDocName";
-            this.txtDocName.ReadOnly = true;
-            this.txtDocName.Size = new System.Drawing.Size(242, 22);
-            this.txtDocName.TabIndex = 28;
+            this.lblDOB.AutoSize = true;
+            this.lblDOB.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDOB.ForeColor = System.Drawing.Color.DarkBlue;
+            this.lblDOB.Location = new System.Drawing.Point(38, 176);
+            this.lblDOB.Name = "lblDOB";
+            this.lblDOB.Size = new System.Drawing.Size(104, 19);
+            this.lblDOB.TabIndex = 27;
+            this.lblDOB.Text = "Date of Birth:";
             // 
-            // lblDocId
+            // lblNationality
             // 
-            this.lblDocId.AutoSize = true;
-            this.lblDocId.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDocId.ForeColor = System.Drawing.Color.DarkBlue;
-            this.lblDocId.Location = new System.Drawing.Point(19, 153);
-            this.lblDocId.Name = "lblDocId";
-            this.lblDocId.Size = new System.Drawing.Size(104, 19);
-            this.lblDocId.TabIndex = 27;
-            this.lblDocId.Text = "Date of Birth:";
-            // 
-            // lblDgn
-            // 
-            this.lblDgn.AutoSize = true;
-            this.lblDgn.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDgn.ForeColor = System.Drawing.Color.DarkBlue;
-            this.lblDgn.Location = new System.Drawing.Point(30, 125);
-            this.lblDgn.Name = "lblDgn";
-            this.lblDgn.Size = new System.Drawing.Size(93, 19);
-            this.lblDgn.TabIndex = 25;
-            this.lblDgn.Text = "Nationality:";
+            this.lblNationality.AutoSize = true;
+            this.lblNationality.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNationality.ForeColor = System.Drawing.Color.DarkBlue;
+            this.lblNationality.Location = new System.Drawing.Point(49, 148);
+            this.lblNationality.Name = "lblNationality";
+            this.lblNationality.Size = new System.Drawing.Size(93, 19);
+            this.lblNationality.TabIndex = 25;
+            this.lblNationality.Text = "Nationality:";
             // 
             // txtDgn
             // 
-            this.txtDgn.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDgn.Location = new System.Drawing.Point(130, 125);
+            this.txtDgn.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold);
+            this.txtDgn.Location = new System.Drawing.Point(149, 148);
             this.txtDgn.Name = "txtDgn";
-            this.txtDgn.Size = new System.Drawing.Size(242, 22);
+            this.txtDgn.Size = new System.Drawing.Size(233, 22);
             this.txtDgn.TabIndex = 24;
             // 
-            // lblAge
+            // lblSalary
             // 
-            this.lblAge.AutoSize = true;
-            this.lblAge.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAge.ForeColor = System.Drawing.Color.DarkBlue;
-            this.lblAge.Location = new System.Drawing.Point(66, 97);
-            this.lblAge.Name = "lblAge";
-            this.lblAge.Size = new System.Drawing.Size(62, 19);
-            this.lblAge.TabIndex = 23;
-            this.lblAge.Text = "Salary: ";
+            this.lblSalary.AutoSize = true;
+            this.lblSalary.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSalary.ForeColor = System.Drawing.Color.DarkBlue;
+            this.lblSalary.Location = new System.Drawing.Point(85, 120);
+            this.lblSalary.Name = "lblSalary";
+            this.lblSalary.Size = new System.Drawing.Size(62, 19);
+            this.lblSalary.TabIndex = 23;
+            this.lblSalary.Text = "Salary: ";
             // 
-            // lblGender
+            // lblHireCmb
             // 
-            this.lblGender.AutoSize = true;
-            this.lblGender.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGender.ForeColor = System.Drawing.Color.DarkBlue;
-            this.lblGender.Location = new System.Drawing.Point(43, 69);
-            this.lblGender.Name = "lblGender";
-            this.lblGender.Size = new System.Drawing.Size(81, 19);
-            this.lblGender.TabIndex = 22;
-            this.lblGender.Text = "Hire Date:";
+            this.lblHireCmb.AutoSize = true;
+            this.lblHireCmb.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHireCmb.ForeColor = System.Drawing.Color.DarkBlue;
+            this.lblHireCmb.Location = new System.Drawing.Point(62, 92);
+            this.lblHireCmb.Name = "lblHireCmb";
+            this.lblHireCmb.Size = new System.Drawing.Size(81, 19);
+            this.lblHireCmb.TabIndex = 22;
+            this.lblHireCmb.Text = "Hire Date:";
             // 
             // lblName
             // 
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblName.ForeColor = System.Drawing.Color.DarkBlue;
-            this.lblName.Location = new System.Drawing.Point(66, 41);
+            this.lblName.Location = new System.Drawing.Point(85, 64);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(58, 19);
             this.lblName.TabIndex = 21;
@@ -153,42 +148,100 @@
             // 
             // txtAge
             // 
-            this.txtAge.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAge.Location = new System.Drawing.Point(130, 97);
+            this.txtAge.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold);
+            this.txtAge.Location = new System.Drawing.Point(149, 120);
             this.txtAge.Name = "txtAge";
-            this.txtAge.Size = new System.Drawing.Size(71, 22);
+            this.txtAge.Size = new System.Drawing.Size(78, 22);
             this.txtAge.TabIndex = 19;
             // 
             // txtName
             // 
-            this.txtName.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.Location = new System.Drawing.Point(130, 42);
+            this.txtName.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold);
+            this.txtName.Location = new System.Drawing.Point(149, 65);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(242, 22);
+            this.txtName.Size = new System.Drawing.Size(233, 22);
             this.txtName.TabIndex = 18;
+            // 
+            // lblBDT
+            // 
+            this.lblBDT.AutoSize = true;
+            this.lblBDT.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold);
+            this.lblBDT.ForeColor = System.Drawing.Color.DarkBlue;
+            this.lblBDT.Location = new System.Drawing.Point(226, 124);
+            this.lblBDT.Name = "lblBDT";
+            this.lblBDT.Size = new System.Drawing.Size(36, 14);
+            this.lblBDT.TabIndex = 36;
+            this.lblBDT.Text = "BDT";
+            this.lblBDT.Click += new System.EventHandler(this.lblBDT_Click);
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold);
+            this.dateTimePicker1.Location = new System.Drawing.Point(149, 94);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(233, 22);
+            this.dateTimePicker1.TabIndex = 37;
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold);
+            this.dateTimePicker2.Location = new System.Drawing.Point(149, 176);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(233, 22);
+            this.dateTimePicker2.TabIndex = 38;
+            // 
+            // cmbDeptID
+            // 
+            this.cmbDeptID.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold);
+            this.cmbDeptID.FormattingEnabled = true;
+            this.cmbDeptID.Items.AddRange(new object[] {
+            "10",
+            "20",
+            "30",
+            "40",
+            "50",
+            "60"});
+            this.cmbDeptID.Location = new System.Drawing.Point(149, 204);
+            this.cmbDeptID.Name = "cmbDeptID";
+            this.cmbDeptID.Size = new System.Drawing.Size(56, 22);
+            this.cmbDeptID.TabIndex = 39;
+            this.cmbDeptID.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // txtDepartment
+            // 
+            this.txtDepartment.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold);
+            this.txtDepartment.Location = new System.Drawing.Point(211, 205);
+            this.txtDepartment.Name = "txtDepartment";
+            this.txtDepartment.ReadOnly = true;
+            this.txtDepartment.Size = new System.Drawing.Size(154, 22);
+            this.txtDepartment.TabIndex = 40;
             // 
             // AddDoctor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(200)))), ((int)(((byte)(157)))));
-            this.ClientSize = new System.Drawing.Size(460, 379);
+            this.ClientSize = new System.Drawing.Size(438, 332);
+            this.Controls.Add(this.txtDepartment);
+            this.Controls.Add(this.cmbDeptID);
+            this.Controls.Add(this.dateTimePicker2);
+            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.lblBDT);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnAddPatient);
-            this.Controls.Add(this.lblDocName);
-            this.Controls.Add(this.txtDocName);
-            this.Controls.Add(this.lblDocId);
-            this.Controls.Add(this.lblDgn);
+            this.Controls.Add(this.lblDeptID);
+            this.Controls.Add(this.lblDOB);
+            this.Controls.Add(this.lblNationality);
             this.Controls.Add(this.txtDgn);
-            this.Controls.Add(this.lblAge);
-            this.Controls.Add(this.lblGender);
+            this.Controls.Add(this.lblSalary);
+            this.Controls.Add(this.lblHireCmb);
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.txtAge);
             this.Controls.Add(this.txtName);
             this.Name = "AddDoctor";
             this.Opacity = 0.95D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Add Patient";
+            this.Text = "Add Doctor";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -198,15 +251,19 @@
 
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnAddPatient;
-        private System.Windows.Forms.Label lblDocName;
-        private System.Windows.Forms.TextBox txtDocName;
-        private System.Windows.Forms.Label lblDocId;
-        private System.Windows.Forms.Label lblDgn;
+        private System.Windows.Forms.Label lblDeptID;
+        private System.Windows.Forms.Label lblDOB;
+        private System.Windows.Forms.Label lblNationality;
         private System.Windows.Forms.TextBox txtDgn;
-        private System.Windows.Forms.Label lblAge;
-        private System.Windows.Forms.Label lblGender;
+        private System.Windows.Forms.Label lblSalary;
+        private System.Windows.Forms.Label lblHireCmb;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.TextBox txtAge;
         private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.Label lblBDT;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.ComboBox cmbDeptID;
+        private System.Windows.Forms.TextBox txtDepartment;
     }
 }

@@ -31,7 +31,9 @@ namespace HospitalManagementSystem.Windows
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnDept = new System.Windows.Forms.Button();
             this.usrBtn = new System.Windows.Forms.Button();
             this.phrBtn = new System.Windows.Forms.Button();
             this.apnBtn = new System.Windows.Forms.Button();
@@ -45,14 +47,12 @@ namespace HospitalManagementSystem.Windows
             this.dataGridViewMain = new System.Windows.Forms.DataGridView();
             this.addPtnBtn = new System.Windows.Forms.Button();
             this.updPtnBtn = new System.Windows.Forms.Button();
-            this.btnDept = new System.Windows.Forms.Button();
             this.delPtnBtn = new System.Windows.Forms.Button();
             this.addDocBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMain)).BeginInit();
             this.SuspendLayout();
-
             // 
             // panel1
             // 
@@ -66,6 +66,22 @@ namespace HospitalManagementSystem.Windows
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(147, 675);
             this.panel1.TabIndex = 0;
+            // 
+            // btnDept
+            // 
+            this.btnDept.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDept.BackgroundImage")));
+            this.btnDept.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnDept.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnDept.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnDept.Location = new System.Drawing.Point(6, 273);
+            this.btnDept.Name = "btnDept";
+            this.btnDept.Size = new System.Drawing.Size(141, 129);
+            this.btnDept.TabIndex = 5;
+            this.btnDept.Text = "DEPARTMENTS";
+            this.btnDept.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnDept.UseVisualStyleBackColor = true;
+            this.btnDept.Visible = false;
+            this.btnDept.Click += new System.EventHandler(this.btnDept_Click);
             // 
             // usrBtn
             // 
@@ -205,6 +221,14 @@ namespace HospitalManagementSystem.Windows
             // dataGridViewMain
             // 
             this.dataGridViewMain.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Mongolian Baiti", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewMain.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewMain.Location = new System.Drawing.Point(22, 136);
             this.dataGridViewMain.Name = "dataGridViewMain";
             this.dataGridViewMain.ReadOnly = true;
@@ -237,22 +261,6 @@ namespace HospitalManagementSystem.Windows
             this.updPtnBtn.Text = "Update Patient";
             this.updPtnBtn.UseVisualStyleBackColor = false;
             this.updPtnBtn.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // btnDept
-            // 
-            this.btnDept.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDept.BackgroundImage")));
-            this.btnDept.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnDept.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btnDept.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnDept.Location = new System.Drawing.Point(6, 273);
-            this.btnDept.Name = "btnDept";
-            this.btnDept.Size = new System.Drawing.Size(141, 129);
-            this.btnDept.TabIndex = 5;
-            this.btnDept.Text = "DEPARTMENTS";
-            this.btnDept.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnDept.UseVisualStyleBackColor = true;
-            this.btnDept.Visible = false;
-            this.btnDept.Click += new System.EventHandler(this.btnDept_Click);
             // 
             // delPtnBtn
             // 

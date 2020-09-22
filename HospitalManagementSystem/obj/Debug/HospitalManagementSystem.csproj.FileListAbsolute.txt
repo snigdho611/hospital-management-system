@@ -30,3 +30,4 @@ D:\GitHub\HospitalManagementSystem\HospitalManagementSystem\obj\Debug\HospitalMa
 D:\GitHub\HospitalManagementSystem\HospitalManagementSystem\obj\Debug\HospitalManagementSystem.Windows.UpdatePatient.resources
 D:\GitHub\HospitalManagementSystem\HospitalManagementSystem\obj\Debug\HospitalManagementSystem.Windows.DischargeConfirm.resources
 D:\GitHub\HospitalManagementSystem\HospitalManagementSystem\obj\Debug\HospitalManagementSystem.Windows.Discharged.resources
+D:\GitHub\HospitalManagementSystem\HospitalManagementSystem\obj\Debug\HospitalManagementSystem.Windows.AddDoctor.resources
