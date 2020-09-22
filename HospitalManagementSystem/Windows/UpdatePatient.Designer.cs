@@ -244,7 +244,7 @@ namespace HospitalManagementSystem.Windows
             this.dateTimePicker1.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold);
             this.dateTimePicker1.Location = new System.Drawing.Point(134, 276);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(156, 22);
+            this.dateTimePicker1.Size = new System.Drawing.Size(242, 22);
             this.dateTimePicker1.TabIndex = 36;
             // 
             // label1

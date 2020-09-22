@@ -33,15 +33,15 @@
             this.lblDeptID = new System.Windows.Forms.Label();
             this.lblDOB = new System.Windows.Forms.Label();
             this.lblNationality = new System.Windows.Forms.Label();
-            this.txtDgn = new System.Windows.Forms.TextBox();
+            this.txtNationality = new System.Windows.Forms.TextBox();
             this.lblSalary = new System.Windows.Forms.Label();
             this.lblHireCmb = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
-            this.txtAge = new System.Windows.Forms.TextBox();
+            this.txtSalary = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
             this.lblBDT = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dtpHire = new System.Windows.Forms.DateTimePicker();
+            this.dtpDOB = new System.Windows.Forms.DateTimePicker();
             this.cmbDeptID = new System.Windows.Forms.ComboBox();
             this.txtDepartment = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
@@ -58,6 +58,7 @@
             this.btnCancel.TabIndex = 35;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnAddPatient
             // 
@@ -71,6 +72,7 @@
             this.btnAddPatient.TabIndex = 34;
             this.btnAddPatient.Text = "Add Doctor";
             this.btnAddPatient.UseVisualStyleBackColor = false;
+            this.btnAddPatient.Click += new System.EventHandler(this.btnAddPatient_Click);
             // 
             // lblDeptID
             // 
@@ -105,13 +107,13 @@
             this.lblNationality.TabIndex = 25;
             this.lblNationality.Text = "Nationality:";
             // 
-            // txtDgn
+            // txtNationality
             // 
-            this.txtDgn.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold);
-            this.txtDgn.Location = new System.Drawing.Point(149, 148);
-            this.txtDgn.Name = "txtDgn";
-            this.txtDgn.Size = new System.Drawing.Size(233, 22);
-            this.txtDgn.TabIndex = 24;
+            this.txtNationality.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold);
+            this.txtNationality.Location = new System.Drawing.Point(149, 148);
+            this.txtNationality.Name = "txtNationality";
+            this.txtNationality.Size = new System.Drawing.Size(233, 22);
+            this.txtNationality.TabIndex = 24;
             // 
             // lblSalary
             // 
@@ -146,13 +148,13 @@
             this.lblName.TabIndex = 21;
             this.lblName.Text = "Name: ";
             // 
-            // txtAge
+            // txtSalary
             // 
-            this.txtAge.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold);
-            this.txtAge.Location = new System.Drawing.Point(149, 120);
-            this.txtAge.Name = "txtAge";
-            this.txtAge.Size = new System.Drawing.Size(78, 22);
-            this.txtAge.TabIndex = 19;
+            this.txtSalary.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold);
+            this.txtSalary.Location = new System.Drawing.Point(149, 120);
+            this.txtSalary.Name = "txtSalary";
+            this.txtSalary.Size = new System.Drawing.Size(78, 22);
+            this.txtSalary.TabIndex = 19;
             // 
             // txtName
             // 
@@ -174,21 +176,21 @@
             this.lblBDT.Text = "BDT";
             this.lblBDT.Click += new System.EventHandler(this.lblBDT_Click);
             // 
-            // dateTimePicker1
+            // dtpHire
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold);
-            this.dateTimePicker1.Location = new System.Drawing.Point(149, 94);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(233, 22);
-            this.dateTimePicker1.TabIndex = 37;
+            this.dtpHire.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold);
+            this.dtpHire.Location = new System.Drawing.Point(149, 94);
+            this.dtpHire.Name = "dtpHire";
+            this.dtpHire.Size = new System.Drawing.Size(233, 22);
+            this.dtpHire.TabIndex = 37;
             // 
-            // dateTimePicker2
+            // dtpDOB
             // 
-            this.dateTimePicker2.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold);
-            this.dateTimePicker2.Location = new System.Drawing.Point(149, 176);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(233, 22);
-            this.dateTimePicker2.TabIndex = 38;
+            this.dtpDOB.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold);
+            this.dtpDOB.Location = new System.Drawing.Point(149, 176);
+            this.dtpDOB.Name = "dtpDOB";
+            this.dtpDOB.Size = new System.Drawing.Size(233, 22);
+            this.dtpDOB.TabIndex = 38;
             // 
             // cmbDeptID
             // 
@@ -224,19 +226,19 @@
             this.ClientSize = new System.Drawing.Size(438, 332);
             this.Controls.Add(this.txtDepartment);
             this.Controls.Add(this.cmbDeptID);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dtpDOB);
+            this.Controls.Add(this.dtpHire);
             this.Controls.Add(this.lblBDT);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnAddPatient);
             this.Controls.Add(this.lblDeptID);
             this.Controls.Add(this.lblDOB);
             this.Controls.Add(this.lblNationality);
-            this.Controls.Add(this.txtDgn);
+            this.Controls.Add(this.txtNationality);
             this.Controls.Add(this.lblSalary);
             this.Controls.Add(this.lblHireCmb);
             this.Controls.Add(this.lblName);
-            this.Controls.Add(this.txtAge);
+            this.Controls.Add(this.txtSalary);
             this.Controls.Add(this.txtName);
             this.Name = "AddDoctor";
             this.Opacity = 0.95D;
@@ -254,15 +256,15 @@
         private System.Windows.Forms.Label lblDeptID;
         private System.Windows.Forms.Label lblDOB;
         private System.Windows.Forms.Label lblNationality;
-        private System.Windows.Forms.TextBox txtDgn;
+        private System.Windows.Forms.TextBox txtNationality;
         private System.Windows.Forms.Label lblSalary;
         private System.Windows.Forms.Label lblHireCmb;
         private System.Windows.Forms.Label lblName;
-        private System.Windows.Forms.TextBox txtAge;
+        private System.Windows.Forms.TextBox txtSalary;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label lblBDT;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dtpHire;
+        private System.Windows.Forms.DateTimePicker dtpDOB;
         private System.Windows.Forms.ComboBox cmbDeptID;
         private System.Windows.Forms.TextBox txtDepartment;
     }

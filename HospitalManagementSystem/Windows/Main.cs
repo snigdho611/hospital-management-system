@@ -262,7 +262,8 @@ namespace HospitalManagementSystem.Windows
 
         private void addDocBtn_Click(object sender, EventArgs e)
         {
-
+            AddDoctor AddDoc = new AddDoctor();
+            AddDoc.ShowDialog();
         }
     }
 }
