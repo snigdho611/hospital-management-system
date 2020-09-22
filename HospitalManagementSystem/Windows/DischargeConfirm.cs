@@ -1,13 +1,7 @@
 ﻿using System.IO;
 using Oracle.ManagedDataAccess.Client;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace HospitalManagementSystem.Windows
@@ -36,18 +30,28 @@ namespace HospitalManagementSystem.Windows
                 access.Command = new OracleCommand(dischargeQuery, access.Connection);
                 access.Command.Parameters.Add("p1", OracleDbType.Varchar2).Value = selectedRow.Cells["PATIENT_ID"].Value;
                 access.Command.Parameters.Add("p2", OracleDbType.Varchar2).Value = selectedRow.Cells["PATIENT_ID"].Value;
-                access.Command.ExecuteNonQuery();
+                OracleDataReader reader = access.Command.ExecuteReader();
 
-                using (StreamWriter sr = new StreamWriter("D:\\GitHub\\HospitalManagementSystem\\Receipts\\receipt.txt", true))
+                DataTable dTable = new DataTable();
+                dTable.Load(reader);
+
+                if (dTable.Rows.Count > 0)
                 {
-                    //Console.WriteLine("Receipt");
-                    sr.WriteLine("Receipt");
-                }
+                    using (StreamWriter sr = new StreamWriter("D:\\GitHub\\HospitalManagementSystem\\Receipts\\receipt.txt", true))
+                    {
+                        //Console.WriteLine("Receipt");
+                        sr.WriteLine("Receipt");
+                    }
 
-                Discharged dis = new Discharged();
-                //this.Hide();
-                dis.ShowDialog();
-                this.Close();
+                    Discharged dis = new Discharged();
+                    //this.Hide();
+                    dis.ShowDialog();
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Failed!");
+                }
             }
             
             catch(Exception exc)

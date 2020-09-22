@@ -24,7 +24,6 @@ namespace HospitalManagementSystem.Windows
 
             try
             {
-                
                 DataAccess access = new DataAccess();
                 
                 access.Command = new OracleCommand("select * from getAllDoctors", access.Connection);
@@ -242,6 +241,7 @@ namespace HospitalManagementSystem.Windows
 
                 tblLbl.Text = "Admins";
                 tblLbl.Visible = true;
+                access.Connection.Close();
             }
 
             catch (Exception E)
@@ -254,6 +254,11 @@ namespace HospitalManagementSystem.Windows
         {
             AddDoctor AddDoc = new AddDoctor();
             AddDoc.ShowDialog();
+        }
+
+        private void delPtnBtn_Click(object sender, EventArgs e)
+        {
+            DataAccess 
         }
     }
 }
