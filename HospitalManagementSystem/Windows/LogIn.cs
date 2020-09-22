@@ -72,6 +72,7 @@ namespace HospitalManagementSystem
                             this.Hide();
 
                             Main M1 = new Main();
+                            M1.ShowUserName(table.Rows[0]["AD_NAME"].ToString());
                             M1.AdminAccess();
                             M1.ShowDialog();
                             this.Close();

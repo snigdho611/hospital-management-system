@@ -31,7 +31,7 @@ namespace HospitalManagementSystem.Windows
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnDept = new System.Windows.Forms.Button();
             this.usrBtn = new System.Windows.Forms.Button();
@@ -40,6 +40,10 @@ namespace HospitalManagementSystem.Windows
             this.docBtn = new System.Windows.Forms.Button();
             this.ptnBtn = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lblAdministrator = new System.Windows.Forms.Label();
+            this.txtLoggedInAs = new System.Windows.Forms.TextBox();
+            this.btnLoggedInAs = new System.Windows.Forms.Label();
+            this.btnLogOut = new System.Windows.Forms.Button();
             this.btnDischarge = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.searchBox = new System.Windows.Forms.TextBox();
@@ -49,9 +53,6 @@ namespace HospitalManagementSystem.Windows
             this.updPtnBtn = new System.Windows.Forms.Button();
             this.delPtnBtn = new System.Windows.Forms.Button();
             this.addDocBtn = new System.Windows.Forms.Button();
-            this.btnLogOut = new System.Windows.Forms.Button();
-            this.btnLoggedInAs = new System.Windows.Forms.Label();
-            this.txtLoggedInAs = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMain)).BeginInit();
@@ -164,6 +165,7 @@ namespace HospitalManagementSystem.Windows
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.lblAdministrator);
             this.panel2.Controls.Add(this.txtLoggedInAs);
             this.panel2.Controls.Add(this.btnLoggedInAs);
             this.panel2.Controls.Add(this.btnLogOut);
@@ -176,6 +178,55 @@ namespace HospitalManagementSystem.Windows
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(884, 663);
             this.panel2.TabIndex = 1;
+            // 
+            // lblAdministrator
+            // 
+            this.lblAdministrator.AutoSize = true;
+            this.lblAdministrator.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Bold);
+            this.lblAdministrator.ForeColor = System.Drawing.Color.DarkBlue;
+            this.lblAdministrator.Location = new System.Drawing.Point(597, 635);
+            this.lblAdministrator.Name = "lblAdministrator";
+            this.lblAdministrator.Size = new System.Drawing.Size(150, 19);
+            this.lblAdministrator.TabIndex = 13;
+            this.lblAdministrator.Text = "Administrator Mode";
+            this.lblAdministrator.Visible = false;
+            // 
+            // txtLoggedInAs
+            // 
+            this.txtLoggedInAs.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.txtLoggedInAs.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLoggedInAs.Location = new System.Drawing.Point(569, 610);
+            this.txtLoggedInAs.Name = "txtLoggedInAs";
+            this.txtLoggedInAs.ReadOnly = true;
+            this.txtLoggedInAs.Size = new System.Drawing.Size(199, 22);
+            this.txtLoggedInAs.TabIndex = 12;
+            this.txtLoggedInAs.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // btnLoggedInAs
+            // 
+            this.btnLoggedInAs.AutoSize = true;
+            this.btnLoggedInAs.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnLoggedInAs.ForeColor = System.Drawing.Color.DarkBlue;
+            this.btnLoggedInAs.Location = new System.Drawing.Point(462, 610);
+            this.btnLoggedInAs.Name = "btnLoggedInAs";
+            this.btnLoggedInAs.Size = new System.Drawing.Size(101, 19);
+            this.btnLoggedInAs.TabIndex = 11;
+            this.btnLoggedInAs.Text = "Logged in as:";
+            this.btnLoggedInAs.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // btnLogOut
+            // 
+            this.btnLogOut.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnLogOut.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnLogOut.Font = new System.Drawing.Font("Sitka Small", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogOut.Location = new System.Drawing.Point(783, 610);
+            this.btnLogOut.Name = "btnLogOut";
+            this.btnLogOut.Size = new System.Drawing.Size(92, 29);
+            this.btnLogOut.TabIndex = 8;
+            this.btnLogOut.Text = "Log Out";
+            this.btnLogOut.UseVisualStyleBackColor = false;
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
             // btnDischarge
             // 
@@ -194,6 +245,7 @@ namespace HospitalManagementSystem.Windows
             // 
             // comboBox1
             // 
+            this.comboBox1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.comboBox1.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
@@ -206,6 +258,7 @@ namespace HospitalManagementSystem.Windows
             // 
             // searchBox
             // 
+            this.searchBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.searchBox.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchBox.Location = new System.Drawing.Point(121, 93);
             this.searchBox.Name = "searchBox";
@@ -227,14 +280,14 @@ namespace HospitalManagementSystem.Windows
             // dataGridViewMain
             // 
             this.dataGridViewMain.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.MediumAquamarine;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewMain.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.MediumAquamarine;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewMain.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewMain.Location = new System.Drawing.Point(22, 136);
             this.dataGridViewMain.Name = "dataGridViewMain";
             this.dataGridViewMain.ReadOnly = true;
@@ -294,41 +347,6 @@ namespace HospitalManagementSystem.Windows
             this.addDocBtn.UseVisualStyleBackColor = false;
             this.addDocBtn.Click += new System.EventHandler(this.addDocBtn_Click);
             // 
-            // btnLogOut
-            // 
-            this.btnLogOut.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnLogOut.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnLogOut.Font = new System.Drawing.Font("Sitka Small", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogOut.Location = new System.Drawing.Point(783, 620);
-            this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Size = new System.Drawing.Size(92, 29);
-            this.btnLogOut.TabIndex = 8;
-            this.btnLogOut.Text = "Log Out";
-            this.btnLogOut.UseVisualStyleBackColor = false;
-            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
-            // 
-            // btnLoggedInAs
-            // 
-            this.btnLoggedInAs.AutoSize = true;
-            this.btnLoggedInAs.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btnLoggedInAs.ForeColor = System.Drawing.Color.DarkBlue;
-            this.btnLoggedInAs.Location = new System.Drawing.Point(525, 624);
-            this.btnLoggedInAs.Name = "btnLoggedInAs";
-            this.btnLoggedInAs.Size = new System.Drawing.Size(101, 19);
-            this.btnLoggedInAs.TabIndex = 11;
-            this.btnLoggedInAs.Text = "Logged in as:";
-            this.btnLoggedInAs.Click += new System.EventHandler(this.label4_Click);
-            // 
-            // txtLoggedInAs
-            // 
-            this.txtLoggedInAs.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLoggedInAs.Location = new System.Drawing.Point(632, 620);
-            this.txtLoggedInAs.Name = "txtLoggedInAs";
-            this.txtLoggedInAs.ReadOnly = true;
-            this.txtLoggedInAs.Size = new System.Drawing.Size(136, 26);
-            this.txtLoggedInAs.TabIndex = 12;
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -358,6 +376,7 @@ namespace HospitalManagementSystem.Windows
         public void AdminAccess()
         {
             this.usrBtn.Visible = true;
+            this.lblAdministrator.Visible = true;
         }
 
         #endregion
@@ -382,5 +401,6 @@ namespace HospitalManagementSystem.Windows
         private Button btnLogOut;
         private Label btnLoggedInAs;
         private TextBox txtLoggedInAs;
+        private Label lblAdministrator;
     }
 }
