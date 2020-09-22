@@ -258,7 +258,31 @@ namespace HospitalManagementSystem.Windows
 
         private void delPtnBtn_Click(object sender, EventArgs e)
         {
-            DataAccess 
+            if(tblLbl.Text == "Patients")
+            {
+                int countRows = dataGridViewMain.SelectedRows.Count;
+                if(countRows == 1)
+                {
+                    try
+                    {
+                        DataAccess access = new DataAccess();
+                        int selectedRowIndex = dataGridViewMain.SelectedRows[0].Index;
+                        DataGridViewRow selectedRow = dataGridViewMain.Rows[selectedRowIndex];
+                        dataGridViewMain.ClearSelection();
+
+                        string deleteQuery = "delete from patients where pat_id = :p1";
+                        access.Command = new OracleCommand(deleteQuery, access.Connection);
+                        access.Command.Parameters.Add("p1", OracleDbType.Varchar2).Value = selectedRow.Cells["patient_id"].Value.ToString();
+                        //MessageBox.Show(deleteQuery + selectedRow.Cells["patient_id"].Value.ToString());
+                        access.Command.ExecuteNonQuery();
+                        MessageBox.Show()
+                    }
+                    catch (Exception exc)
+                    {
+                        MessageBox.Show(exc.ToString());
+                    }
+                }
+            }
         }
     }
 }

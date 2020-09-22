@@ -68,7 +68,6 @@ namespace HospitalManagementSystem.Windows
                 {
                     DataAccess access = new DataAccess();
                     
-                    
                     string updatePatientQuery = "BEGIN updatePatient(:p1, :p2, :p3, :p4, :p5, :p6, :p7, to_date(:p8, 'DD-MM-YYYY'), :p9); END; ";
 
                     access.Command = new OracleCommand(
