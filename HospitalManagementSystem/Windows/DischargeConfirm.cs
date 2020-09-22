@@ -1,4 +1,5 @@
-﻿using Oracle.ManagedDataAccess.Client;
+﻿using System.IO;
+using Oracle.ManagedDataAccess.Client;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -36,6 +37,13 @@ namespace HospitalManagementSystem.Windows
                 access.Command.Parameters.Add("p1", OracleDbType.Varchar2).Value = selectedRow.Cells["PATIENT_ID"].Value;
                 access.Command.Parameters.Add("p2", OracleDbType.Varchar2).Value = selectedRow.Cells["PATIENT_ID"].Value;
                 access.Command.ExecuteNonQuery();
+
+                using (StreamWriter sr = new StreamWriter("D:\\GitHub\\HospitalManagementSystem\\Receipts\\receipt.txt", true))
+                {
+                    //Console.WriteLine("Receipt");
+                    sr.WriteLine("Receipt");
+                }
+
                 Discharged dis = new Discharged();
                 //this.Hide();
                 dis.ShowDialog();

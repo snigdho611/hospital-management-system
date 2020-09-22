@@ -51,6 +51,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataAccess.cs" />
+    <Compile Include="Windows\AddDoctor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\AddDoctor.Designer.cs">
+      <DependentUpon>AddDoctor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Windows\AddPatient.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +107,9 @@
     <Compile Include="Windows\UpdatePatient.Designer.cs">
       <DependentUpon>UpdatePatient.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Windows\AddDoctor.resx">
+      <DependentUpon>AddDoctor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Windows\AddPatient.resx">
       <DependentUpon>AddPatient.cs</DependentUpon>
     </EmbeddedResource>
