@@ -35,7 +35,11 @@ namespace HospitalManagementSystem.Windows
                 access.Command = new OracleCommand(dischargeQuery, access.Connection);
                 access.Command.Parameters.Add("p1", OracleDbType.Varchar2).Value = selectedRow.Cells["PATIENT_ID"].Value;
                 access.Command.Parameters.Add("p2", OracleDbType.Varchar2).Value = selectedRow.Cells["PATIENT_ID"].Value;
-                int rowsAffected = access.Command.ExecuteNonQuery();
+                access.Command.ExecuteNonQuery();
+                Discharged dis = new Discharged();
+                //this.Hide();
+                dis.ShowDialog();
+                this.Close();
             }
             
             catch(Exception exc)
