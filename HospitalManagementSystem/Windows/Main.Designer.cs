@@ -75,7 +75,6 @@
             this.usrBtn.Text = "USER";
             this.usrBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.usrBtn.UseVisualStyleBackColor = true;
-            this.usrBtn.Visible = false;
             this.usrBtn.Click += new System.EventHandler(this.usrBtn_Click);
             // 
             // phrBtn

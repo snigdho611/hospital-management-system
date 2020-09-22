@@ -129,9 +129,34 @@ namespace HospitalManagementSystem.Windows
                     dataGridViewMain.DataSource = table;
                     dataGridViewMain.Visible = true;
                 }
+                //Admins
+                else if (selectedItem == "ID" && tblLbl.Text == "Admins")
+                {
+                    string searchBoxQuery = "select * from getAllAdmins where ADMIN_ID like :p || '%'";
+                    access.Command = new OracleCommand(searchBoxQuery, access.Connection);
+                    access.Command.Parameters.Add("p1", OracleDbType.Varchar2).Value = searchBox.Text;
+                    access.Adapter = new OracleDataAdapter(access.Command);
+                    DataTable table = new DataTable();
+                    access.Adapter.Fill(table);
+                    dataGridViewMain.DataSource = table;
+                    dataGridViewMain.Visible = true;
+                }
+                else if (selectedItem == "Name" && tblLbl.Text == "Admins")
+                {
+                    string searchBoxQuery = "select * from getAllAdmins where NAME like :p || '%'";
+                    access.Command = new OracleCommand(searchBoxQuery, access.Connection);
+                    access.Command.Parameters.Add("p1", OracleDbType.Varchar2).Value = searchBox.Text;
+                    access.Adapter = new OracleDataAdapter(access.Command);
+                    DataTable table = new DataTable();
+                    access.Adapter.Fill(table);
+                    dataGridViewMain.DataSource = table;
+                    dataGridViewMain.Visible = true;
+                }
                 else if(selectedItem == "")
                 {
                     MessageBox.Show("No property was selected!");
+                    searchBox.Text = "";
+
                 }
             }
 
@@ -161,11 +186,12 @@ namespace HospitalManagementSystem.Windows
                     MessageBox.Show("Are you sure you want to discharge " + patientName + "?");
                     dataGridViewMain.ClearSelection();
 
-                    string dischargeQuery = "begin dischargeprocess(:p1); end;";
+                    string dischargeQuery = "begin dischargeprocess(:p1); Bill(:p2); end;";
 
                    // string dischargeQuery = "declare patientInfo patients% rowtype; patientID patients.pat_id % type:= 310021; output varchar2(1000); begin output:= printPatient(patientInfo, patientID); dbms_output.put_line(output); end; ";
                     DataAccess access = new DataAccess();
                     access.Command = new OracleCommand(dischargeQuery, access.Connection);
+                    access.Command.Parameters.Add("p1", OracleDbType.Varchar2).Value = selectedRow.Cells["PATIENT_ID"].Value;
                     access.Command.Parameters.Add("p1", OracleDbType.Varchar2).Value = selectedRow.Cells["PATIENT_ID"].Value;
                     int rowsAffected = access.Command.ExecuteNonQuery();
                     //MessageBox.Show("Successfully discharged ");
