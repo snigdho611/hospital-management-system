@@ -42,8 +42,10 @@
             this.tblLbl = new System.Windows.Forms.Label();
             this.dataGridViewMain = new System.Windows.Forms.DataGridView();
             this.addPtnBtn = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.updPtnBtn = new System.Windows.Forms.Button();
             this.btnDept = new System.Windows.Forms.Button();
+            this.delPtnBtn = new System.Windows.Forms.Button();
+            this.addDocBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMain)).BeginInit();
@@ -212,7 +214,7 @@
             this.addPtnBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(166)))), ((int)(((byte)(126)))));
             this.addPtnBtn.Font = new System.Drawing.Font("Mongolian Baiti", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addPtnBtn.ForeColor = System.Drawing.Color.White;
-            this.addPtnBtn.Location = new System.Drawing.Point(155, 99);
+            this.addPtnBtn.Location = new System.Drawing.Point(155, 20);
             this.addPtnBtn.Name = "addPtnBtn";
             this.addPtnBtn.Size = new System.Drawing.Size(63, 36);
             this.addPtnBtn.TabIndex = 2;
@@ -220,18 +222,18 @@
             this.addPtnBtn.UseVisualStyleBackColor = false;
             this.addPtnBtn.Click += new System.EventHandler(this.addPtnBtn_Click);
             // 
-            // button1
+            // updPtnBtn
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(166)))), ((int)(((byte)(126)))));
-            this.button1.Font = new System.Drawing.Font("Mongolian Baiti", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(155, 57);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(63, 36);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Update Patient";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.updPtnBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(166)))), ((int)(((byte)(126)))));
+            this.updPtnBtn.Font = new System.Drawing.Font("Mongolian Baiti", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updPtnBtn.ForeColor = System.Drawing.Color.White;
+            this.updPtnBtn.Location = new System.Drawing.Point(155, 57);
+            this.updPtnBtn.Name = "updPtnBtn";
+            this.updPtnBtn.Size = new System.Drawing.Size(63, 36);
+            this.updPtnBtn.TabIndex = 3;
+            this.updPtnBtn.Text = "Update Patient";
+            this.updPtnBtn.UseVisualStyleBackColor = false;
+            this.updPtnBtn.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnDept
             // 
@@ -249,13 +251,40 @@
             this.btnDept.Visible = false;
             this.btnDept.Click += new System.EventHandler(this.btnDept_Click);
             // 
+            // delPtnBtn
+            // 
+            this.delPtnBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(166)))), ((int)(((byte)(126)))));
+            this.delPtnBtn.Font = new System.Drawing.Font("Mongolian Baiti", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.delPtnBtn.ForeColor = System.Drawing.Color.White;
+            this.delPtnBtn.Location = new System.Drawing.Point(155, 93);
+            this.delPtnBtn.Name = "delPtnBtn";
+            this.delPtnBtn.Size = new System.Drawing.Size(63, 36);
+            this.delPtnBtn.TabIndex = 4;
+            this.delPtnBtn.Text = "Delete Patient";
+            this.delPtnBtn.UseVisualStyleBackColor = false;
+            // 
+            // addDocBtn
+            // 
+            this.addDocBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(138)))), ((int)(((byte)(61)))));
+            this.addDocBtn.Font = new System.Drawing.Font("Mongolian Baiti", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addDocBtn.ForeColor = System.Drawing.Color.White;
+            this.addDocBtn.Location = new System.Drawing.Point(155, 151);
+            this.addDocBtn.Name = "addDocBtn";
+            this.addDocBtn.Size = new System.Drawing.Size(63, 36);
+            this.addDocBtn.TabIndex = 5;
+            this.addDocBtn.Text = "Add Doctor";
+            this.addDocBtn.UseVisualStyleBackColor = false;
+            this.addDocBtn.Click += new System.EventHandler(this.addDocBtn_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(200)))), ((int)(((byte)(157)))));
             this.ClientSize = new System.Drawing.Size(1120, 681);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.addDocBtn);
+            this.Controls.Add(this.delPtnBtn);
+            this.Controls.Add(this.updPtnBtn);
             this.Controls.Add(this.addPtnBtn);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -293,7 +322,9 @@
         private System.Windows.Forms.Button usrBtn;
         private System.Windows.Forms.Button addPtnBtn;
         private System.Windows.Forms.Button btnDischarge;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button updPtnBtn;
         private System.Windows.Forms.Button btnDept;
+        private System.Windows.Forms.Button delPtnBtn;
+        private System.Windows.Forms.Button addDocBtn;
     }
 }
