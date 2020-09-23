@@ -209,7 +209,8 @@
             "30",
             "40",
             "50",
-            "60"});
+            "60",
+            "70"});
             this.cmbDeptID.Location = new System.Drawing.Point(149, 204);
             this.cmbDeptID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cmbDeptID.Name = "cmbDeptID";

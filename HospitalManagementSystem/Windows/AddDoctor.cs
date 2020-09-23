@@ -49,6 +49,10 @@ namespace HospitalManagementSystem.Windows
             {
                 txtDepartment.Text = "NEUROLOGY";
             }
+            else if (cmbDeptID.Text == "70")
+            {
+                txtDepartment.Text = "PEDIATRICS";
+            }
             else
             {
 

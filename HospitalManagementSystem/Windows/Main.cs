@@ -202,22 +202,28 @@ namespace HospitalManagementSystem.Windows
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int countOfRows = dataGridViewMain.SelectedRows.Count;
-
-            if (countOfRows == 1)
+            if(tblLbl.Text == "Patients")
             {
-                int selectedRowIndex = dataGridViewMain.SelectedRows[0].Index;
-                DataGridViewRow selectedRow = dataGridViewMain.Rows[selectedRowIndex];
-                dataGridViewMain.ClearSelection();
+                int countOfRows = dataGridViewMain.SelectedRows.Count;
 
-                UpdatePatient updatePatient = new UpdatePatient();
-                updatePatient.LoadData(selectedRow);
-                updatePatient.LoadDoctor(selectedRow);
-                updatePatient.PatientID = Convert.ToInt32(selectedRow.Cells["PATIENT_ID"].Value);
-                //updatePatient.LoadDoctor(dTable.Rows[0]["PAT_ID"].ToString());
-                updatePatient.ShowDialog();
+                if (countOfRows == 1)
+                {
+                    int selectedRowIndex = dataGridViewMain.SelectedRows[0].Index;
+                    DataGridViewRow selectedRow = dataGridViewMain.Rows[selectedRowIndex];
+                    dataGridViewMain.ClearSelection();
+
+                    UpdatePatient updatePatient = new UpdatePatient();
+                    updatePatient.LoadData(selectedRow);
+                    updatePatient.LoadDoctor(selectedRow);
+                    updatePatient.PatientID = Convert.ToInt32(selectedRow.Cells["PATIENT_ID"].Value);
+                    //updatePatient.LoadDoctor(dTable.Rows[0]["PAT_ID"].ToString());
+                    updatePatient.ShowDialog();
+                }
             }
-            
+            else
+            {
+
+            }
         }
 
         private void btnDept_Click(object sender, EventArgs e)

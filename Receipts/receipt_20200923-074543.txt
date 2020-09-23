@@ -1,0 +1,10 @@
+--------------Receipt--------------
+Name: ZANNATUL FARIN
+Age: 23
+Gender: FEMALE
+Department: PEDIATRICS
+Doctor: Dr. MASHABA MOUBONY
+Bill: 83000 BDT
+Admitted since: 9/23/2020 12:00:00 AM
+-----------------------------------
+Wednesday, 23 September 2020

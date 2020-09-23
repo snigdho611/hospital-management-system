@@ -50,7 +50,7 @@
             // 
             // txtName
             // 
-            this.txtName.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold);
             this.txtName.Location = new System.Drawing.Point(130, 53);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(242, 22);
@@ -58,7 +58,7 @@
             // 
             // txtAge
             // 
-            this.txtAge.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAge.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold);
             this.txtAge.Location = new System.Drawing.Point(130, 108);
             this.txtAge.Name = "txtAge";
             this.txtAge.Size = new System.Drawing.Size(71, 22);
@@ -66,6 +66,7 @@
             // 
             // cmbGender
             // 
+            this.cmbGender.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold);
             this.cmbGender.FormattingEnabled = true;
             this.cmbGender.Items.AddRange(new object[] {
             "Male",
@@ -73,7 +74,7 @@
             "Other"});
             this.cmbGender.Location = new System.Drawing.Point(130, 81);
             this.cmbGender.Name = "cmbGender";
-            this.cmbGender.Size = new System.Drawing.Size(121, 21);
+            this.cmbGender.Size = new System.Drawing.Size(121, 22);
             this.cmbGender.TabIndex = 2;
             // 
             // lblName
@@ -122,7 +123,7 @@
             // 
             // txtDgn
             // 
-            this.txtDgn.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDgn.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold);
             this.txtDgn.Location = new System.Drawing.Point(130, 136);
             this.txtDgn.Name = "txtDgn";
             this.txtDgn.Size = new System.Drawing.Size(242, 22);
@@ -141,7 +142,7 @@
             // 
             // txtDocId
             // 
-            this.txtDocId.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDocId.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold);
             this.txtDocId.Location = new System.Drawing.Point(130, 164);
             this.txtDocId.Name = "txtDocId";
             this.txtDocId.ReadOnly = true;
@@ -161,7 +162,7 @@
             // 
             // txtDocName
             // 
-            this.txtDocName.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDocName.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold);
             this.txtDocName.Location = new System.Drawing.Point(130, 192);
             this.txtDocName.Name = "txtDocName";
             this.txtDocName.ReadOnly = true;
@@ -181,7 +182,7 @@
             // 
             // txtRoom
             // 
-            this.txtRoom.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRoom.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold);
             this.txtRoom.Location = new System.Drawing.Point(130, 220);
             this.txtRoom.Name = "txtRoom";
             this.txtRoom.Size = new System.Drawing.Size(242, 22);
@@ -200,7 +201,7 @@
             // 
             // txtBill
             // 
-            this.txtBill.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBill.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold);
             this.txtBill.Location = new System.Drawing.Point(130, 248);
             this.txtBill.Name = "txtBill";
             this.txtBill.Size = new System.Drawing.Size(242, 22);
