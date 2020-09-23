@@ -43,6 +43,7 @@
             // 
             // txtUserId
             // 
+            this.txtUserId.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUserId.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtUserId.Location = new System.Drawing.Point(159, 147);
             this.txtUserId.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -53,6 +54,7 @@
             // 
             // txtPass
             // 
+            this.txtPass.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPass.Location = new System.Drawing.Point(159, 187);
             this.txtPass.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPass.Name = "txtPass";

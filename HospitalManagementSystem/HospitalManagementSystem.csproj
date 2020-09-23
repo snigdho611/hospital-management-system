@@ -63,6 +63,12 @@
     <Compile Include="Windows\AddPatient.Designer.cs">
       <DependentUpon>AddPatient.cs</DependentUpon>
     </Compile>
+    <Compile Include="Windows\AddUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\AddUser.Designer.cs">
+      <DependentUpon>AddUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Windows\DischargeConfirm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,6 +124,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Windows\AddPatient.resx">
       <DependentUpon>AddPatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\AddUser.resx">
+      <DependentUpon>AddUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Windows\DischargeConfirm.resx">
       <DependentUpon>DischargeConfirm.cs</DependentUpon>

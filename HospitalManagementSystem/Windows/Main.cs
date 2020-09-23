@@ -92,7 +92,7 @@ namespace HospitalManagementSystem.Windows
                 }
                 else if (selectedItem == "Name" && tblLbl.Text == "Patients")
                 {
-                    string searchBoxQuery = "SELECT * FROM getAllPatients where NAME like :p1 || '%'";
+                    string searchBoxQuery = "SELECT * FROM getAllPatients where PATIENT_NAME like :p1 || '%'";
                     access.Command = new OracleCommand(searchBoxQuery, access.Connection);
                     access.Command.Parameters.Add("p1", OracleDbType.Varchar2).Value = searchBox.Text;
 
@@ -119,7 +119,7 @@ namespace HospitalManagementSystem.Windows
                 }
                 else if (selectedItem == "Name" && tblLbl.Text == "Doctors")
                 {
-                    string searchBoxQuery = "select * from getAllDoctors where NAME like :p || '%'";
+                    string searchBoxQuery = "select * from getAllDoctors where DOCTOR_NAME like :p || '%'";
                     access.Command = new OracleCommand(searchBoxQuery, access.Connection);
                     access.Command.Parameters.Add("p1", OracleDbType.Varchar2).Value = searchBox.Text;
                     access.Adapter = new OracleDataAdapter(access.Command);
