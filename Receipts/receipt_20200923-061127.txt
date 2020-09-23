@@ -1,0 +1,10 @@
+--------------Receipt--------------
+Name: BRUCE WAYNE
+Age: 50
+Gender: Male
+Department: CARDIOLOGY
+Doctor: Dr. MARY RODRIGUEZ
+Bill: 
+Admitted since: 
+-----------------------------------
+Wednesday, 23 September 2020

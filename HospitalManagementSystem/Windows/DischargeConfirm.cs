@@ -22,40 +22,51 @@ namespace HospitalManagementSystem.Windows
 
         private void button1_Click(object sender, EventArgs e)
         {
-
-
             try
             {
-                string dischargeQuery = "begin dischargeprocess(:p1); Bill(:p2);  end;";
+                string dischargeQuery = "begin Bill(:p1) dischargeprocess(:p2);  end;";
+                string receiptQuery = "select * from GETALLPATIENTSREFDOCTORS";
+                //MessageBox.Show(selectedRow.Cells["PATIENT_ID"].Value.ToString());
 
                 DataAccess access = new DataAccess();
                 access.Command = new OracleCommand(dischargeQuery, access.Connection);
                 access.Command.Parameters.Add("p1", OracleDbType.Varchar2).Value = selectedRow.Cells["PATIENT_ID"].Value;
                 access.Command.Parameters.Add("p2", OracleDbType.Varchar2).Value = selectedRow.Cells["PATIENT_ID"].Value;
-                OracleDataReader reader = access.Command.ExecuteReader();
+                access.Command.ExecuteNonQuery();
 
-                DataTable dTable = new DataTable();
-                dTable.Load(reader);
+                access.Command = new OracleCommand(receiptQuery, access.Connection);
+                OracleDataAdapter adapter = new OracleDataAdapter();
+                
 
-                if (dTable.Rows.Count > 0)
+                try
                 {
                     DateTime localDateTime = DateTime.Now;
-                    using (StreamWriter sr = new StreamWriter("D:\\GitHub\\HospitalManagementSystem\\Receipts\\receipt"+ localDateTime.ToString("_yyyyMMdd-HHmmss") + ".txt"))
+                    using (StreamWriter sr = new StreamWriter("D:\\GitHub\\HospitalManagementSystem\\Receipts\\receipt" + localDateTime.ToString("_yyyyMMdd-HHmmss") + ".txt"))
                     {
                         //Console.WriteLine("Receipt");
                         sr.WriteLine("--------------Receipt--------------\n" +
-                            "Name: "+selectedRow.Cells["PATIENT_NAME"].Value);
+                            "Name: " + selectedRow.Cells["PATIENT_NAME"].Value +
+                            "\nAge: " + selectedRow.Cells["AGE"].Value +
+                            "\nGender: " + selectedRow.Cells["GENDER"].Value +
+                            "\nDepartment: " + selectedRow.Cells["DEPARTMENT"].Value +
+                            "\nDoctor: Dr. " + selectedRow.Cells["DOCTOR_NAME"].Value +
+                            "\nBill: " + selectedRow.Cells["BILL"].Value +
+                            "\nAdmitted since: " + selectedRow.Cells["ADMITTED"].Value +
+                            "\n-----------------------------------" +
+                            "\n" + localDateTime.ToString("dddd, dd MMMM yyyy"));
                     }
+                }
 
-                    Discharged dis = new Discharged();
-                    //this.Hide();
-                    dis.ShowDialog();
-                    this.Close();
-                }
-                else
+                catch (Exception exc)
                 {
-                    MessageBox.Show("Failed!");
+                    MessageBox.Show(exc.ToString());
                 }
+
+
+                Discharged dis = new Discharged();
+                //this.Hide();
+                dis.ShowDialog();
+                this.Close();
             }
             
             catch(Exception exc)

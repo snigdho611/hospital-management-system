@@ -214,9 +214,9 @@ namespace HospitalManagementSystem.Windows
             this.cmbGender.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold);
             this.cmbGender.FormattingEnabled = true;
             this.cmbGender.Items.AddRange(new object[] {
-            "Male",
-            "Female",
-            "Other"});
+            "MALE",
+            "FEMALE",
+            "OTHERS"});
             this.cmbGender.Location = new System.Drawing.Point(134, 78);
             this.cmbGender.Name = "cmbGender";
             this.cmbGender.Size = new System.Drawing.Size(121, 22);

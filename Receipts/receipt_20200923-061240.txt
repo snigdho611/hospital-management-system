@@ -1,0 +1,10 @@
+--------------Receipt--------------
+Name: STAN LEE
+Age: 93
+Gender: MALE
+Department: CARDIOLOGY
+Doctor: Dr. SARAH MCLANE
+Bill: 20000
+Admitted since: 3/23/2020 12:00:00 AM
+-----------------------------------
+Wednesday, 23 September 2020

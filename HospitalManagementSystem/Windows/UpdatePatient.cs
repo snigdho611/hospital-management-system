@@ -33,7 +33,7 @@ namespace HospitalManagementSystem.Windows
 
         public void LoadData(DataGridViewRow selectedRow)
         {
-            txtName.Text = selectedRow.Cells["NAME"].Value.ToString();
+            txtName.Text = selectedRow.Cells["PATIENT_NAME"].Value.ToString();
             cmbGender.Text = selectedRow.Cells["GENDER"].Value.ToString();
             txtAge.Text = selectedRow.Cells["AGE"].Value.ToString(); ;
             txtDgn.Text = selectedRow.Cells["DIAGNOSIS"].Value.ToString(); ;
