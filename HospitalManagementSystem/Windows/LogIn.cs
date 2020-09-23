@@ -77,7 +77,7 @@ namespace HospitalManagementSystem
                             M1.ShowDialog();
                             this.Close();
                         }
-                        else
+                        else if(table.Rows[0]["AD_PERMIT"].ToString() == "0")
                         {
                             LogInSuccess LG = new LogInSuccess();
                             LG.Show(table.Rows[0]["AD_NAME"].ToString());

@@ -31,6 +31,7 @@ namespace HospitalManagementSystem.Windows
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UpdatePatient));
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnUpdatePatient = new System.Windows.Forms.Button();
             this.lblBill = new System.Windows.Forms.Label();
@@ -283,6 +284,7 @@ namespace HospitalManagementSystem.Windows
             this.Controls.Add(this.cmbGender);
             this.Controls.Add(this.txtAge);
             this.Controls.Add(this.txtName);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "UpdatePatient";
             this.Opacity = 0.95D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
