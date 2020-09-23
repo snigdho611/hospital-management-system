@@ -53,8 +53,8 @@ namespace HospitalManagementSystem.Windows
                             "\nGender: " + table.Rows[0]["GENDER"].ToString() +
                             "\nDepartment: " + table.Rows[0]["DEPARTMENT"].ToString() +
                             "\nDoctor: Dr. " + table.Rows[0]["DOCTOR_NAME"].ToString() +
-                            "\nBill: " + table.Rows[0]["BILL"].ToString() +
-                            "\nAdmitted since: " + AdmittedDate+
+                            "\nBill: " + table.Rows[0]["BILL"].ToString() + " BDT"+
+                            "\nAdmitted since: " + AdmittedDate.ToString()+
                             "\n-----------------------------------" +
                             "\n" + localDateTime.ToString("dddd, dd MMMM yyyy"));
                     }
