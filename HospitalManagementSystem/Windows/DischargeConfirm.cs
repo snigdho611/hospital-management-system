@@ -24,8 +24,9 @@ namespace HospitalManagementSystem.Windows
         {
             try
             {
-                string dischargeQuery = "begin Bill(:p1) dischargeprocess(:p2);  end;";
-                string receiptQuery = "select * from GETALLPATIENTSREFDOCTORS";
+                string AdmittedDate = selectedRow.Cells["ADMITTED"].Value.ToString();
+                string dischargeQuery = "begin Bill(:p1); dischargeprocess(:p2);  end;";
+                string receiptQuery = "select * from GETALLPATIENTSREFDOCTORS where PATIENT_ID = :p3";
                 //MessageBox.Show(selectedRow.Cells["PATIENT_ID"].Value.ToString());
 
                 DataAccess access = new DataAccess();
@@ -35,8 +36,10 @@ namespace HospitalManagementSystem.Windows
                 access.Command.ExecuteNonQuery();
 
                 access.Command = new OracleCommand(receiptQuery, access.Connection);
-                OracleDataAdapter adapter = new OracleDataAdapter();
-                
+                access.Command.Parameters.Add("p3", OracleDbType.Varchar2).Value = selectedRow.Cells["PATIENT_ID"].Value;
+                access.Adapter = new OracleDataAdapter(access.Command);
+                DataTable table = new DataTable();
+                access.Adapter.Fill(table);
 
                 try
                 {
@@ -45,13 +48,13 @@ namespace HospitalManagementSystem.Windows
                     {
                         //Console.WriteLine("Receipt");
                         sr.WriteLine("--------------Receipt--------------\n" +
-                            "Name: " + selectedRow.Cells["PATIENT_NAME"].Value +
-                            "\nAge: " + selectedRow.Cells["AGE"].Value +
-                            "\nGender: " + selectedRow.Cells["GENDER"].Value +
-                            "\nDepartment: " + selectedRow.Cells["DEPARTMENT"].Value +
-                            "\nDoctor: Dr. " + selectedRow.Cells["DOCTOR_NAME"].Value +
-                            "\nBill: " + selectedRow.Cells["BILL"].Value +
-                            "\nAdmitted since: " + selectedRow.Cells["ADMITTED"].Value +
+                            "Name: " + table.Rows[0]["PATIENT_NAME"].ToString() +
+                            "\nAge: " + table.Rows[0]["AGE"].ToString() +
+                            "\nGender: " + table.Rows[0]["GENDER"].ToString() +
+                            "\nDepartment: " + table.Rows[0]["DEPARTMENT"].ToString() +
+                            "\nDoctor: Dr. " + table.Rows[0]["DOCTOR_NAME"].ToString() +
+                            "\nBill: " + table.Rows[0]["BILL"].ToString() +
+                            "\nAdmitted since: " + AdmittedDate+
                             "\n-----------------------------------" +
                             "\n" + localDateTime.ToString("dddd, dd MMMM yyyy"));
                     }

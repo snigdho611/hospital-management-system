@@ -1,0 +1,10 @@
+--------------Receipt--------------
+Name: MILES DAVIS
+Age: 93
+Gender: MALE
+Department: CARDIOLOGY
+Doctor: Dr. SARAH MCLANE
+Bill: 482000
+Admitted since: 
+-----------------------------------
+Wednesday, 23 September 2020
