@@ -69,8 +69,21 @@ create or replace PROCEDURE updatePatient(
 	   p_admitted in patients.admitted%type, 
 	   p_input_id in patients.pat_id%type) 
 IS 
+-- user defined exception 
+   user_invalid_id  EXCEPTION; 
 BEGIN 
+    if p_input_id <= 0 then
+	   raise user_invalid_id;
+    else	   
        UPDATE PATIENTS SET pat_name = p_name, gender = p_gender, age = p_age, diagnosis = p_diagnosis, doc_id = p_docId, room_no = p_room, bill = p_bill, admitted = p_admitted where pat_id = p_input_id; 
+	end if;
+exception 
+    when user_invalid_id then 
+	   dbms_output.put_line('user has an invalid id!');
+	when no_data_found then 
+	   dbms_output.put_line('user is not in the system');
+	when others then 
+	   dbms_output.put_line('error!');
 END;
 
 create or replace function calculateDays(patient_id in patients.pat_id%type) 

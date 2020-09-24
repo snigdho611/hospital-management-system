@@ -32,3 +32,4 @@ D:\GitHub\HospitalManagementSystem\HospitalManagementSystem\obj\Debug\HospitalMa
 D:\GitHub\HospitalManagementSystem\HospitalManagementSystem\obj\Debug\HospitalManagementSystem.csproj.CopyComplete
 D:\GitHub\HospitalManagementSystem\HospitalManagementSystem\obj\Debug\HospitalManagementSystem.exe
 D:\GitHub\HospitalManagementSystem\HospitalManagementSystem\obj\Debug\HospitalManagementSystem.pdb
+D:\GitHub\HospitalManagementSystem\HospitalManagementSystem\obj\Debug\HospitalManagementSystem.csprojAssemblyReference.cache

@@ -267,6 +267,7 @@ namespace HospitalManagementSystem.Windows
         {
             if(tblLbl.Text == "Patients")
             {
+
                 int countRows = dataGridViewMain.SelectedRows.Count;
                 if(countRows == 1)
                 {

@@ -1,0 +1,10 @@
+--------------Receipt--------------
+Name: DAVID VILLA
+Age: 31
+Gender: MALE
+Department: ONCOLOGY
+Doctor: Dr. JON SNOW
+Bill:  BDT
+Admitted since: 
+-----------------------------------
+Thursday, 24 September 2020
