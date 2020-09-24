@@ -1,0 +1,147 @@
+USE [warddb]
+GO
+
+/****** Object:  Table [dbo].[patients]    Script Date: 9/23/2020 8:31:43 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[patients](
+	[patient_id] [numeric](15, 0) IDENTITY(1,1) NOT NULL,
+	[patient_name] [nvarchar](200) NOT NULL,
+	[gender] [nvarchar](20) NULL,
+	[age] [numeric](3, 0) NULL,
+	[diagnosis] [nvarchar](200) NULL,
+	[doctor_name] [nvarchar](200) NULL,
+	[ward_no] [numeric](4, 0) NULL,
+	[bill] [numeric](12, 2) NULL,
+	[admit_date] [date] NULL,
+	[discharged] [nvarchar](20) NULL,
+ CONSTRAINT [PK_patients] PRIMARY KEY CLUSTERED 
+(
+	[patient_id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+
+
+
+
+
+
+
+
+USE [warddb]
+GO
+
+/****** Object:  Table [dbo].[rooms]    Script Date: 9/23/2020 8:31:13 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[rooms](
+	[room_id] [numeric](5, 0) NOT NULL,
+	[pat_id] [numeric](15, 0) NULL,
+	[availability] [nvarchar](10) NOT NULL,
+ CONSTRAINT [PK_rooms] PRIMARY KEY CLUSTERED 
+(
+	[room_id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+
+
+
+
+
+
+
+
+
+insert into patients(patient_name, gender, age, diagnosis, doctor_name, ward_no, bill, admit_date) 
+values
+('HARRY POTTER', 'MALE', 23, 'CONCUSSION', 'JACK NICHOLSON', 1003, 3000, CONVERT(DATE, '2018-06-12')),
+('RON WEASELY', 'MALE', 23, 'KIDNEY FAILURE', 'ROBERT DOWNEY', 1004, 3500, CONVERT(DATE, '2020-07-14')),
+('CAROL DANVERS', 'FEMALE', 40, 'LIVER FAILURE', 'WARREN BUFFET', 1010, 3200, CONVERT(DATE, '2020-09-24')),
+('HARVEY DENT', 'MALE', 47, 'LUNG INFECTION', 'JACK NICHOLSON', 1002, 2700, CONVERT(DATE, '2020-09-03')),
+('SELINA KYLE', 'FEMALE', 35, 'FRACTURED RIB', 'SCARLETT JOHANNSON', 1005,2800, CONVERT(DATE, '2020-08-29')),
+('WANDA MAXIMOFF', 'FEMALE', 32, 'INTERNAL BLEEDING', 'BILBO BAGGINS', 1008, 3100, CONVERT(DATE, '2020-09-20')),
+('CAROL DANVERS', 'FEMALE', 40, 'LIVER FAILURE', 'WARREN BUFFET', 1007, 3200, CONVERT(DATE, '2020-09-24')),
+('HARVEY DENT', 'MALE', 47, 'LUNG INFECTION', 'JACK NICHOLSON', 1006, 2700, CONVERT(DATE, '2020-09-03')),
+('DIANA PRINCE', 'FEMALE', 42, 'STOMACH INFECTION', 'CHRISTIAN BALE', 1008, 2900, CONVERT(DATE, '2020-07-05')),
+('FELICIA HARDY', 'FEMALE', 25, 'TORN LIGAMENT', 'PETER PARKER', 1001, 2600, CONVERT(DATE, '2020-08-29')),
+('EDDIE BROCK', 'MALE', 33, 'BROKEN FEMUR', 'OTTO OCTAVIUS', 1012, 3600, CONVERT(DATE, '2020-09-18'))
+
+
+
+
+
+insert into rooms(room_id, pat_id, availability) 
+values(1001, 10, 'no'), 
+(1002, 4, 'no'),
+(1003, 1, 'no'),
+(1004, 2, 'no'),
+(1005, 5, 'no'),
+(1006, 8, 'no'),
+(1007, 7, 'no'),
+(1008, 9, 'no'),
+(1009, 6, 'no'),
+(1010, 3, 'no'),
+(1011, null, 'yes'),
+(1012, 11, 'no'),
+(1013, null, 'yes'),
+(1014, null, 'yes'),
+(1015, 12, 'no'),
+(1016, 15, 'no'),
+(1017, 17, 'no'),
+(1018, null, 'yes'),
+(1019, 18, 'no'),
+(1020, null, 'yes')
+
+
+
+
+USE [warddb]
+GO
+
+/****** Object:  Table [dbo].[doctors]    Script Date: 9/24/2020 12:08:49 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[doctors](
+	[doctor_id] [numeric](15, 0) IDENTITY(1,1) NOT NULL,
+	[doctor_name] [nvarchar](200) NULL,
+	[specialization] [nvarchar](50) NULL,
+	[age] [numeric](4, 0) NULL,
+	[nationality] [nvarchar](200) NULL,
+ CONSTRAINT [PK_doctors] PRIMARY KEY CLUSTERED 
+(
+	[doctor_id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+
+
+
+
+
+
+
+insert into doctors(doctor_name, specialization, age, nationality) 
+values('ALAN ROGER', 'ONCOLOGY', 65, 'AMERICA'),
+('JAMES SMITH', 'UROLOGY', 54, 'AMERICA'),
+('MARIA RODRIGUEZ', 'UROLOGY', 42, 'MEXICO'),
+('MITCHELL ROZARIO', 'NEPHROLOGY', 42, 'ENGLAND'),
+('JOHN MARCUS', 'CARDIOLOGY', 45, 'ENGLAND'),
+('IVANKA JIMENEZ', 'GASTROLOGY', 51, 'MEXICO'),
+('SARAH MCLANE', 'UROLOGY', 45, 'AMERICA')

@@ -37,7 +37,7 @@ namespace HospitalManagementSystem.Windows
             {
                 if(txtPass.Text == txtCnfPass.Text)
                 {
-                    string insertAdmin = "insert into admin(ad_name, email, phone, username, password) values(:p1, :p2, :p3, :p4, :p5)";
+                    string insertAdmin = "insert into admin(ad_name, email, phone, username, password, ad_permit) values(:p1, :p2, :p3, :p4, :p5, :p6)";
                     DataAccess access = new DataAccess();
 
                     access.Command = new OracleCommand(insertAdmin, access.Connection);
@@ -46,9 +46,11 @@ namespace HospitalManagementSystem.Windows
                     access.Command.Parameters.Add("p3", OracleDbType.Varchar2).Value = txtPhn.Text;
                     access.Command.Parameters.Add("p4", OracleDbType.Varchar2).Value = txtUsr.Text;
                     access.Command.Parameters.Add("p5", OracleDbType.Varchar2).Value = txtPass.Text;
+                    access.Command.Parameters.Add("p5", OracleDbType.Varchar2).Value = Convert.ToString(0);
 
                     access.Command.ExecuteNonQuery();
                     MessageBox.Show("Successfully added user!");
+                    access.Connection.Close();
                 }
                 else
                 {
