@@ -70,8 +70,7 @@ namespace HospitalManagementSystem.Windows
                     
                     string updatePatientQuery = "BEGIN updatePatient(:p1, :p2, :p3, :p4, :p5, :p6, :p7, to_date(:p8, 'DD-MM-YYYY'), :p9); END; ";
 
-                    access.Command = new OracleCommand(
-                       updatePatientQuery, access.Connection);
+                    access.Command = new OracleCommand(updatePatientQuery, access.Connection);
 
                     access.Command.Parameters.Add("p1", OracleDbType.Varchar2).Value = txtName.Text;
                     access.Command.Parameters.Add("p2", OracleDbType.Varchar2).Value = cmbGender.Text.ToString();

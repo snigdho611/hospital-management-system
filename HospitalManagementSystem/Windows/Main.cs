@@ -237,7 +237,7 @@ namespace HospitalManagementSystem.Windows
 
             try
             {
-                string selectPatientQuery = "SELECT * FROM getAllAdmins";
+                string selectPatientQuery = "SELECT * FROM adminview";
 
                 DataAccess access = new DataAccess();
 
