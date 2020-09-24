@@ -1,3 +1,20 @@
+CREATE OR REPLACE FORCE VIEW  "ADMINVIEW" ("ADMIN_ID", "ADMIN_NAME", "USERNAME", "EMAIL", "PHONE") 
+AS 
+   select ad_id as admin_id, ad_name as admin_name, username, email as email, phone as phone from admin
+
+CREATE OR REPLACE FORCE VIEW  "GETALLDOCTORS" ("DOCTOR_ID", "NAME", "HIRE_DATE", "SALARY", "NATIONALITY", "DATE_OF_BIRTH", "DEPARTMENT_ID") AS 
+  select doc_id as doctor_id, doc_name as name, hire_date, salary, nationality, dob as date_of_birth, dept_id as department_id from doctors order by doc_id
+  
+CREATE OR REPLACE FORCE VIEW  "GETALLPATIENTS" ("PATIENT_ID", "PATIENT_NAME", "GENDER", "AGE", "DIAGNOSIS", "DOCTOR_ID", "WARD", "BILL", "ADMITTED") AS 
+  select PAT_ID AS PATIENT_ID, PAT_NAME AS NAME, GENDER, AGE, DIAGNOSIS, DOC_ID AS DOCTOR_ID, ROOM_NO AS WARD, BILL, TO_DATE(ADMITTED, 'DD/MM/YY')AS ADMITTED from PATIENTS
+  
+  
+CREATE OR REPLACE FORCE VIEW  "GETALLPATIENTSREFDOCTORS" ("PATIENT_ID", "PATIENT_NAME", "GENDER", "AGE", "DIAGNOSIS", "DOCTOR_ID", "DOCTOR_NAME", "WARD", "BILL", "ADMITTED", "DEPARTMENT") AS 
+  select patients.PAT_ID AS PATIENT_ID, patients.PAT_NAME AS PATIENT_NAME, GENDER, AGE, DIAGNOSIS, PATIENTS.DOC_ID AS DOCTOR_ID, DOCTORS.DOC_NAME as DOCTOR_NAME, patients.ROOM_NO AS WARD, BILL, TO_DATE(patients.ADMITTED, 'DD/MM/YY')AS ADMITTED, department.dept_name as DEPARTMENT from PATIENTS, DOCTORS, department where PATIENTS.DOC_ID = DOCTORS.DOC_ID and doctors.dept_id = department.dept_id order by patients.pat_id
+
+CREATE OR REPLACE FORCE VIEW  "PAT_DOC" ("PAT_ID", "PAT_NAME", "GENDER", "AGE", "DIAGNOSIS", "DOC_ID", "DOC_NAME", "NATIONALITY", "DEPT_ID") AS 
+  select patients.pat_id, patients.pat_name, patients.gender, patients.age, patients.diagnosis, doctors.doc_id, doctors.doc_name, doctors.nationality, doctors.dept_id from patients, doctors where patients.doc_id = doctors.doc_id
+
 create or replace procedure Bill(patient_id in patients.pat_id%type) 
 is 
 days number(8);
