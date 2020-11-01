@@ -119,34 +119,12 @@ namespace HospitalManagementSystem
 
         private void txtUserId_GotFocus(object sender, EventArgs e)
         {
-            if(String.IsNullOrWhiteSpace(txtUserId.Text) == false)
-            {
-                if (String.IsNullOrWhiteSpace(txtPass.Text) == true)
-                {
-                    txtPass.PasswordChar = '\0';
-                    txtPass.Text = "Enter password here";
-                }
-
-                else
-                {
-                    
-                }
-            }
+            
         }
 
         private void txtPass_GotFocus(object sender, EventArgs e)
         {
-            txtPass.PasswordChar = '•';
-            if (String.IsNullOrWhiteSpace(txtUserId.Text) == true)
-            {
-                txtPass.Text = null;
-                
-                txtUserId.Text = "Enter username here";
-            }
-            else
-            {
-                txtPass.Text = null;
-            }
+                        
         }
     }
 }
