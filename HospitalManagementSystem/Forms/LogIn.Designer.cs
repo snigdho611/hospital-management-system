@@ -38,29 +38,31 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // txtUserId
             // 
-            this.txtUserId.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUserId.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUserId.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtUserId.Location = new System.Drawing.Point(159, 147);
             this.txtUserId.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtUserId.Name = "txtUserId";
             this.txtUserId.Size = new System.Drawing.Size(212, 22);
             this.txtUserId.TabIndex = 0;
-            this.txtUserId.Text = "example: AB123";
+            this.txtUserId.Text = "Enter username here";
+            this.txtUserId.TextChanged += new System.EventHandler(this.txtUserId_TextChanged);
+            this.txtUserId.GotFocus += new System.EventHandler(this.txtUserId_GotFocus);
             // 
             // txtPass
             // 
-            this.txtPass.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPass.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPass.Location = new System.Drawing.Point(159, 187);
             this.txtPass.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPass.Name = "txtPass";
-            this.txtPass.PasswordChar = '•';
             this.txtPass.Size = new System.Drawing.Size(212, 22);
             this.txtPass.TabIndex = 1;
+            this.txtPass.Text = "Enter password here";
+            this.txtPass.GotFocus += new System.EventHandler(this.txtPass_GotFocus);
             // 
             // lblUser
             // 
@@ -147,23 +149,12 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // panel3
-            // 
-            this.panel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel3.BackgroundImage")));
-            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel3.Location = new System.Drawing.Point(-6, -8);
-            this.panel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(70, 64);
-            this.panel3.TabIndex = 8;
-            // 
             // LogIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(200)))), ((int)(((byte)(157)))));
             this.ClientSize = new System.Drawing.Size(785, 362);
-            this.Controls.Add(this.panel3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel2);
@@ -189,16 +180,15 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtUserId;
-        private System.Windows.Forms.TextBox txtPass;
         private System.Windows.Forms.Label lblUser;
         private System.Windows.Forms.Label lblPass;
+        private System.Windows.Forms.TextBox txtUserId;
+        private System.Windows.Forms.TextBox txtPass;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Panel panel3;
     }
 }
 

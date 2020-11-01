@@ -51,96 +51,96 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataAccess.cs" />
-    <Compile Include="Windows\AddDoctor.cs">
+    <Compile Include="Forms\AddDoctor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Windows\AddDoctor.Designer.cs">
+    <Compile Include="Forms\AddDoctor.Designer.cs">
       <DependentUpon>AddDoctor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Windows\AddPatient.cs">
+    <Compile Include="Forms\AddPatient.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Windows\AddPatient.Designer.cs">
+    <Compile Include="Forms\AddPatient.Designer.cs">
       <DependentUpon>AddPatient.cs</DependentUpon>
     </Compile>
-    <Compile Include="Windows\AddUser.cs">
+    <Compile Include="Forms\AddUser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Windows\AddUser.Designer.cs">
+    <Compile Include="Forms\AddUser.Designer.cs">
       <DependentUpon>AddUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="Windows\DischargeConfirm.cs">
+    <Compile Include="Forms\DischargeConfirm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Windows\DischargeConfirm.Designer.cs">
+    <Compile Include="Forms\DischargeConfirm.Designer.cs">
       <DependentUpon>DischargeConfirm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Windows\Discharged.cs">
+    <Compile Include="Forms\Discharged.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Windows\Discharged.Designer.cs">
+    <Compile Include="Forms\Discharged.Designer.cs">
       <DependentUpon>Discharged.cs</DependentUpon>
     </Compile>
-    <Compile Include="Windows\DoctorConfirm.cs">
+    <Compile Include="Forms\DoctorConfirm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Windows\DoctorConfirm.Designer.cs">
+    <Compile Include="Forms\DoctorConfirm.Designer.cs">
       <DependentUpon>DoctorConfirm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Windows\LogOutConfirm.cs">
+    <Compile Include="Forms\LogOutConfirm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Windows\LogOutConfirm.Designer.cs">
+    <Compile Include="Forms\LogOutConfirm.Designer.cs">
       <DependentUpon>LogOutConfirm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Windows\Main.cs">
+    <Compile Include="Forms\Main.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Windows\Main.Designer.cs">
+    <Compile Include="Forms\Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
-    <Compile Include="Windows\LogIn.cs">
+    <Compile Include="Forms\LogIn.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Windows\LogIn.Designer.cs">
+    <Compile Include="Forms\LogIn.Designer.cs">
       <DependentUpon>LogIn.cs</DependentUpon>
     </Compile>
-    <Compile Include="Windows\LogInSuccess.cs">
+    <Compile Include="Forms\LogInSuccess.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Windows\LogInSuccess.Designer.cs">
+    <Compile Include="Forms\LogInSuccess.Designer.cs">
       <DependentUpon>LogInSuccess.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Windows\UpdatePatient.cs">
+    <Compile Include="Forms\UpdatePatient.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Windows\UpdatePatient.Designer.cs">
+    <Compile Include="Forms\UpdatePatient.Designer.cs">
       <DependentUpon>UpdatePatient.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Windows\AddDoctor.resx">
+    <EmbeddedResource Include="Forms\AddDoctor.resx">
       <DependentUpon>AddDoctor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Windows\AddPatient.resx">
+    <EmbeddedResource Include="Forms\AddPatient.resx">
       <DependentUpon>AddPatient.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Windows\AddUser.resx">
+    <EmbeddedResource Include="Forms\AddUser.resx">
       <DependentUpon>AddUser.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Windows\DischargeConfirm.resx">
+    <EmbeddedResource Include="Forms\DischargeConfirm.resx">
       <DependentUpon>DischargeConfirm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Windows\Discharged.resx">
+    <EmbeddedResource Include="Forms\Discharged.resx">
       <DependentUpon>Discharged.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Windows\DoctorConfirm.resx">
+    <EmbeddedResource Include="Forms\DoctorConfirm.resx">
       <DependentUpon>DoctorConfirm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Windows\LogIn.resx">
+    <EmbeddedResource Include="Forms\LogIn.resx">
       <DependentUpon>LogIn.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Windows\LogInSuccess.resx">
+    <EmbeddedResource Include="Forms\LogInSuccess.resx">
       <DependentUpon>LogInSuccess.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -152,13 +152,13 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Windows\LogOutConfirm.resx">
+    <EmbeddedResource Include="Forms\LogOutConfirm.resx">
       <DependentUpon>LogOutConfirm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Windows\Main.resx">
+    <EmbeddedResource Include="Forms\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Windows\UpdatePatient.resx">
+    <EmbeddedResource Include="Forms\UpdatePatient.resx">
       <DependentUpon>UpdatePatient.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
@@ -174,6 +174,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Images\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
