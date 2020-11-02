@@ -119,12 +119,34 @@ namespace HospitalManagementSystem
 
         private void txtUserId_GotFocus(object sender, EventArgs e)
         {
-            
+            if (txtUserId.Text == "Enter username here")
+            {
+                txtUserId.Text = null;
+                txtUserId.ForeColor = System.Drawing.Color.Black;
+            }
+
+            if (String.IsNullOrWhiteSpace(txtPass.Text) == true)
+            {
+                txtPass.PasswordChar = '\0';
+                txtPass.ForeColor = System.Drawing.Color.DimGray;
+                txtPass.Text = "Enter password here";
+            }
         }
 
         private void txtPass_GotFocus(object sender, EventArgs e)
         {
-                        
+            if(txtPass.Text == "Enter password here")
+            {
+                txtPass.Text = null;
+                txtPass.ForeColor = System.Drawing.Color.Black;
+                txtPass.PasswordChar = '•';
+            }
+
+            if (String.IsNullOrWhiteSpace(txtUserId.Text) == true)
+            {
+                txtUserId.ForeColor = System.Drawing.Color.DimGray;
+                txtUserId.Text = "Enter username here";
+            }
         }
     }
 }

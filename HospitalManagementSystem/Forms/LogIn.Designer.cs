@@ -43,7 +43,7 @@
             // txtUserId
             // 
             this.txtUserId.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUserId.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.txtUserId.ForeColor = System.Drawing.Color.DimGray;
             this.txtUserId.Location = new System.Drawing.Point(159, 147);
             this.txtUserId.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtUserId.Name = "txtUserId";
@@ -56,6 +56,7 @@
             // txtPass
             // 
             this.txtPass.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPass.ForeColor = System.Drawing.Color.DimGray;
             this.txtPass.Location = new System.Drawing.Point(159, 187);
             this.txtPass.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPass.Name = "txtPass";
