@@ -60,6 +60,7 @@ namespace HospitalManagementSystem.Windows
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.btnDept);
             this.panel1.Controls.Add(this.usrBtn);
             this.panel1.Controls.Add(this.phrBtn);
@@ -166,6 +167,7 @@ namespace HospitalManagementSystem.Windows
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.lblAdministrator);
             this.panel2.Controls.Add(this.txtLoggedInAs);
             this.panel2.Controls.Add(this.btnLoggedInAs);
@@ -185,7 +187,7 @@ namespace HospitalManagementSystem.Windows
             // 
             this.lblAdministrator.AutoSize = true;
             this.lblAdministrator.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Bold);
-            this.lblAdministrator.ForeColor = System.Drawing.Color.DarkBlue;
+            this.lblAdministrator.ForeColor = System.Drawing.Color.Indigo;
             this.lblAdministrator.Location = new System.Drawing.Point(597, 635);
             this.lblAdministrator.Name = "lblAdministrator";
             this.lblAdministrator.Size = new System.Drawing.Size(150, 19);
@@ -208,7 +210,7 @@ namespace HospitalManagementSystem.Windows
             // 
             this.btnLoggedInAs.AutoSize = true;
             this.btnLoggedInAs.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btnLoggedInAs.ForeColor = System.Drawing.Color.DarkBlue;
+            this.btnLoggedInAs.ForeColor = System.Drawing.Color.Indigo;
             this.btnLoggedInAs.Location = new System.Drawing.Point(462, 610);
             this.btnLoggedInAs.Name = "btnLoggedInAs";
             this.btnLoggedInAs.Size = new System.Drawing.Size(101, 19);
@@ -222,6 +224,7 @@ namespace HospitalManagementSystem.Windows
             this.btnLogOut.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLogOut.Font = new System.Drawing.Font("Sitka Small", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogOut.ForeColor = System.Drawing.Color.Indigo;
             this.btnLogOut.Location = new System.Drawing.Point(783, 610);
             this.btnLogOut.Name = "btnLogOut";
             this.btnLogOut.Size = new System.Drawing.Size(92, 29);
@@ -272,6 +275,7 @@ namespace HospitalManagementSystem.Windows
             // 
             this.tblLbl.AutoSize = true;
             this.tblLbl.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tblLbl.ForeColor = System.Drawing.Color.Indigo;
             this.tblLbl.Location = new System.Drawing.Point(17, 14);
             this.tblLbl.Name = "tblLbl";
             this.tblLbl.Size = new System.Drawing.Size(97, 25);
@@ -354,6 +358,8 @@ namespace HospitalManagementSystem.Windows
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(200)))), ((int)(((byte)(157)))));
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1120, 681);
             this.Controls.Add(this.addDocBtn);
             this.Controls.Add(this.delPtnBtn);
