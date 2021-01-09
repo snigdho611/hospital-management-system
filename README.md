@@ -12,4 +12,4 @@ Implements the following topics from PL/SQL in the Oracle Database:
 University project for Advanced Database Management Course.
 
 Log In Screen:
-![Screenshot](Screenshots/login.png)
+![Screenshot](Screenshots/login.png width=100)
