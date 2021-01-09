@@ -13,3 +13,4 @@ University project for Advanced Database Management Course.
 
 Log In Screen:
 ![alt text](https://github.com/snigdho611/Hospital_Management_System/blob/master/Screenshots/login.png?raw=true)
+![Screenshot](login.png)
