@@ -1,0 +1,199 @@
+------------------------------------------START ADMIN----------------------------------------------
+CREATE TABLE  "ADMIN" 
+   (	"AD_ID" NUMBER(4,0) NOT NULL ENABLE, 
+	"AD_NAME" VARCHAR2(200) NOT NULL ENABLE, 
+	"USERNAME" VARCHAR2(50) NOT NULL ENABLE, 
+	"PASSWORD" VARCHAR2(50) NOT NULL ENABLE, 
+	"AD_PERMIT" NUMBER(1,0), 
+	"EMAIL" VARCHAR2(200), 
+	"PHONE" VARCHAR2(50), 
+	 CONSTRAINT "ADMIN_PK" PRIMARY KEY ("AD_ID") ENABLE
+   )
+/
+
+CREATE OR REPLACE TRIGGER  "BI_ADMIN" 
+  before insert on "ADMIN"               
+  for each row  
+begin   
+    select "AD_SEQ".nextval into :NEW.AD_ID from dual; 
+end; 
+
+/
+ALTER TRIGGER  "BI_ADMIN" ENABLE
+/
+
+------------------------------------------END ADMIN----------------------------------------------
+------------------------------------------START DEPARTMENT----------------------------------------------
+CREATE TABLE  "DEPARTMENT" 
+   (	"DEPT_ID" NUMBER(4,0) NOT NULL ENABLE, 
+	"DEPT_NAME" VARCHAR2(255) NOT NULL ENABLE, 
+	"COUNT" NUMBER(6,0), 
+	 CONSTRAINT "DEPARTMENT_PK" PRIMARY KEY ("DEPT_ID") ENABLE
+   )
+/
+
+CREATE OR REPLACE TRIGGER  "BI_DEPARTMENT" before insert on "DEPARTMENT" for each row begin select "DEPT_SEQ".nextval into :NEW.DEPT_ID from dual; end;
+/
+ALTER TRIGGER  "BI_DEPARTMENT" ENABLE
+/
+------------------------------------------END DEPARTMENT----------------------------------------------
+------------------------------------------START DOCTORS----------------------------------------------
+CREATE TABLE  "DOCTORS" 
+   (	"DOC_ID" NUMBER(5,0) NOT NULL ENABLE, 
+	"DOC_NAME" VARCHAR2(200) NOT NULL ENABLE, 
+	"HIRE_DATE" DATE, 
+	"SALARY" NUMBER(12,2), 
+	"NATIONALITY" VARCHAR2(200), 
+	"DOB" DATE, 
+	"DEPT_ID" NUMBER(2,0) NOT NULL ENABLE, 
+	"P_COUNT" NUMBER(5,0), 
+	 CONSTRAINT "DOCTORS_PK" PRIMARY KEY ("DOC_ID") ENABLE
+   )
+/
+
+CREATE OR REPLACE TRIGGER  "BI_DOCTORS" 
+  before insert on "DOCTORS"               
+  for each row  
+begin   
+    select "DOC_SEQ".nextval into :NEW.DOC_ID from dual; 
+end;
+/
+ALTER TRIGGER  "BI_DOCTORS" ENABLE
+/
+
+CREATE OR REPLACE TRIGGER  "DECREMENTDOCTORBYDEPT" 
+after delete on doctors
+for each row
+declare 
+     deptdoctors number(5);
+begin
+     select department.count into deptdoctors from department where department.dept_id = :OLD.dept_id;
+     update department set count = deptdoctors - 1 where department.dept_id = :OLD.dept_id;
+     dbms_output.put_line('updated patient count');
+end;
+/
+ALTER TRIGGER  "DECREMENTDOCTORBYDEPT" ENABLE
+/
+
+CREATE OR REPLACE TRIGGER  "INCREMENTDOCTORBYDEPT" 
+after insert on doctors
+for each row
+declare 
+     deptdoctors number(5);
+begin
+     select department.count into deptdoctors from department where department.dept_id = :NEW.dept_id;
+     update department set count = deptdoctors + 1 where department.dept_id = :NEW.dept_id;
+     dbms_output.put_line('updated patient count');
+end;
+/
+ALTER TRIGGER  "INCREMENTDOCTORBYDEPT" ENABLE
+/
+------------------------------------------END DOCTORS----------------------------------------------
+------------------------------------------START NURSE----------------------------------------------
+CREATE TABLE  "NURSE" 
+   (	"NUR_ID" NUMBER(6,0) NOT NULL ENABLE, 
+	"NUR_NAME" VARCHAR2(200) NOT NULL ENABLE, 
+	"HIRE_DATE" DATE, 
+	"SALARY" VARCHAR2(200), 
+	"NATIONALITY" VARCHAR2(200), 
+	"SHIFT" VARCHAR2(200) NOT NULL ENABLE, 
+	 CONSTRAINT "NURSE_PK" PRIMARY KEY ("NUR_ID") ENABLE
+   )
+/
+
+CREATE OR REPLACE TRIGGER  "BI_NURSE" 
+  before insert on "NURSE"               
+  for each row  
+begin   
+    select "NUR_SEQ".nextval into :NEW.NUR_ID from dual; 
+end; 
+
+/
+ALTER TRIGGER  "BI_NURSE" ENABLE
+/
+------------------------------------------END NURSE----------------------------------------------
+------------------------------------------START PATIENTS----------------------------------------------
+CREATE TABLE  "PATIENTS" 
+   (	"PAT_ID" NUMBER(6,0) NOT NULL ENABLE, 
+	"PAT_NAME" VARCHAR2(200) NOT NULL ENABLE, 
+	"GENDER" VARCHAR2(10), 
+	"AGE" NUMBER(4,0), 
+	"DIAGNOSIS" VARCHAR2(4000), 
+	"DOC_ID" NUMBER(6,0), 
+	"ROOM_NO" NUMBER(4,0), 
+	"BILL" NUMBER(12,2), 
+	"ADMITTED" DATE, 
+	 CONSTRAINT "PATIENTS_PK" PRIMARY KEY ("PAT_ID") ENABLE
+   )
+/
+
+CREATE OR REPLACE TRIGGER  "BI_PATIENTS" 
+  before insert on "PATIENTS"               
+  for each row  
+begin   
+    select "PAT_SEQ".nextval into :NEW.PAT_ID from dual; 
+end; 
+
+/
+ALTER TRIGGER  "BI_PATIENTS" ENABLE
+/
+
+CREATE OR REPLACE TRIGGER  "DECREMENTPATIENTBYDOC" 
+after delete on patients
+for each row
+declare 
+     docpat number(5);
+begin
+     select doctors.P_count into docpat from doctors where doctors.doc_id = :OLD.doc_id;
+     update doctors set p_count = docpat - 1 where doctors.doc_id = :OLD.doc_id;
+     dbms_output.put_line('decremented doctor count');
+end;
+/
+ALTER TRIGGER  "DECREMENTPATIENTBYDOC" ENABLE
+/
+
+CREATE OR REPLACE TRIGGER  "INCREMENTPATIENTBYDOC" 
+after insert on patients
+for each row
+declare 
+     docpat number(5);
+begin
+     select doctors.P_count into docpat from doctors where doctors.doc_id = :NEW.doc_id;
+     update doctors set p_count = docpat + 1 where doctors.doc_id = :NEW.doc_id;
+     dbms_output.put_line('updated doctor count');
+end;
+/
+ALTER TRIGGER  "INCREMENTPATIENTBYDOC" ENABLE
+/
+------------------------------------------END PATIENTS----------------------------------------------
+------------------------------------------START ROOM----------------------------------------------
+CREATE TABLE  "ROOM" 
+   (	"ROOM_NO" NUMBER(4,0) NOT NULL ENABLE, 
+	"AVAILABILITY" VARCHAR2(5) NOT NULL ENABLE, 
+	"OCCUPIED" VARCHAR2(5) NOT NULL ENABLE, 
+	"DISCHARGE" DATE, 
+	"PAT_ID" NUMBER(7,0), 
+	"RATE" NUMBER(10,2), 
+	 CONSTRAINT "ROOM_PK" PRIMARY KEY ("ROOM_NO") ENABLE
+   )
+/
+
+CREATE OR REPLACE TRIGGER  "BI_ROOM" before insert on "ROOM" for each row begin select "ROOM_SEQ".nextval into :NEW.ROOM_NO from dual; end;
+/
+ALTER TRIGGER  "BI_ROOM" ENABLE
+/
+
+CREATE OR REPLACE TRIGGER  "EMPTYROOM" 
+after update on room
+for each row
+begin
+     if :OLD.AVAILABILITY='NO' and :OLD.OCCUPIED ='YES' THEN
+        dbms_output.put_line('NOT ALLOWED');
+     elsif :OLD.AVAILABILITY='YES' and :OLD.OCCUPIED ='NO' THEN
+        dbms_output.put_line('NOT ALLOWED');
+     end if;
+end;
+/
+ALTER TRIGGER  "EMPTYROOM" ENABLE
+/
+------------------------------------------END ROOM----------------------------------------------
